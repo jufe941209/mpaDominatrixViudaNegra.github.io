@@ -824,3 +824,232 @@ p{
     transform: scale(1.2);
 }
 /*** Destination End ***/
+
+/*** Quinta pagina gallery Start ***/
+/*** Fotos profesionales ***/
+.galeria {
+    background-color: #ffffff;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+}
+
+.galeria .tab-class .tab-content .tab-pane .destination-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    z-index: 1;
+    margin: 0; /* Eliminar margen */
+    border: 2px solid #fff; /* Borde pequeño entre imágenes */
+    transition: transform 0.3s ease-in-out; /* Añadir transición */
+}
+
+.galeria .tab-class .tab-content .tab-pane .destination-img .destination-overlay {
+    
+    bottom: -100%;
+    left: 0;
+    z-index: 3;
+    transition: 0.5s;
+}
+
+.galeria .tab-class .tab-content .tab-pane .destination-img .search-icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: end;
+    padding: 20px 20px 0 0;
+    background: rgba(153, 153, 153, 0.1);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.galeria .tab-class .tab-content .tab-pane .destination-img .search-icon a i {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.galeria .tab-class .nav-item {
+    padding: 0 0 20px 0;
+}
+
+.galeria .tab-class .nav-item a.active {
+    background: #000000 !important;
+}
+
+.galeria .tab-class .nav-item a.active span {
+    color: var(--bs-white) !important;
+}
+
+.galeria .tab-class .tab-content .destination-img:hover .search-icon {
+    background: rgba(19, 53, 123, 0.7);
+}
+
+.galeria .tab-class .tab-content .destination-img:hover .search-icon a i {
+    opacity: 1;
+}
+
+.galeria .tab-class .tab-content .destination-img img {
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galeria .tab-class .tab-content .destination-img:hover img {
+    transform: scale(1.2); /* Aumentar tamaño de imagen al pasar el mouse */
+}
+
+.galeria .tab-class .tab-content .destination-img:hover .destination-overlay {
+    bottom: 0;
+}
+
+.galeria .tab-class .tab-content .tab-pane .destination-img:hover {
+    transform: scale(2); /* Aumentar tamaño del contenedor */
+    z-index: 10; /* Asegurarse de que el contenedor agrandado esté en frente */
+}
+
+@media (max-width: 768px) {
+    .galeria .tab-class .tab-content .tab-pane .destination-img {
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilos para Fishnet */
+
+.fishnet {
+    background-color: #e70303;
+    padding-top: 20px !important;
+    padding-bottom: 100px !important;
+}
+
+.fishnet .tab-class .tab-content .tab-pane .destination-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    z-index: 1;
+    margin: 0; /* Eliminar margen */
+    border: 2px solid #fff; /* Borde pequeño entre imágenes */
+    transition: transform 0.3s ease-in-out; /* Añadir transición */
+}
+
+.fishnet .tab-class .tab-content .tab-pane .destination-img .destination-overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    z-index: 3;
+    transition: 0.5s;
+}
+
+.fishnet .tab-class .tab-content .tab-pane .destination-img .search-icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: end;
+    padding: 20px 20px 0 0;
+    background: rgba(153, 153, 153, 0.1);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.fishnet .tab-class .tab-content .tab-pane .destination-img .search-icon a i {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.fishnet .tab-class .nav-item {
+    padding: 0 0 20px 0;
+}
+
+.fishnet .tab-class .nav-item a.active {
+    background: #000000 !important;
+}
+
+.fishnet .tab-class .nav-item a.active span {
+    color: var(--bs-white) !important;
+}
+
+.fishnet .tab-class .tab-content .destination-img:hover .search-icon {
+    background: rgba(19, 53, 123, 0.7);
+}
+
+.fishnet .tab-class .tab-content .destination-img:hover .search-icon a i {
+    opacity: 1;
+}
+
+.fishnet .tab-class .tab-content .destination-img img {
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fishnet .tab-class .tab-content .destination-img:hover img {
+    transform: scale(1.2); /* Aumentar tamaño de imagen al pasar el mouse */
+}
+
+.fishnet .tab-class .tab-content .destination-img:hover .destination-overlay {
+    bottom: 0;
+}
+
+.fishnet .tab-class .tab-content .tab-pane .destination-img:hover {
+    transform: scale(2); /* Aumentar tamaño del contenedor */
+    z-index: 10; /* Asegurarse de que el contenedor agrandado esté en frente */
+}
+
+@media (max-width: 768px) {
+    .galeria .tab-class .tab-content .tab-pane .destination-img {
+        margin-bottom: 20px;
+    }
+}
+
+/* -------------------------------------------------------------------------------*/
+
+/* Ultima pagina prensa */
+
+.petplay .col-lg-7 {
+    text-align: center;
+    padding: 80px;
+}
+
+.petplay .col-lg-7 .btn {
+    margin-bottom: 25px;
+    background-color: #007a70;
+    border-radius: 50px 50px 50px 50px;
+    color: #ffffff;
+}
+
+.petplay .col-lg-7 .btn:hover {
+    background-color: #030303;
+    color: #ffffff;
+}
+
+.petplay .col-lg-7 .p {
+    font-size: 28px !important;
+}
+
+.booking .col-lg-7 {
+    text-align: center;
+    padding: 80px;
+}
+
+.booking .col-lg-7 .btn {
+    margin-bottom: 25px;
+    background-color: #007a70;
+    border-radius: 50px 50px 50px 50px;
+    color: #ffffff;
+}
+
+.booking .col-lg-7 .btn:hover {
+    background-color: #030303;
+    color: #ffffff;
+}
+
+.booking .col-lg-7 .mb-4 {
+    
+    color: #000000 !important;
+}

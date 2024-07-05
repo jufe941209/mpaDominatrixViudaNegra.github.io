@@ -152,3 +152,16 @@ document.getElementById("openFormBtn").addEventListener("click", function() {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll('.destination-img');
+
+    images.forEach(image => {
+        image.addEventListener('mouseover', function() {
+            image.classList.add('hover');
+        });
+
+        image.addEventListener('mouseout', function() {
+            image.classList.remove('hover');
+        });
+    });
+});

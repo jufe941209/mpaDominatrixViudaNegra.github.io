@@ -599,7 +599,11 @@ p{
 /*** Reglas ***/
 
 .reglas {
+<<<<<<< HEAD
+    background: linear-gradient(#BA2505, rgba(0, 0, 0, 0.2)), url(../img/fondoreglas.jpg) ;
+=======
     background: linear-gradient(#BA2505, rgba(0, 0, 0, 0.2)), url(../img/tour-booking-bg.jpg);
+>>>>>>> 1c1f584 (Tercera actualización, se agrega paginas en construcción, se mejora todos los procesos, se cambian reglas y se recomienda disminucion de pestañas para una pagina mas funcional)
     padding: 85px !important;
     background-position: center center;
     background-repeat: no-repeat;
@@ -823,9 +827,13 @@ p{
 .destination .tab-class .tab-content .destination-img:hover img {
     transform: scale(1.2);
 }
+<<<<<<< HEAD
 /*** Destination End ***/
 
+<<<<<<<< HEAD:css/style.css
 /*** Quinta pagina gallery Start ***/
+========
+>>>>>>>> 1c1f584 (Tercera actualización, se agrega paginas en construcción, se mejora todos los procesos, se cambian reglas y se recomienda disminucion de pestañas para una pagina mas funcional):travela-1.0.0/css/style.css
 /*** Fotos profesionales ***/
 .galeria {
     background-color: #ffffff;
@@ -1052,4 +1060,11 @@ p{
 .booking .col-lg-7 .mb-4 {
     
     color: #000000 !important;
+<<<<<<<< HEAD:css/style.css
 }
+========
+}
+>>>>>>>> 1c1f584 (Tercera actualización, se agrega paginas en construcción, se mejora todos los procesos, se cambian reglas y se recomienda disminucion de pestañas para una pagina mas funcional):travela-1.0.0/css/style.css
+=======
+/*** Destination End ***/
+>>>>>>> 1c1f584 (Tercera actualización, se agrega paginas en construcción, se mejora todos los procesos, se cambian reglas y se recomienda disminucion de pestañas para una pagina mas funcional)

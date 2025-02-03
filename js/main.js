@@ -152,7 +152,7 @@ document.getElementById("openFormBtn").addEventListener("click", function() {
     }
 });
 
-<<<<<<< HEAD
+
 document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll('.destination-img');
 
@@ -166,5 +166,4 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
-=======
->>>>>>> 1c1f584 (Tercera actualización, se agrega paginas en construcción, se mejora todos los procesos, se cambian reglas y se recomienda disminucion de pestañas para una pagina mas funcional)
+

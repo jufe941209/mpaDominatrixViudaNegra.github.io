@@ -131,6 +131,7 @@ p{
     margin-left: 8px;
 }
 
+
 @media (min-width: 1200px) {
     .navbar .nav-item .dropdown-menu {
         display: block;
@@ -1003,4 +1004,103 @@ p{
 
 /* ------------------------------AQUI ACABA GALERIA-------------------------------------------------*/
 
+
+/*  prensa */
+
+.petplay1{
+    padding-top: 100px !important;
+}
+
 /* Ultima pagina prensa */
+
+/* ------------------------------AQUI EMPIEZA TIENDA-------------------------------------------------*/
+/* CSS DE LA TIENDA*/
+
+.tienda-container {
+    padding-top: 150px !important;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.tienda-titulo {
+    font-size: 26px;
+    color: #e60073;
+    margin-bottom: 10px;
+}
+
+.tienda-descripcion {
+    font-size: 18px;
+    color: #ccc;
+    margin: 30px auto; /* Aumenta el margen superior e inferior */
+    max-width: 600px; /* Limita el ancho para una mejor lectura */
+    text-align: center; /* Alinea el texto al centro */
+    line-height: 1.6; /* Mejora la legibilidad */
+}
+
+
+.tienda-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tienda-item {
+    background-color: #2b0808;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(255, 0, 255, 0.2);
+}
+
+.tienda-img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.tienda-nombre {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #ff66b2;
+}
+
+.tienda-detalle {
+    font-size: 14px;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+.tienda-precio {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e60073;
+}
+
+.tienda-boton {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.tienda-compra {
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 50px;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.tienda-compra i {
+    margin-right: 8px;
+}
+
+.tienda-compra:hover {
+    background-color: #1ebe5d;
+}

@@ -1019,23 +1019,27 @@ p{
 .tienda-container {
     padding-top: 150px !important;
     text-align: center;
-    background-color: #1a1a1a;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('/img/fondoreglas.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     color: #fff;
     padding: 20px;
     border-radius: 10px;
 }
 
 .tienda-titulo {
-    font-size: 26px;
-    color: #e60073;
+    font-size: 46px;
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
 .tienda-descripcion {
-    font-size: 18px;
-    color: #ccc;
-    margin: 30px auto; /* Aumenta el margen superior e inferior */
-    max-width: 600px; /* Limita el ancho para una mejor lectura */
+    font-size: 22px;
+    color: #ffffff;
+    margin: 60px auto; /* Aumenta el margen superior e inferior */
+    max-width: 1900px; /* Limita el ancho para una mejor lectura */
     text-align: center; /* Alinea el texto al centro */
     line-height: 1.6; /* Mejora la legibilidad */
 }
@@ -1045,12 +1049,12 @@ p{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 70px;
 }
 
 .tienda-item {
     background-color: #2b0808;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 15px;
     width: 200px;
     text-align: center;
@@ -1063,14 +1067,14 @@ p{
 }
 
 .tienda-nombre {
-    font-size: 18px;
+    font-size: 20px;
     margin: 10px 0;
     color: #ff66b2;
 }
 
 .tienda-detalle {
-    font-size: 14px;
-    color: #ddd;
+    font-size: 16px;
+    color: #ffffff;
     margin-bottom: 10px;
 }
 

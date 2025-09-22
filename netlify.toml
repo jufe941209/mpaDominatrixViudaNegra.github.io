@@ -1,0 +1,11 @@
+[build]
+  publish = "."
+  command = "echo 'No build command needed for PHP'"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.php"
+  status = 200
+
+[build.environment]
+  PHP_VERSION = "8.2"

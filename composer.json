@@ -1,0 +1,11 @@
+{
+    "name": "viuda-negra/website",
+    "description": "Dominatrix Viuda Negra Website",
+    "type": "project",
+    "require": {
+        "php": ">=8.1"
+    },
+    "scripts": {
+        "start": "php -S 0.0.0.0:$PORT"
+    }
+}

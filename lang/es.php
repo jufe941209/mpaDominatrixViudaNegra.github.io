@@ -13,9 +13,9 @@ $lang = [
     'nav_press' => 'PRENSA',
     
     // Servicios
-    'services_presencial' => 'Sesiones presenciales',
-    'services_virtual' => 'Sesiones virtuales',
-    'services_webcam' => 'Sección Webcam',
+    'services_presencial' => 'Servicios presenciales',
+    'services_virtual' => 'Servicios virtuales',
+    'services_webcam' => 'Servicios Webcam',
     'services_shows' => 'Shows para eventos',
     'services_workshops' => 'Talleres y eventos',
     

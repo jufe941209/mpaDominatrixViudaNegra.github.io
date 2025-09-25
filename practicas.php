@@ -1,486 +1,393 @@
 <?php include 'includes/header.php'; ?>
 
-        <!-- Navbar & Hero End -->
+<style>
+/* Estilos para la página de prácticas */
+.practicas-page {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.85), rgba(183, 35, 39, 0.3), rgba(0, 0, 0, 0.9)), url('img/hero-bg.png.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 120px;
+}
 
-        <!-- PetPlay -->
+.practicas-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 80%, rgba(183, 35, 39, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+    z-index: 1;
+}
 
-        <!--Imagen Seccion About-->
-       <!-- Galeria -->
-<div class="container-fluid galeria1 py-1">
-    <div class="container py-1">
-        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-        </div>
-        <div class="tab-class text-center">
-            <h2 class="FetText mb-4"><?php echo t('practicas_feet_title'); ?></h2>
-            <div class="tab-content">
-                <div id="tab-1" class="tab-pane fade show p-0 active">
-                    <div class="row g-0 justify-content-center"> <!-- g-0 para eliminar márgenes entre columnas -->
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/pies/pies1.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/pies/pies1.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/pies/pies2.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/pies/pies2.jpg" data-lightbox="destination-2"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/pies/pies3.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/pies/pies3.jpg" data-lightbox="destination-3"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/pies/pies4.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/pies/pies4.jpg" data-lightbox="destination-4"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/pies/pies5.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/pies/pies5.jpg" data-lightbox="destination-5"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/pies/pies6.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/pies/pies6.jpg" data-lightbox="destination-5"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
+.practicas-content {
+    position: relative;
+    z-index: 2;
+    padding: 40px 0;
+}
 
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/pies/pies8.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/pies/pies8.jpg" data-lightbox="destination-5"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
+/* Estilos para las secciones */
+.gallery-section {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    margin: 30px 0;
+    padding: 40px 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: fadeInUp 0.8s ease-out;
+    position: relative;
+}
+
+.gallery-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(183, 35, 39, 0.1), rgba(0, 0, 0, 0.2));
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.gallery-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.section-title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #b72327, transparent);
+    border-radius: 2px;
+}
+
+/* Estilos para las imágenes */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.image-card {
+    position: relative;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+}
+
+.image-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover img {
+    transform: scale(1.1);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(183, 35, 39, 0.8), rgba(0, 0, 0, 0.6));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-card:hover .image-overlay {
+    opacity: 1;
+}
+
+.search-icon {
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .practicas-page {
+        padding-top: 100px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+    
+    .image-card {
+        height: 200px;
+    }
+}
+
+/* Lightbox styles */
+.lb-data .lb-close {
+    background: #b72327 !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    line-height: 40px !important;
+    text-align: center !important;
+    font-size: 20px !important;
+    color: white !important;
+    text-shadow: none !important;
+}
+
+.lb-overlay {
+    background: rgba(0, 0, 0, 0.9) !important;
+}
+
+.lb-image {
+    border: 3px solid #b72327 !important;
+    border-radius: 10px !important;
+}
+
+/* Footer protection */
+.footer, .copyright {
+    background: #000000 !important;
+    background-color: #000000 !important;
+}
+
+.footer *, .copyright * {
+    background: inherit !important;
+    background-color: inherit !important;
+}
+</style>
+
+<!-- Página de Prácticas -->
+<div class="practicas-page">
+    <div class="practicas-content">
+        <div class="container">
+
+            <!-- Sección: Fetiche de Pies -->
+            <section class="gallery-section">
+                <h1 class="section-title"><?php echo t('practicas_feet_title'); ?></h1>
+                <div class="image-grid">
+                    <?php for($i = 1; $i <= 10; $i++): ?>
+                        <div class="image-card">
+                            <img src="img/pies/pies<?php echo $i; ?>.jpg" alt="Pies <?php echo $i; ?>">
+                            <div class="image-overlay">
+                                <a href="img/pies/pies<?php echo $i; ?>.jpg" data-lightbox="practicas" title="Ver imagen en tamaño completo">
+                                    <i class="fa fa-search-plus search-icon"></i>
+                                </a>
                             </div>
                         </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/pies/pies9.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/pies/pies9.jpg" data-lightbox="destination-5"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/pies/pies10.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/pies/pies10.jpg" data-lightbox="destination-5"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Repite los bloques de imágenes según sea necesario -->
-                    </div>
+                    <?php endfor; ?>
                 </div>
-            </div>
+            </section>
+
+            <!-- Sección: Fishnet Fetish -->
+            <section class="gallery-section">
+                <h1 class="section-title"><?php echo t('practicas_fishnet_title'); ?></h1>
+                <div class="image-grid">
+                    <?php for($i = 1; $i <= 18; $i++): ?>
+                        <div class="image-card">
+                            <img src="img/fishnets/fishnets<?php echo $i; ?>.jpg" alt="Fishnet <?php echo $i; ?>">
+                            <div class="image-overlay">
+                                <a href="img/fishnets/fishnets<?php echo $i; ?>.jpg" data-lightbox="practicas" title="Ver imagen en tamaño completo">
+                                    <i class="fa fa-search-plus search-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    <?php endfor; ?>
+                </div>
+            </section>
+
+            <!-- Sección: Smell Fetish -->
+            <section class="gallery-section">
+                <h1 class="section-title"><?php echo t('practicas_smell_title'); ?></h1>
+                <div class="image-grid">
+                    <?php for($i = 1; $i <= 4; $i++): ?>
+                        <div class="image-card">
+                            <img src="img/smell/smell<?php echo $i; ?>.jpg" alt="Smell <?php echo $i; ?>">
+                            <div class="image-overlay">
+                                <a href="img/smell/smell<?php echo $i; ?>.jpg" data-lightbox="practicas" title="Ver imagen en tamaño completo">
+                                    <i class="fa fa-search-plus search-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    <?php endfor; ?>
+                </div>
+            </section>
+
+            <!-- Sección: Lick my boots -->
+            <section class="gallery-section">
+                <h1 class="section-title"><?php echo t('practicas_boots_title'); ?></h1>
+                <div class="image-grid">
+                    <?php for($i = 1; $i <= 7; $i++): ?>
+                        <div class="image-card">
+                            <img src="img/boots/boots<?php echo $i; ?>.jpg" alt="Boots <?php echo $i; ?>">
+                            <div class="image-overlay">
+                                <a href="img/boots/boots<?php echo $i; ?>.jpg" data-lightbox="practicas" title="Ver imagen en tamaño completo">
+                                    <i class="fa fa-search-plus search-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    <?php endfor; ?>
+                </div>
+            </section>
+
+            <!-- Sección: Nylon Fetish -->
+            <section class="gallery-section">
+                <h1 class="section-title"><?php echo t('practicas_nylon_title'); ?></h1>
+                <div class="image-grid">
+                    <?php for($i = 1; $i <= 6; $i++): ?>
+                        <div class="image-card">
+                            <img src="img/nylon/nylon<?php echo $i; ?>.jpg" alt="Nylon <?php echo $i; ?>">
+                            <div class="image-overlay">
+                                <a href="img/nylon/nylon<?php echo $i; ?>.jpg" data-lightbox="practicas" title="Ver imagen en tamaño completo">
+                                    <i class="fa fa-search-plus search-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    <?php endfor; ?>
+                </div>
+            </section>
+
+            <!-- Sección: Smoking Fetish -->
+            <section class="gallery-section">
+                <h1 class="section-title"><?php echo t('practicas_smoking_title'); ?></h1>
+                <div class="image-grid">
+                    <?php for($i = 1; $i <= 3; $i++): ?>
+                        <div class="image-card">
+                            <img src="img/smoking/smoking<?php echo $i; ?>.jpg" alt="Smoking <?php echo $i; ?>">
+                            <div class="image-overlay">
+                                <a href="img/smoking/smoking<?php echo $i; ?>.jpg" data-lightbox="practicas" title="Ver imagen en tamaño completo">
+                                    <i class="fa fa-search-plus search-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    <?php endfor; ?>
+                </div>
+            </section>
+
+            <!-- Sección: Chastity -->
+            <section class="gallery-section">
+                <h1 class="section-title">CHASTITY</h1>
+                <div class="image-grid">
+                    <?php for($i = 1; $i <= 4; $i++): ?>
+                        <div class="image-card">
+                            <img src="img/chastity/castidad<?php echo $i; ?>.jpg" alt="Chastity <?php echo $i; ?>">
+                            <div class="image-overlay">
+                                <a href="img/chastity/castidad<?php echo $i; ?>.jpg" data-lightbox="practicas" title="Ver imagen en tamaño completo">
+                                    <i class="fa fa-search-plus search-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    <?php endfor; ?>
+                </div>
+            </section>
+
         </div>
     </div>
 </div>
-<!-- Imagenes inicio fin -->
 
-<!-- Galeria 2 -->
-<div class="container-fluid fishnet py-1">
-    <div class="container py-1">
-        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-        </div>
-        <div class="tab-class text-center">
-            <h1 class="FetText mb-4"><?php echo t('practicas_fishnet_title'); ?></h1>
-            <div class="tab-content">
-                <div id="tab-1" class="tab-pane fade show p-0 active">
-                    <div class="row g-0 justify-content-center"> <!-- g-0 para eliminar márgenes entre columnas -->
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/fishnets/fishnets1.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/fishnets/fishnets1.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/fishnets/fishnets3.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/fishnets/fishnets3.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/fishnets/fishnets4.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/fishnets/fishnets4.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/fishnets/fishnets5.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/fishnets/fishnets5.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/fishnets/fishnets6.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/fishnets/fishnets6.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/fishnets/fishnets7.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/fishnets/fishnets7.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/fishnets/fishnets8.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/fishnets/fishnets8.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/fishnets/fishnets9.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/fishnets/fishnets9.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/fishnets/fishnets10.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/fishnets/fishnets10.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                       
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/fishnets/fishnets12.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/fishnets/fishnets12.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                       
-                       
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/fishnets/fishnets15.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/fishnets/fishnets15.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/fishnets/fishnets18.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/fishnets/fishnets18.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Repite los bloques de imágenes según sea necesario -->
-                    </div>
+<!-- Script para lightbox -->
+<script>
+$(document).ready(function() {
+    // Inicializar lightbox
+    if (typeof lightbox !== 'undefined') {
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'showImageNumberLabel': false,
+            'albumLabel': 'Imagen %1 de %2'
+        });
+    }
+    
+    // Fallback personalizado si lightbox no está disponible
+    $('[data-lightbox]').on('click', function(e) {
+        e.preventDefault();
+        const imageSrc = $(this).attr('href');
+        const modal = $(`
+            <div class="custom-lightbox" style="
+                position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+                background: rgba(0,0,0,0.9); z-index: 9999; display: flex; 
+                align-items: center; justify-content: center;
+            ">
+                <div style="position: relative; max-width: 90%; max-height: 90%;">
+                    <img src="${imageSrc}" style="max-width: 100%; max-height: 100%; border-radius: 10px;">
+                    <button class="close-btn" style="
+                        position: absolute; top: -40px; right: 0; background: #b72327; 
+                        color: white; border: none; border-radius: 50%; width: 40px; 
+                        height: 40px; font-size: 20px; cursor: pointer;
+                    ">×</button>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<!-- End Galeria 2 -->
-
-     <!-- Galeria 3 -->
-<div class="container-fluid galeria1 py-1">
-    <div class="container py-1">
-        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-            <h1 class="FetText mb-4"><?php echo t('practicas_smell_title'); ?></h1>
-        </div>
-        <div class="tab-class text-center">
-            
-            <div class="tab-content">
-                <div id="tab-1" class="tab-pane fade show p-0 active">
-                    <div class="row g-0 justify-content-center"> <!-- g-0 para eliminar márgenes entre columnas -->
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/smell/smell1.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/smell/smell1.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/smell/smell2.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/smell/smell2.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/smell/smell3.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/smell/smell3.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/smell/smell4.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/smell/smell4.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        <!-- Repite los bloques de imágenes según sea necesario -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Galeria 3 fin -->
-
-<!-- Galeria 4 -->
-<div class="container-fluid fishnet py-1">
-    <div class="container py-1">
-        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-        </div>
-        <div class="tab-class text-center">
-            <h1 class="FetText mb-4"><?php echo t('practicas_boots_title'); ?></h1>
-            <div class="tab-content">
-                <div id="tab-1" class="tab-pane fade show p-0 active">
-                    <div class="row g-0 justify-content-center"> <!-- g-0 para eliminar márgenes entre columnas -->
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/boots/boots1.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/boots/boots1.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/boots/boots2.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/boots/boots2.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/boots/boots3.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/boots/boots3.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/boots/boots5.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/boots/boots5.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/boots/boots6.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/boots/boots6.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/boots/boots7.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/boots/boots7.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Repite los bloques de imágenes según sea necesario -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Galeria 4 -->
-
-<!-- Galeria 5 -->
-<div class="container-fluid galeria1 py-1">
-    <div class="container py-1">
-        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-        </div>
-        <div class="tab-class text-center">
-            <h1 class="FetText mb-4"><?php echo t('practicas_nylon_title'); ?></h1>
-            <div class="tab-content">
-                <div id="tab-1" class="tab-pane fade show p-0 active">
-                    <div class="row g-0 justify-content-center"> <!-- g-0 para eliminar márgenes entre columnas -->
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/nylon/nylon1.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/nylon/nylon1.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/nylon/nylon2.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/nylon/nylon2.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/nylon/nylon3.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/nylon/nylon3.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/nylon/nylon4.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/nylon/nylon4.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/nylon/nylon5.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/nylon/nylon5.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                        <!-- Repite los bloques de imágenes según sea necesario -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Galeria 5 -->
-
-<!-- Galeria 6 -->
-<div class="container-fluid fishnet py-1">
-    <div class="container py-1">
-        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-        </div>
-        <div class="tab-class text-center">
-            <h1 class="FetText mb-4"><?php echo t('practicas_smoking_title'); ?></h1>
-            <div class="tab-content">
-                <div id="tab-1" class="tab-pane fade show p-0 active">
-                    <div class="row g-0 justify-content-center"> <!-- g-0 para eliminar márgenes entre columnas -->
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/smoking/smoking1.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/smoking/smoking1.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/smoking/smoking2.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/smoking/smoking2.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded" src="img/smoking/smoking3.jpg" alt="">
-                                <div class="destination-overlay p-4"></div>
-                                <div class="search-icon">
-                                    <a href="img/smoking/smoking3.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                        <!-- Repite los bloques de imágenes según sea necesario -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Galeria 4 -->
-        <!-- About End -->
+        `);
+        
+        $('body').append(modal);
+        modal.fadeIn();
+        
+        modal.on('click', function(e) {
+            if (e.target === this || $(e.target).hasClass('close-btn')) {
+                modal.fadeOut(function() {
+                    modal.remove();
+                });
+            }
+        });
+        
+        $(document).on('keyup', function(e) {
+            if (e.keyCode === 27) {
+                modal.fadeOut(function() {
+                    modal.remove();
+                });
+            }
+        });
+    });
+});
+</script>
 
 <?php include 'includes/footer.php'; ?>

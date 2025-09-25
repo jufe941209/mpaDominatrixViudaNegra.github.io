@@ -10,7 +10,6 @@
         <div class="dropdown-menu m-0">
             <a href="<?php echo get_config('navigation')['servicios']['presenciales']; ?>" class="dropdown-item"><?php echo t('services_presencial'); ?></a>
             <a href="<?php echo get_config('navigation')['servicios']['virtuales']; ?>" class="dropdown-item"><?php echo t('services_virtual'); ?></a>
-            <a href="<?php echo get_config('navigation')['servicios']['webcam']; ?>" class="dropdown-item"><?php echo t('services_webcam'); ?></a>
             <a href="<?php echo get_config('navigation')['servicios']['shows']; ?>" class="dropdown-item"><?php echo t('services_shows'); ?></a>
             <a href="<?php echo get_config('navigation')['servicios']['talleres']; ?>" class="dropdown-item"><?php echo t('services_workshops'); ?></a>
         </div>

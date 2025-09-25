@@ -798,8 +798,10 @@ p{
 }
 
 .galeria1 .tab-class .tab-content .tab-pane .destination-img:hover {
-    transform: scale(2); /* Aumentar tamaño del contenedor */
+    transform: scale(1.05); /* Efecto sutil de zoom */
     z-index: 10; /* Asegurarse de que el contenedor agrandado esté en frente */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5) !important;
 }
 
 @media (max-width: 768px) {
@@ -892,8 +894,10 @@ p{
 }
 
 .fishnet .tab-class .tab-content .tab-pane .destination-img:hover {
-    transform: scale(2); /* Aumentar tamaño del contenedor */
+    transform: scale(1.05); /* Efecto sutil de zoom */
     z-index: 10; /* Asegurarse de que el contenedor agrandado esté en frente */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5) !important;
 }
 
 @media (max-width: 768px) {

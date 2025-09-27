@@ -136,22 +136,26 @@
 })(jQuery);
 
 
-// Llena el formulario
-// JavaScript para mostrar/ocultar el formulario al hacer clic en el botón
-document.getElementById("openFormBtn").addEventListener("click", function() {
-    var formContainer = document.querySelector(".form-container");
-    if (formContainer.style.display === "none") {
-        formContainer.style.display = "block";
-        formContainer.innerHTML = `
-            <h2>Formulario de Solicitud de Sesión</h2>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf0xyhl4ZdfquSP5OGg8rBl8AL7D7IyDE-37FLTyZ2hJhU0Xg/viewform" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
-        `;
-    } else {
-        formContainer.style.display = "none";
-        formContainer.innerHTML = ""; // Limpiar el contenido si se oculta
-    }
-});
-
+    // Llena el formulario
+    // JavaScript para mostrar/ocultar el formulario al hacer clic en el botón
+    $(document).ready(function() {
+        $("#openFormBtn").on("click", function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            var formContainer = $(".form-container");
+            if (formContainer.is(":hidden")) {
+                formContainer.show();
+                formContainer.html(`
+                    <h2>Formulario de Solicitud de Sesión</h2>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf0xyhl4ZdfquSP5OGg8rBl8AL7D7IyDE-37FLTyZ2hJhU0Xg/viewform" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
+                `);
+            } else {
+                formContainer.hide();
+                formContainer.html(""); // Limpiar el contenido si se oculta
+            }
+        });
+    });
 
 document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll('.destination-img');

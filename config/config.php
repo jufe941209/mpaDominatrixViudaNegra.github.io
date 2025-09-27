@@ -21,7 +21,6 @@ $site_config = [
     // Navegación
     'navigation' => [
         'home' => 'index.php',
-        'reglas' => 'reglas.php',
         'practicas' => 'practicas.php',
         'servicios' => [
             'presenciales' => 'presenciales.php',
@@ -73,10 +72,7 @@ function set_language($lang) {
     }
 }
 
-function t($key) {
-    global $lang;
-    return isset($lang[$key]) ? $lang[$key] : $key;
-}
+// Función t() movida más abajo para evitar conflictos
 
 // Inicializar sesión si no existe (solo si no se han enviado headers)
 if (session_status() == PHP_SESSION_NONE && !headers_sent()) {
@@ -92,4 +88,39 @@ if (file_exists($lang_file)) {
     // Fallback al español si no existe el archivo
     include __DIR__ . "/../lang/es.php";
 }
+
+// Incluir sistema de traducción simple y funcional
+include __DIR__ . "/../lib/simple_translator.php";
+
+// Función mejorada de traducción que incluye traducción automática
+function t($key, $auto_translate = false) {
+    global $lang, $current_lang;
+    
+    // Primero intentar obtener traducción del sistema de idiomas
+    if (isset($lang[$key])) {
+        return $lang[$key];
+    }
+    
+    // Si no existe y se solicita traducción automática
+    if ($auto_translate && $current_lang === 'en') {
+        return auto_translate($key, 'en', 'es');
+    }
+    
+    // Fallback: devolver la clave
+    return $key;
+}
+
+// Función para traducir contenido dinámico
+function translate_content($content) {
+    global $current_lang;
+    
+    if ($current_lang === 'es') {
+        return $content;
+    }
+    
+    return translate_dynamic_content($content, $current_lang);
+}
+
+// No usar output buffer para evitar problemas con imágenes y formato
+// La traducción se maneja directamente en el frontend
 ?>

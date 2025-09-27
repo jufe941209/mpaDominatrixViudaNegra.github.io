@@ -27,6 +27,9 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        
+        <!-- Simple Auto Translate Script -->
+        <script src="js/simple-translate.js"></script>
     </head>
 
     <body>

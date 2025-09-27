@@ -2,7 +2,6 @@
 
 <div class="navbar-nav ms-auto py-0">
     <a href="<?php echo get_config('navigation')['home']; ?>" class="nav-item nav-link active"><?php echo t('nav_home'); ?></a>
-    <a href="<?php echo get_config('navigation')['reglas']; ?>" class="nav-item nav-link active"><?php echo t('nav_rules'); ?></a>
     <a href="<?php echo get_config('navigation')['practicas']; ?>" class="nav-item nav-link active"><?php echo t('nav_practices'); ?></a>
 
     <div class="nav-item dropdown">

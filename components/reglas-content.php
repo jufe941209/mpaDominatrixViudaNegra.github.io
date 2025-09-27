@@ -20,7 +20,7 @@
                         </ul>
                         <!-- Botón para abrir el formulario -->
                         <div class="mt-4">
-                            <button id="openFormBtn" class="btn btn-primary">¡Solicita una sesión aquí, doble click!</button>
+                            <button id="openFormBtn" class="btn btn-primary">¡Solicita una sesión aquí!</button>
                         </div>
                     </div>
                 </div>

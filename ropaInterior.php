@@ -283,6 +283,26 @@
             <h1 class="ropa-title"><?php echo t('shop_underwear_title'); ?></h1>
             <p class="ropa-subtitle"><?php echo t('shop_underwear_description'); ?></p>
             
+            <!-- Galería de Ropa Interior Usada -->
+            <div class="ejemplo-section">
+                <h2 class="ejemplo-title">Galería de Ropa Interior Usada</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="ejemplo-image">
+                            <img src="img/tienda/interiorUsada1.jpg" alt="Ropa Interior Usada 1" class="img-fluid" style="border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.3);">
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="ejemplo-image">
+                            <img src="img/tienda/interiorUsada2.jpg" alt="Ropa Interior Usada 2" class="img-fluid" style="border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.3);">
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; color: #666; font-style: italic; margin-top: 1rem;">
+                    Prendas auténticas usadas por la Dominatrix Viuda Negra durante sesiones completas
+                </p>
+            </div>
+            
             <!-- Sección de Ejemplo -->
             <div class="ejemplo-section">
                 <h2 class="ejemplo-title">Ejemplo de Producto</h2>

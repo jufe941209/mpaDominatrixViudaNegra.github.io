@@ -129,6 +129,15 @@ $lang = [
     'presenciales_additional_services' => 'ADDITIONAL SERVICES',
     'presenciales_fuck_machine' => 'FUCK MACHINE',
     'presenciales_fuck_machine_description' => 'Experience the intensity of the Fuck Machine in a unique session. This powerful machine will take you to the limit with its precise and controlled movements, creating a mechanical pleasure experience that will challenge all your senses.',
+    'presenciales_sissys_rental' => 'SISSYS RENTAL',
+    'presenciales_sissys_rental_description' => 'Discover the pleasure of having your own personalized sissy for your most intimate fantasies. Our sissys are specially trained to satisfy your deepest desires, from role-playing to advanced submission practices. Each sissy is unique and prepared to provide you with a completely personalized and memorable experience.',
+    
+    // Sesiones Múltiples
+    'presenciales_multiples_title' => 'MULTIPLE SESSIONS',
+    'presenciales_multiples_subtitle' => 'Exclusive Group Experiences',
+    'presenciales_multiples_warning' => '⚠️ IMPORTANT: Every session involving more people has additional cost and availability must be checked and reserved without exceptions with 50% advance payment.',
+    'presenciales_multiples_description' => 'Immerse yourself in unique group experiences where the power dynamics multiply. Sessions designed for groups seeking to explore their deepest fantasies in a controlled and professional environment.',
+    'presenciales_multiples_gallery' => 'Multiple Sessions Gallery',
     
     // Servicios Virtuales
     'virtuales_title' => 'VIRTUAL SERVICES',

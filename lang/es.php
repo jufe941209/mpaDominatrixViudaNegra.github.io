@@ -129,6 +129,15 @@ $lang = [
     'presenciales_additional_services' => 'SERVICIOS ADICIONALES',
     'presenciales_fuck_machine' => 'FUCK MACHINE',
     'presenciales_fuck_machine_description' => 'Experimenta la intensidad de la Fuck Machine en una sesión única. Esta poderosa máquina te llevará al límite con sus movimientos precisos y controlados, creando una experiencia de placer mecánico que desafiará todos tus sentidos.',
+    'presenciales_sissys_rental' => 'ALQUILER DE SISSYS',
+    'presenciales_sissys_rental_description' => 'Descubre el placer de tener tu propia sissy personalizada para tus fantasías más íntimas. Nuestras sissys están entrenadas especialmente para satisfacer tus deseos más profundos, desde juegos de rol hasta prácticas de sumisión avanzada. Cada sissy es única y está preparada para brindarte una experiencia completamente personalizada y memorable.',
+    
+    // Sesiones Múltiples
+    'presenciales_multiples_title' => 'SESIONES MÚLTIPLES',
+    'presenciales_multiples_subtitle' => 'Experiencias Grupales Exclusivas',
+    'presenciales_multiples_warning' => '⚠️ IMPORTANTE: Toda sesión involucrando más personas tiene costo adicional y se debe consultar disponibilidad y reservar sin excepciones con el 50% de anticipo.',
+    'presenciales_multiples_description' => 'Sumérgete en experiencias grupales únicas donde la dinámica de poder se multiplica. Sesiones diseñadas para grupos que buscan explorar sus fantasías más profundas en un ambiente controlado y profesional.',
+    'presenciales_multiples_gallery' => 'Galería de Sesiones Múltiples',
     
     // Servicios Virtuales
     'virtuales_title' => 'SERVICIOS VIRTUALES',

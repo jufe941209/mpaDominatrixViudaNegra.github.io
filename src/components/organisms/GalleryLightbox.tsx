@@ -1,6 +1,10 @@
-import Lightbox from 'yet-another-react-lightbox';
-import 'yet-another-react-lightbox/styles.css';
+import { lazy, Suspense } from 'react';
 import type { GalleryImage } from '../../types/content';
+
+// The lightbox library only needs to load the moment someone actually opens
+// an image, not as part of every page's initial bundle (it sits on the home
+// page too, which loads eagerly).
+const GalleryLightboxImpl = lazy(() => import('./GalleryLightboxImpl'));
 
 interface GalleryLightboxProps {
   images: GalleryImage[];
@@ -9,13 +13,11 @@ interface GalleryLightboxProps {
 }
 
 export function GalleryLightbox({ images, index, onClose }: GalleryLightboxProps) {
+  if (index < 0) return null;
+
   return (
-    <Lightbox
-      open={index >= 0}
-      close={onClose}
-      index={index}
-      slides={images.map((img) => ({ src: img.src, alt: img.alt }))}
-      styles={{ container: { backgroundColor: 'rgba(0,0,0,0.92)' } }}
-    />
+    <Suspense fallback={null}>
+      <GalleryLightboxImpl images={images} index={index} onClose={onClose} />
+    </Suspense>
   );
 }

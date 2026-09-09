@@ -1,9 +1,17 @@
 import { Outlet, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import { TopBar } from '../organisms/TopBar';
 import { Navbar } from '../organisms/Navbar';
 import { Footer } from '../organisms/Footer';
 import { BackToTopButton } from '../molecules/BackToTopButton';
+
+function PageFallback() {
+  return (
+    <div className="flex min-h-[60vh] items-center justify-center">
+      <div className="h-10 w-10 animate-spin rounded-full border-4 border-brand/20 border-t-brand" />
+    </div>
+  );
+}
 
 export function PageLayout() {
   const location = useLocation();
@@ -20,7 +28,9 @@ export function PageLayout() {
       <div className="relative flex-1">
         <Navbar overlay={isHome} />
         <main>
-          <Outlet />
+          <Suspense fallback={<PageFallback />}>
+            <Outlet />
+          </Suspense>
         </main>
       </div>
       <Footer />

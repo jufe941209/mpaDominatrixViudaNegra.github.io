@@ -18,6 +18,7 @@ export function PriceCard({ service }: { service: ServiceCard }) {
         <img
           src={service.image}
           alt={t(service.titleKey)}
+          loading="lazy"
           className="mb-4 h-[220px] w-full rounded-2xl object-cover shadow-md"
         />
         <p className="mb-4 flex-1 text-center text-sm leading-relaxed text-gray-600">{t(service.descriptionKey)}</p>

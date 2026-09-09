@@ -50,6 +50,9 @@ export function HeroCarousel() {
           <img
             src={slide.image}
             alt=""
+            loading={i === 0 ? 'eager' : 'lazy'}
+            fetchPriority={i === 0 ? 'high' : 'low'}
+            decoding={i === 0 ? 'sync' : 'async'}
             className={`h-full w-full object-cover transition-transform duration-[6000ms] ease-out ${i === active ? 'scale-105' : 'scale-100'}`}
           />
           <div className="absolute inset-0 flex items-center justify-center bg-black/50 px-4 pt-[60px] text-center">

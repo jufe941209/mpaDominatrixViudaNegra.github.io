@@ -27,8 +27,8 @@ export function RopaInteriorPage() {
           <section className="mb-10 rounded-[20px] border border-white/20 bg-white/95 p-8 shadow-2xl backdrop-blur-sm">
             <h2 className="mb-6 text-center font-heading text-2xl font-bold text-brand">{t('ropaInterior:gallery.title')}</h2>
             <div className="mb-4 grid grid-cols-1 gap-6 sm:grid-cols-2">
-              <img src="/img/tienda/interiorUsada1.jpg" alt="Ropa Interior Usada 1" className="w-full rounded-2xl shadow-lg" />
-              <img src="/img/tienda/interiorUsada2.jpg" alt="Ropa Interior Usada 2" className="w-full rounded-2xl shadow-lg" />
+              <img src="/img/tienda/interiorUsada1.jpg" alt="Ropa Interior Usada 1" loading="lazy" className="w-full rounded-2xl shadow-lg" />
+              <img src="/img/tienda/interiorUsada2.jpg" alt="Ropa Interior Usada 2" loading="lazy" className="w-full rounded-2xl shadow-lg" />
             </div>
             <p className="text-center italic text-gray-600">{t('ropaInterior:gallery.caption')}</p>
           </section>
@@ -38,7 +38,7 @@ export function RopaInteriorPage() {
           <section className="mb-10 rounded-[20px] border border-white/20 bg-white/95 p-8 shadow-2xl backdrop-blur-sm">
             <h2 className="mb-6 text-center font-heading text-2xl font-bold text-brand">{t('ropaInterior:example.title')}</h2>
             <div className="mb-4 flex justify-center">
-              <img src="/img/tienda/interior1.jpg" alt={t('ropaInterior:example.title')} className="max-w-xs rounded-2xl shadow-lg" />
+              <img src="/img/tienda/interior1.jpg" alt={t('ropaInterior:example.title')} loading="lazy" className="max-w-xs rounded-2xl shadow-lg" />
             </div>
             <p className="text-center italic text-gray-600">{t('ropaInterior:example.caption')}</p>
           </section>

@@ -39,7 +39,7 @@ export function PresencialesPage() {
                   <h5 className="font-heading text-lg font-bold text-white">🤖 {t('presenciales:fuck_machine.title')}</h5>
                 </div>
                 <div className="flex flex-1 flex-col items-center px-6 py-8 text-center">
-                  <img src="/img/presenciales/fuckmachine.jpg" alt={t('presenciales:fuck_machine.title')} className="mb-4 h-[220px] w-full rounded-2xl object-cover shadow-md" />
+                  <img src="/img/presenciales/fuckmachine.jpg" alt={t('presenciales:fuck_machine.title')} loading="lazy" className="mb-4 h-[220px] w-full rounded-2xl object-cover shadow-md" />
                   <p className="mb-4 flex-1 text-center text-sm text-gray-600">{t('presenciales:fuck_machine.description')}</p>
                   <div className="mb-4"><Badge>✓ {t('common:available')}</Badge></div>
                   <Button href={buildWhatsAppUrl('Hola, me interesa el servicio de Fuck Machine')} variant="danger">
@@ -56,7 +56,7 @@ export function PresencialesPage() {
                   <h5 className="font-heading text-lg font-bold text-white">👗 {t('presenciales:sissys_rental.title')}</h5>
                 </div>
                 <div className="flex flex-1 flex-col items-center px-6 py-8 text-center">
-                  <img src="/img/presenciales/sissys.jpg" alt={t('presenciales:sissys_rental.title')} className="mb-4 h-[220px] w-full rounded-2xl object-cover shadow-md" />
+                  <img src="/img/presenciales/sissys.jpg" alt={t('presenciales:sissys_rental.title')} loading="lazy" className="mb-4 h-[220px] w-full rounded-2xl object-cover shadow-md" />
                   <p className="mb-4 flex-1 text-center text-sm text-gray-600">{t('presenciales:sissys_rental.description')}</p>
                   <div className="mb-4"><Badge>✓ {t('common:available')}</Badge></div>
                   <Button href={buildWhatsAppUrl('Hola, me interesa el servicio de Alquiler de Sissys')} variant="danger">

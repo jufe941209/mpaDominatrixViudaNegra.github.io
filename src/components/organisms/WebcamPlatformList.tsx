@@ -16,7 +16,7 @@ export function WebcamPlatformList() {
             } ${platform.imageOnLeft ? '' : 'md:flex-row-reverse'}`}
           >
             <div className="flex flex-1 items-center justify-center">
-              <img src={platform.logo} alt={platform.name} className="max-h-[200px] rounded-lg shadow-md" />
+              <img src={platform.logo} alt={platform.name} loading="lazy" className="max-h-[200px] rounded-lg shadow-md" />
             </div>
             <div className="flex flex-1 flex-col items-center gap-4 text-center">
               <p className="text-center">{t(platform.descriptionKey)}</p>

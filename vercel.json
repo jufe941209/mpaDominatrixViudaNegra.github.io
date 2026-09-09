@@ -1,0 +1,23 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "redirects": [
+    { "source": "/index.php", "destination": "/", "permanent": true },
+    { "source": "/practicas.php", "destination": "/practicas", "permanent": true },
+    { "source": "/presenciales.php", "destination": "/presenciales", "permanent": true },
+    { "source": "/virtuales.php", "destination": "/virtuales", "permanent": true },
+    { "source": "/talleres.php", "destination": "/talleres", "permanent": true },
+    { "source": "/prensa.php", "destination": "/prensa", "permanent": true },
+    { "source": "/profesionales.php", "destination": "/profesionales", "permanent": true },
+    { "source": "/sesiones.php", "destination": "/sesiones", "permanent": true },
+    { "source": "/mazmorra.php", "destination": "/mazmorra", "permanent": true },
+    { "source": "/sexshop.php", "destination": "/sexshop", "permanent": true },
+    { "source": "/listaDeDeseos.php", "destination": "/lista-deseos", "permanent": true },
+    { "source": "/shows.php", "destination": "/shows", "permanent": true },
+    { "source": "/eventos.php", "destination": "/eventos", "permanent": true },
+    { "source": "/packages.php", "destination": "/packages", "permanent": true },
+    { "source": "/ropaInterior.php", "destination": "/ropa-interior", "permanent": true },
+    { "source": "/capacitaciones.php", "destination": "/talleres", "permanent": true }
+  ],
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}

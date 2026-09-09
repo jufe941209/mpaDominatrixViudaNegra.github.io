@@ -1,0 +1,58 @@
+import type { ServiceCard } from '../types/content';
+
+export const virtualesServices: ServiceCard[] = [
+  {
+    id: 'video-domination',
+    titleKey: 'virtuales:services.video_domination.title',
+    descriptionKey: 'virtuales:services.video_domination.description',
+    image: '/img/virtuales/llamadaDominacion.jpg',
+    emoji: '🎥',
+    buttonVariant: 'danger',
+    whatsappMessage: 'Hola, me interesa el servicio de Video Llamada Dominación',
+  },
+  {
+    id: 'video-submission',
+    titleKey: 'virtuales:services.video_submission.title',
+    descriptionKey: 'virtuales:services.video_submission.description',
+    image: '/img/virtuales/llamadaSumicion.png',
+    emoji: '🎥',
+    buttonVariant: 'danger',
+    whatsappMessage: 'Hola, me interesa el servicio de Video Llamada Sumisión',
+  },
+  {
+    id: 'whatsapp-hot',
+    titleKey: 'virtuales:services.whatsapp_hot.title',
+    descriptionKey: 'virtuales:services.whatsapp_hot.description',
+    image: '/img/virtuales/whatsappCaliente.jpg',
+    emoji: '📱',
+    buttonVariant: 'success',
+    whatsappMessage: 'Hola, me interesa el servicio de WhatsApp Caliente',
+  },
+  {
+    id: 'hot-call',
+    titleKey: 'virtuales:services.hot_call.title',
+    descriptionKey: 'virtuales:services.hot_call.description',
+    image: '/img/virtuales/llamadaCaliente.jpg',
+    emoji: '📞',
+    buttonVariant: 'primary',
+    whatsappMessage: 'Hola, me interesa el servicio de Llamada Caliente',
+  },
+  {
+    id: 'custom-videos',
+    titleKey: 'virtuales:services.custom_videos.title',
+    descriptionKey: 'virtuales:services.custom_videos.description',
+    image: '/img/virtuales/videosPersonalizados.jpg',
+    emoji: '🎬',
+    buttonVariant: 'dark',
+    whatsappMessage: 'Hola, me interesa el servicio de Videos Personalizados',
+  },
+  {
+    id: 'erotic-story',
+    titleKey: 'virtuales:services.erotic_story.title',
+    descriptionKey: 'virtuales:services.erotic_story.description',
+    image: '/img/virtuales/relatoerotico.jpg',
+    emoji: '📖',
+    buttonVariant: 'secondary',
+    whatsappMessage: 'Hola, me interesa el servicio de Relato Erótico',
+  },
+];

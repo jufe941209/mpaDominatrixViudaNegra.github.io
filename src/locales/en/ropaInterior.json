@@ -1,0 +1,39 @@
+{
+  "title": "🖤 Used Underwear Sale 🖤",
+  "description": "Satisfy your darkest desires with our exclusive garments. Each piece tells a unique story, waiting for you.",
+  "gallery": {
+    "title": "Used Underwear Gallery",
+    "caption": "Authentic garments worn by Dominatrix Viuda Negra during complete sessions"
+  },
+  "example": {
+    "title": "Product Example",
+    "caption": "All garments are worn for 1 complete day (24 hours) by Dominatrix Viuda Negra"
+  },
+  "tiers": {
+    "economic": { "title": "Economic Version", "description": "Basic Thong worn by Dominatrix Viuda Negra during a complete session. Perfect to start your collection with an authentic garment with the unique essence of the dominatrix." },
+    "standard": { "title": "Standard Version", "description": "Generic Thong of medium quality, worn by the dominatrix for 24 complete hours. Ideal for those looking for a balanced option between quality and price." },
+    "plus": { "title": "Plus Version", "description": "High quality Brand Lingerie, worn by the dominatrix during a special session. For demanding collectors looking for premium garments with the authentic essence of the dominatrix." }
+  },
+  "consultPrice": "Consult Price",
+  "additionalServices": {
+    "title": "Additional Services",
+    "1_day": { "title": "1 Additional Day", "description": "Usage extension for 24 more hours" },
+    "photo": { "title": "Printed Photo", "description": "With personalized autograph" },
+    "note": { "title": "Personalized Note", "description": "Special message from the dominatrix" },
+    "premium_box": { "title": "Premium Box", "description": "Elegant presentation" },
+    "exclusive_bag": { "title": "Exclusive Bag", "description": "Discreet and secure packaging" }
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "items": [
+      "All garments are worn by Dominatrix Viuda Negra for 24 complete hours",
+      "The client is responsible for shipping costs",
+      "Prices vary according to the selected version and additional services",
+      "Check availability before placing the order",
+      "Discreet and confidential shipping guaranteed",
+      "Authentic products with certificate of use",
+      "Exclusive contact via WhatsApp for inquiries and orders"
+    ]
+  },
+  "mainCta": "Contact via WhatsApp"
+}

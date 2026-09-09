@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes pulse-rule {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+  color-scheme: light;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Jost', ui-sans-serif, system-ui, sans-serif;
+}
+
+p {
+  text-align: left;
+  line-height: 1.7;
+}
+
+::selection {
+  background: #b72327;
+  color: #fff;
+}
+
+a, button {
+  outline-offset: 3px;
+}
+
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid #b72327;
+  outline-offset: 3px;
+  border-radius: 2px;
+}

@@ -1,0 +1,39 @@
+{
+  "title": "🖤 Venta de Ropa Interior Usada 🖤",
+  "description": "Satisface tus deseos más oscuros con nuestras exclusivas prendas. Cada pieza cuenta una historia única, esperando por ti.",
+  "gallery": {
+    "title": "Galería de Ropa Interior Usada",
+    "caption": "Prendas auténticas usadas por la Dominatrix Viuda Negra durante sesiones completas"
+  },
+  "example": {
+    "title": "Ejemplo de Producto",
+    "caption": "Todas las prendas son usadas por 1 día completo (24 horas) por la Dominatrix Viuda Negra"
+  },
+  "tiers": {
+    "economic": { "title": "Versión Económica", "description": "Tanga Básica usada por la Dominatrix Viuda Negra durante una sesión completa. Perfecta para comenzar tu colección con una prenda auténtica y con la esencia única de la dominatrix." },
+    "standard": { "title": "Versión Estándar", "description": "Solo Tanga Genérica de calidad media, usada por la dominatrix durante 24 horas completas. Ideal para aquellos que buscan una opción balanceada entre calidad y precio." },
+    "plus": { "title": "Versión Plus", "description": "Lencería de Marca de alta calidad, usada por la dominatrix durante una sesión especial. Para coleccionistas exigentes que buscan prendas premium con la esencia auténtica de la dominatrix." }
+  },
+  "consultPrice": "Consultar Precio",
+  "additionalServices": {
+    "title": "Servicios Adicionales",
+    "1_day": { "title": "1 Día Adicional", "description": "Extensión de uso por 24 horas más" },
+    "photo": { "title": "Foto Impresa", "description": "Con autógrafo personalizado" },
+    "note": { "title": "Nota Personalizada", "description": "Mensaje especial de la dominatrix" },
+    "premium_box": { "title": "Caja Premium", "description": "Presentación elegante" },
+    "exclusive_bag": { "title": "Bolsa Exclusiva", "description": "Embalaje discreto y seguro" }
+  },
+  "terms": {
+    "title": "Términos y Condiciones",
+    "items": [
+      "Todas las prendas son usadas por la Dominatrix Viuda Negra durante 24 horas completas",
+      "El cliente se encarga del costo del envío",
+      "Los precios varían según la versión y servicios adicionales seleccionados",
+      "Consultar disponibilidad antes de realizar el pedido",
+      "Envío discreto y confidencial garantizado",
+      "Productos auténticos con certificado de uso",
+      "Contacto exclusivo por WhatsApp para consultas y pedidos"
+    ]
+  },
+  "mainCta": "Contactar por WhatsApp"
+}

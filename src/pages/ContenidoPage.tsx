@@ -29,7 +29,10 @@ function ContentSection({ icon, title, description, whatsappMessage, delayMs }: 
 
 export function ContenidoPage() {
   return (
-    <div className="bg-black py-20">
+    <div
+      className="bg-cover bg-center py-20"
+      style={{ backgroundImage: 'linear-gradient(135deg, rgba(0,0,0,0.92), rgba(183,35,39,0.25), rgba(0,0,0,0.95)), url(/img/fondo1.jpg)' }}
+    >
       <div className="mx-auto max-w-[1100px] px-4">
         <Reveal className="mb-12 text-center">
           <h1 className="mb-4 font-heading text-3xl font-bold text-white md:text-4xl">Contenido</h1>

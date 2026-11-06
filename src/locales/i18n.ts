@@ -14,6 +14,7 @@ import esRopaInterior from './es/ropaInterior.json';
 import esConstruction from './es/construction.json';
 import esNotFound from './es/notFound.json';
 import esMazmorra from './es/mazmorra.json';
+import esRubberDollJade from './es/rubberDollJade.json';
 
 import enCommon from './en/common.json';
 import enHome from './en/home.json';
@@ -27,6 +28,7 @@ import enRopaInterior from './en/ropaInterior.json';
 import enConstruction from './en/construction.json';
 import enNotFound from './en/notFound.json';
 import enMazmorra from './en/mazmorra.json';
+import enRubberDollJade from './en/rubberDollJade.json';
 
 export const defaultNS = 'common';
 
@@ -39,7 +41,7 @@ i18next
     defaultNS,
     ns: [
       'common', 'home', 'practicas', 'presenciales', 'virtuales',
-      'talleres', 'profesionales', 'prensa', 'ropaInterior', 'construction', 'notFound', 'mazmorra',
+      'talleres', 'profesionales', 'prensa', 'ropaInterior', 'construction', 'notFound', 'mazmorra', 'rubberDollJade',
     ],
     resources: {
       es: {
@@ -55,6 +57,7 @@ i18next
         construction: esConstruction,
         notFound: esNotFound,
         mazmorra: esMazmorra,
+        rubberDollJade: esRubberDollJade,
       },
       en: {
         common: enCommon,
@@ -69,6 +72,7 @@ i18next
         construction: enConstruction,
         notFound: enNotFound,
         mazmorra: enMazmorra,
+        rubberDollJade: enRubberDollJade,
       },
     },
     interpolation: { escapeValue: false },

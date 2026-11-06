@@ -6,21 +6,10 @@
   "book": "Make your reservation here!",
   "pricing": {
     "title": "Rates per Person",
-    "tiers": [
-      { "label": "1 to 3 people", "price": "$120.000" },
-      { "label": "3 to 6 people", "price": "$80.000" },
-      { "label": "6 or more", "price": "$60.000" }
-    ]
+    "description": "The price per person drops as the group gets bigger. Message me with the number of participants and I'll confirm the exact cost for your workshop."
   },
   "available": {
     "title": "Available Workshops",
-    "items": [
-      "WC Fetish Initiation",
-      "Foot Fetish",
-      "Male Chastity",
-      "Self Bondage",
-      "Findom",
-      "Sissification / Feminization"
-    ]
+    "description": "From beginner to more advanced practices, every workshop is tailored to your team's level. Ask me which one fits best what you're looking for."
   }
 }

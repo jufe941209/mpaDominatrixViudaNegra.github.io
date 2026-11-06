@@ -2,11 +2,15 @@ import { useTranslation } from 'react-i18next';
 import { Icon } from '../atoms/Icon';
 import { Button } from '../atoms/Button';
 import { Reveal } from '../atoms/Reveal';
+import { GalleryLightbox } from './GalleryLightbox';
+import { useLightbox } from '../../hooks/useLightbox';
 import { buildWhatsAppUrl } from '../../lib/whatsapp';
 import { multipleSessionCards } from '../../content/presencialesData';
 
 export function MultipleSessionsSection() {
   const { t } = useTranslation();
+  const lightbox = useLightbox();
+  const lightboxImages = multipleSessionCards.map((card) => ({ src: card.image, alt: t(card.titleKey) }));
 
   return (
     <div className="my-8 rounded-[20px] border-2 border-brand bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] p-6 shadow-2xl md:p-10">
@@ -30,7 +34,9 @@ export function MultipleSessionsSection() {
         {multipleSessionCards.map((card, i) => (
           <Reveal key={card.id} delayMs={i * 80}>
             <div className="overflow-hidden rounded-2xl border-2 border-brand bg-gradient-to-br from-[#2d2d2d] to-[#1a1a1a] shadow-xl transition-transform duration-300 hover:-translate-y-1">
-              <img src={card.image} alt={t(card.titleKey)} loading="lazy" className="aspect-[2/3] w-full object-cover object-top" />
+              <button type="button" onClick={() => lightbox.open(i)} aria-label={`Ver ${t(card.titleKey)}`} className="block w-full">
+                <img src={card.image} alt={t(card.titleKey)} loading="lazy" className="aspect-[2/3] w-full object-cover object-top" />
+              </button>
               <div className="p-5 text-center">
                 <h5 className="mb-1 font-heading font-bold text-brand">{t(card.titleKey)}</h5>
                 <p className="text-center text-sm text-gray-300">{t(card.subtitleKey)}</p>
@@ -46,6 +52,7 @@ export function MultipleSessionsSection() {
           {t('presenciales:multiples.cta')}
         </Button>
       </div>
+      <GalleryLightbox images={lightboxImages} index={lightbox.index} onClose={lightbox.close} />
     </div>
   );
 }

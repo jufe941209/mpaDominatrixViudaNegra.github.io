@@ -6,7 +6,7 @@ import { VideoThumbnail } from '../components/molecules/VideoThumbnail';
 import { VideoModal } from '../components/organisms/VideoModal';
 import { useLightbox } from '../hooks/useLightbox';
 import { eventItems } from '../content/eventItems';
-import { videos, videoPosters } from '../content/videos';
+import { videos } from '../content/videos';
 
 export function EventosPage() {
   const lightbox = useLightbox();
@@ -30,7 +30,7 @@ export function EventosPage() {
 
         <Reveal className="mx-auto mb-12 max-w-5xl rounded-[20px] border border-white/20 bg-black/50 p-6 text-center shadow-2xl backdrop-blur-sm md:p-10">
           <VideoThumbnail
-            posterSrc={videoPosters.home}
+            posterSrc="/img/throne/throne1.jpg"
             alt="Video de la Dominatrix Viuda Negra"
             heightClass="h-[300px] sm:h-[460px]"
             onClick={() => setVideoOpen(true)}

@@ -6,21 +6,10 @@
   "book": "¡Haz tu reserva aquí!",
   "pricing": {
     "title": "Tarifas por Persona",
-    "tiers": [
-      { "label": "1 a 3 personas", "price": "$120.000" },
-      { "label": "3 a 6 personas", "price": "$80.000" },
-      { "label": "6 en adelante", "price": "$60.000" }
-    ]
+    "description": "El valor por persona baja entre más grande sea el grupo. Escríbeme con el número de participantes y te confirmo el costo exacto para tu taller."
   },
   "available": {
     "title": "Talleres Disponibles",
-    "items": [
-      "Iniciación WC Fetish",
-      "Fetiche de Pies",
-      "Castidad Masculina",
-      "Self Bondage",
-      "Findom",
-      "Sissification / Feminización"
-    ]
+    "description": "Desde iniciación hasta prácticas más avanzadas, cada taller se adapta al nivel de tu equipo. Pregúntame cuál se ajusta mejor a lo que buscas."
   }
 }

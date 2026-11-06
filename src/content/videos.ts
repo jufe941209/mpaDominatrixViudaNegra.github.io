@@ -1,5 +1,6 @@
 export const videos = {
   home: 'https://player.mediadelivery.net/play/801001/c3f5baac-3553-40a4-9656-8078506d0d1b',
+  inicio: 'https://player.mediadelivery.net/play/801001/19fa5b5f-1497-444b-a60b-12fa8f7f3c7d',
   presenciales: 'https://player.mediadelivery.net/play/801001/3c98e918-d894-4ee3-bbae-4221a4ae73d9',
   mazmorraJuguetes: 'https://player.mediadelivery.net/play/801001/24e98f21-f846-45e2-9c72-f616850ff89a',
   rubberDollJade: 'https://player.mediadelivery.net/play/801001/32058c9f-1f44-413b-bfe6-c1eb6b16704d',

@@ -37,10 +37,6 @@ export function AboutSection() {
                 <Icon name="fas fa-video" />
                 Servicios Virtuales
               </Button>
-              <Button to="/mazmorra" variant="outline-light">
-                <Icon name="fas fa-dungeon" />
-                Mazmorra / Arsenal
-              </Button>
             </div>
           </div>
         </div>

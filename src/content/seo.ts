@@ -65,7 +65,7 @@ export const seoByPath: Record<string, SeoEntry> = {
   },
   '/rubber-doll-jade': {
     title: `Rubber Doll Jade | ${BRAND}`,
-    description: 'Rubber Doll Jade: una faceta de la Dominatrix Viuda Negra en Bogotá, Colombia.',
+    description: 'Rubber Doll Jade: la muñeca sexual fetichista de látex de la Dominatrix Viuda Negra. Servicio virtual y contenido exclusivo.',
   },
 };
 

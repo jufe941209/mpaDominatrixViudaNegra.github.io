@@ -1,11 +1,25 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Reveal } from '../components/atoms/Reveal';
+import { Icon } from '../components/atoms/Icon';
 import { VideoThumbnail } from '../components/molecules/VideoThumbnail';
 import { VideoModal } from '../components/organisms/VideoModal';
+import { GalleryLightbox } from '../components/organisms/GalleryLightbox';
+import { useLightbox } from '../hooks/useLightbox';
 import { videos } from '../content/videos';
 
+const infographics = [
+  { src: '/img/rubberdoll/limits-es.jpg', srcEn: '/img/rubberdoll/limits-en.jpg', alt: 'Límites de Rubber Doll Jade' },
+  { src: '/img/rubberdoll/practice-es.jpg', srcEn: '/img/rubberdoll/practice-en.jpg', alt: 'Prácticas de Rubber Doll Jade' },
+];
+
 export function RubberDollJadePage() {
+  const { i18n } = useTranslation();
+  const isEnglish = i18n.language?.startsWith('en');
   const [videoOpen, setVideoOpen] = useState(false);
+  const lightbox = useLightbox();
+
+  const lightboxImages = infographics.map((item) => ({ src: isEnglish ? item.srcEn : item.src, alt: item.alt }));
 
   return (
     <>
@@ -15,7 +29,11 @@ export function RubberDollJadePage() {
             className="rounded-2xl p-10 text-center"
             style={{ background: 'linear-gradient(#b72327, rgba(0,0,0,0.8)), url(/img/fondo-webcam.jpg)', backgroundSize: 'cover' }}
           >
-            <h1 className="font-heading text-3xl font-bold text-white md:text-4xl">Rubber Doll Jade</h1>
+            <h1 className="mb-4 font-heading text-3xl font-bold text-white md:text-4xl">Rubber Doll Jade</h1>
+            <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/60 bg-black/40 px-4 py-2 text-sm font-semibold text-white">
+              <Icon name="fas fa-video" />
+              En este rol, solo servicio virtual y contenido. No sesiones presenciales.
+            </div>
           </Reveal>
         </div>
       </div>
@@ -26,8 +44,8 @@ export function RubberDollJadePage() {
             <div className="lg:col-span-5">
               <div className="h-full border-y-[10px] border-brand bg-black p-1">
                 <img
-                  src="/img/rubberdoll/jade2.jpg"
-                  alt="Rubber Doll Jade 1"
+                  src="/img/rubberdoll/jade3.jpg"
+                  alt="Rubber Doll Jade"
                   loading="lazy"
                   className="h-full min-h-[320px] w-full bg-black object-contain"
                 />
@@ -38,7 +56,12 @@ export function RubberDollJadePage() {
               style={{ background: 'linear-gradient(#b72327, rgba(0,0,0,0.85))' }}
             >
               <h2 className="mb-4 font-heading text-3xl font-semibold text-white">Rubber Doll Jade</h2>
-              <p className="text-center text-white/90">Muy pronto encontrarás aquí toda la información sobre esta faceta.</p>
+              <p className="text-center text-white/90">
+                Disfruto de otro rol, interpretando una muñeca sexual fetichista de látex que ama los juguetes
+                sexuales, las BBC, los cornudos, y está abierta a explorar nuevas prácticas. Es un espacio para
+                desarrollar mis fantasías más perversas, acompañándolas de algunas actividades BDSM de sometimiento
+                para hacer más dinámicas y divertidas las transmisiones. Aunque no me considero sumisa como tal.
+              </p>
             </div>
           </div>
         </Reveal>
@@ -64,27 +87,52 @@ export function RubberDollJadePage() {
         <Reveal className="mx-auto max-w-[1320px] px-4">
           <div className="grid grid-cols-1 items-stretch gap-0 lg:grid-cols-12">
             <div
-              className="order-2 flex flex-col justify-center px-6 py-10 text-center lg:order-1 lg:col-span-7"
+              className="order-2 flex flex-col justify-center px-6 py-10 text-center lg:order-1 lg:col-span-5"
               style={{ background: 'linear-gradient(rgba(0,0,0,0.85), #b72327)' }}
             >
-              <h2 className="mb-4 font-heading text-3xl font-semibold text-white">Rubber Doll Jade</h2>
-              <p className="text-center text-white/90">Muy pronto conocerás más sobre esta faceta de la Dominatrix Viuda Negra.</p>
+              <h2 className="mb-4 font-heading text-2xl font-semibold text-white">Mis Límites</h2>
+              <p className="text-center text-white/90">Dale clic a la imagen para verla completa.</p>
             </div>
-            <div className="order-1 lg:order-2 lg:col-span-5">
-              <div className="h-full border-y-[10px] border-brand bg-black p-1">
+            <div className="order-1 lg:order-2 lg:col-span-7">
+              <button type="button" onClick={() => lightbox.open(0)} aria-label={infographics[0].alt} className="block h-full w-full bg-black">
                 <img
-                  src="/img/rubberdoll/jade1.jpg"
-                  alt="Rubber Doll Jade 2"
+                  src={isEnglish ? infographics[0].srcEn : infographics[0].src}
+                  alt={infographics[0].alt}
                   loading="lazy"
-                  className="h-full min-h-[320px] w-full bg-black object-contain"
+                  className="mx-auto h-full max-h-[600px] w-full border-y-[10px] border-brand bg-black object-contain p-1"
                 />
-              </div>
+              </button>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+
+      <div className="bg-black py-16">
+        <Reveal className="mx-auto max-w-[1320px] px-4">
+          <div className="grid grid-cols-1 items-stretch gap-0 lg:grid-cols-12">
+            <div className="lg:col-span-7">
+              <button type="button" onClick={() => lightbox.open(1)} aria-label={infographics[1].alt} className="block h-full w-full bg-black">
+                <img
+                  src={isEnglish ? infographics[1].srcEn : infographics[1].src}
+                  alt={infographics[1].alt}
+                  loading="lazy"
+                  className="mx-auto h-full max-h-[600px] w-full border-y-[10px] border-brand bg-black object-contain p-1"
+                />
+              </button>
+            </div>
+            <div
+              className="flex flex-col justify-center px-6 py-10 text-center lg:col-span-5"
+              style={{ background: 'linear-gradient(#b72327, rgba(0,0,0,0.85))' }}
+            >
+              <h2 className="mb-4 font-heading text-2xl font-semibold text-white">Lo Que Disfruto</h2>
+              <p className="text-center text-white/90">Dale clic a la imagen para verla completa.</p>
             </div>
           </div>
         </Reveal>
       </div>
 
       {videoOpen && <VideoModal url={videos.rubberDollJade} onClose={() => setVideoOpen(false)} />}
+      <GalleryLightbox images={lightboxImages} index={lightbox.index} onClose={lightbox.close} />
     </>
   );
 }

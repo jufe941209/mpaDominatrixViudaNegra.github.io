@@ -6,7 +6,7 @@ import { VideoThumbnail } from '../components/molecules/VideoThumbnail';
 import { VideoModal } from '../components/organisms/VideoModal';
 import { useLightbox } from '../hooks/useLightbox';
 import { eventItems } from '../content/eventItems';
-import { videos } from '../content/videos';
+import { videos, videoPosters } from '../content/videos';
 
 export function EventosPage() {
   const lightbox = useLightbox();
@@ -29,12 +29,8 @@ export function EventosPage() {
         </Reveal>
 
         <Reveal className="mx-auto mb-12 max-w-5xl rounded-[20px] border border-white/20 bg-black/50 p-6 text-center shadow-2xl backdrop-blur-sm md:p-10">
-          <h2 className="mb-3 font-heading text-3xl font-semibold text-white md:text-4xl">Mírame en Acción</h2>
-          <p className="mx-auto mb-8 max-w-2xl text-white/70">
-            Un adelanto exclusivo de la Dominatrix Viuda Negra. Dale clic para ver el video completo.
-          </p>
           <VideoThumbnail
-            posterSrc="/img/throne/throne1.jpg"
+            posterSrc={videoPosters.home}
             alt="Video de la Dominatrix Viuda Negra"
             heightClass="h-[300px] sm:h-[460px]"
             onClick={() => setVideoOpen(true)}

@@ -10,7 +10,7 @@ const FEATURES = [
   {
     icon: 'fas fa-user-secret',
     title: 'Discreción Total',
-    text: 'Tu privacidad es prioridad: atención, pagos y comunicación 100% discretos en cada sesión.',
+    text: 'Todo lo que publico es bajo consentimiento. La discreción y la seguridad son primordiales para los dos.',
   },
   {
     icon: 'fas fa-crown',
@@ -39,7 +39,7 @@ export function DominaPhilosophySection() {
           {FEATURES.map((feature) => (
             <div
               key={feature.title}
-              className="flex h-full flex-col items-center rounded-[20px] border border-gray-200 bg-white p-6 text-center shadow-lg transition-transform duration-300 hover:-translate-y-1"
+              className="flex h-full flex-col items-center rounded-[20px] border-2 border-brand bg-gradient-to-br from-white to-gray-50 p-6 text-center shadow-xl transition-transform duration-300 hover:-translate-y-1"
             >
               <Icon name={feature.icon} className="mb-4 text-4xl text-brand" />
               <h3 className="mb-2 font-heading text-lg font-bold text-black">{feature.title}</h3>

@@ -1,7 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import { Reveal } from '../atoms/Reveal';
-import { Button } from '../atoms/Button';
-import { Icon } from '../atoms/Icon';
 
 export function AboutSection() {
   const { t } = useTranslation();
@@ -31,13 +29,7 @@ export function AboutSection() {
               ))}
             </div>
             <h4 className="mb-4 uppercase tracking-wide text-gray-200">{t('home:about.subtitle')}</h4>
-            <p className="mb-6 text-center text-white/90">{t('home:about.text')}</p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <Button to="/virtuales" variant="danger">
-                <Icon name="fas fa-video" />
-                Servicios Virtuales
-              </Button>
-            </div>
+            <p className="text-center text-white/90">{t('home:about.text')}</p>
           </div>
         </div>
       </Reveal>

@@ -6,7 +6,7 @@ import { VideoThumbnail } from '../components/molecules/VideoThumbnail';
 import { VideoModal } from '../components/organisms/VideoModal';
 import { GalleryLightbox } from '../components/organisms/GalleryLightbox';
 import { useLightbox } from '../hooks/useLightbox';
-import { videos } from '../content/videos';
+import { videos, videoPosters } from '../content/videos';
 
 const infographics = [
   { src: '/img/rubberdoll/limits-es.jpg', srcEn: '/img/rubberdoll/limits-en.jpg', alt: 'Límites de Rubber Doll Jade' },
@@ -82,10 +82,8 @@ export function RubberDollJadePage() {
         style={{ backgroundImage: 'linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)), url(/img/fondo-webcam.jpg)' }}
       >
         <Reveal className="mx-auto max-w-3xl px-4 text-center">
-          <h2 className="mb-4 font-heading text-2xl font-semibold text-white md:text-3xl">Mírame en Acción</h2>
-          <p className="mb-8 text-center text-white/70">Dale clic para ver el video de Rubber Doll Jade.</p>
           <VideoThumbnail
-            posterSrc="/img/fondo-webcam.jpg"
+            posterSrc={videoPosters.rubberDollJade}
             alt="Video de Rubber Doll Jade"
             heightClass="h-[260px] sm:h-[380px]"
             onClick={() => setVideoOpen(true)}

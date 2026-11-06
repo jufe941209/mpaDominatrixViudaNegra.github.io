@@ -7,7 +7,7 @@ import { VideoThumbnail } from '../components/molecules/VideoThumbnail';
 import { VideoModal } from '../components/organisms/VideoModal';
 import { mazmorraCategories } from '../content/mazmorraCategories';
 import { buildCategoryImages } from '../content/practiceImages';
-import { videos } from '../content/videos';
+import { videos, videoPosters } from '../content/videos';
 import { PracticeGallerySection } from '../components/organisms/PracticeGallerySection';
 import { GalleryLightbox } from '../components/organisms/GalleryLightbox';
 import { useLightbox } from '../hooks/useLightbox';
@@ -65,7 +65,7 @@ export function MazmorraArsenalPage() {
                       />
                     ))}
                     <VideoThumbnail
-                      posterSrc={juguetesImages[0].src}
+                      posterSrc={videoPosters.mazmorraJuguetes}
                       alt="Video del módulo de juguetes sexuales"
                       heightClass="h-[200px] sm:h-[250px]"
                       onClick={() => setVideoOpen(true)}

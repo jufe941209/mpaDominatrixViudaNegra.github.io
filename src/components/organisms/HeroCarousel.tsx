@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Icon } from '../atoms/Icon';
+import { Button } from '../atoms/Button';
 
 interface Slide {
   image: string;
@@ -60,9 +61,19 @@ export function HeroCarousel() {
               className={`max-w-[900px] transition-all duration-700 ${i === active ? 'translate-y-0 opacity-100 delay-300' : 'translate-y-4 opacity-0'}`}
             >
               {slide.titleKey && (
-                <h1 className="mb-5 font-heading text-4xl font-semibold text-white md:text-5xl">{t(slide.titleKey)}</h1>
+                <h2 className="mb-5 font-heading text-4xl font-semibold text-white md:text-5xl">{t(slide.titleKey)}</h2>
               )}
-              <p className="text-center text-lg text-white md:text-2xl">{t(slide.textKey)}</p>
+              <p className="mb-8 text-center text-lg text-white md:text-2xl">{t(slide.textKey)}</p>
+              <div className="flex flex-wrap items-center justify-center gap-4">
+                <Button to="/presenciales" variant="danger">
+                  <Icon name="fas fa-calendar-check" />
+                  Reservar tu Sesión
+                </Button>
+                <Button to="/practicas" variant="outline-light">
+                  <Icon name="fas fa-mask" />
+                  Ver Prácticas
+                </Button>
+              </div>
             </div>
           </div>
         </div>

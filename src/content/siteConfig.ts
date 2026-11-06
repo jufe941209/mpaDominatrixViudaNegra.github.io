@@ -1,13 +1,13 @@
 export const siteConfig = {
   title: 'DOMINATRIX VIUDA NEGRA',
   email: 'Dominatrixbogota@gmail.com',
-  phone: '3115710072',
+  phone: '3192137590',
   location: 'Bogotá',
   socialLinks: {
     twitter: 'https://twitter.com/Dominatrixbog',
-    telegram: 'https://t.me/+P5nA2u54FUQwODI5',
+    telegram: 'https://t.me/amaviudanegra',
     instagram: 'https://www.instagram.com/viuda_negra_dominatrix',
-    whatsapp: 'https://api.whatsapp.com/send?phone=573115710072',
+    whatsapp: 'https://api.whatsapp.com/send?phone=573192137590',
     snapchat: 'https://www.snapchat.com/add/amaviudanegra?share_id=5Cp-MiuolJM&locale=es-US',
     tiktok: 'https://www.tiktok.com/@dominatrix_viuda_negra',
     youtube: 'https://www.youtube.com/channel/UC5HmJn8VLOXRRUqiodQ55Xg',

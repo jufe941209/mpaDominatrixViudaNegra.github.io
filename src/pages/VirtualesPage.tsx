@@ -9,7 +9,7 @@ export function VirtualesPage() {
 
   return (
     <div
-      className="bg-cover bg-center bg-fixed py-16"
+      className="bg-cover bg-center py-16"
       style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/img/fondo-webcam.jpg')" }}
     >
       <div className="mx-auto max-w-[1320px] px-4">

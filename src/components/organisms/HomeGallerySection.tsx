@@ -1,6 +1,8 @@
 import { GalleryCard } from '../molecules/GalleryCard';
 import { GalleryLightbox } from './GalleryLightbox';
 import { Reveal } from '../atoms/Reveal';
+import { Button } from '../atoms/Button';
+import { Icon } from '../atoms/Icon';
 import { useLightbox } from '../../hooks/useLightbox';
 import type { GalleryImage } from '../../types/content';
 
@@ -16,6 +18,13 @@ export function HomeGallerySection() {
   return (
     <div className="bg-white py-16">
       <Reveal className="mx-auto max-w-[1320px] px-4">
+        <div className="mx-auto mb-10 max-w-2xl text-center">
+          <h2 className="mb-3 font-heading text-3xl font-semibold text-black">Galería Fetichista y BDSM</h2>
+          <p className="text-gray-600">
+            Un vistazo a mi universo: sesiones de dominación, fetiches, látex y escenarios diseñados para explorar
+            tus fantasías más profundas junto a la Dominatrix Viuda Negra, Ama y Mistress de referencia en Bogotá.
+          </p>
+        </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:grid-rows-2">
           <div className="md:col-span-1">
             <GalleryCard src={images[0].src} alt={images[0].alt} heightClass="h-[220px]" onClick={() => lightbox.open(0)} />
@@ -37,6 +46,12 @@ export function HomeGallerySection() {
           {[5, 6, 7].map((i) => (
             <GalleryCard key={images[i].src} src={images[i].src} alt={images[i].alt} heightClass="h-[220px]" onClick={() => lightbox.open(i)} />
           ))}
+        </div>
+        <div className="mt-10 text-center">
+          <Button to="/profesionales" variant="danger">
+            <Icon name="fas fa-images" />
+            Ver Galería Completa
+          </Button>
         </div>
       </Reveal>
       <GalleryLightbox images={images} index={lightbox.index} onClose={lightbox.close} />

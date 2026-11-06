@@ -1,18 +1,23 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Icon } from '../components/atoms/Icon';
 import { Button } from '../components/atoms/Button';
 import { Badge } from '../components/atoms/Badge';
 import { Reveal } from '../components/atoms/Reveal';
+import { VideoThumbnail } from '../components/molecules/VideoThumbnail';
+import { VideoModal } from '../components/organisms/VideoModal';
 import { buildWhatsAppUrl } from '../lib/whatsapp';
+import { videos } from '../content/videos';
 import { MultipleSessionsSection } from '../components/organisms/MultipleSessionsSection';
 import { RulesSection } from '../components/organisms/RulesSection';
 
 export function PresencialesPage() {
   const { t } = useTranslation();
+  const [videoOpen, setVideoOpen] = useState(false);
 
   return (
     <div
-      className="bg-cover bg-center bg-fixed py-16"
+      className="bg-cover bg-center py-16"
       style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/img/fondo-webcam.jpg')" }}
     >
       <div className="mx-auto max-w-[1320px] px-4">
@@ -24,9 +29,20 @@ export function PresencialesPage() {
           <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed text-white">{t('presenciales:description')}</p>
         </Reveal>
 
-        <MultipleSessionsSection />
+        <Reveal className="mb-8 rounded-[20px] border border-white/20 bg-black/50 p-6 text-center shadow-2xl backdrop-blur-sm md:p-10">
+          <h2 className="mb-2 font-heading text-2xl font-bold text-white md:text-3xl">Mírame en Acción</h2>
+          <p className="mb-6 text-white/70">Dale clic para ver un adelanto de mis sesiones presenciales.</p>
+          <VideoThumbnail
+            posterSrc="/img/presenciales/multiples1.jpg"
+            alt="Video de sesiones presenciales"
+            heightClass="h-[260px] sm:h-[380px]"
+            onClick={() => setVideoOpen(true)}
+          />
+        </Reveal>
 
         <RulesSection />
+
+        <MultipleSessionsSection />
 
         <div className="my-8 rounded-[20px] border border-white/20 bg-gradient-to-br from-gray-100 to-gray-200 p-6 shadow-2xl md:p-10">
           <h2 className="mb-10 text-center font-heading text-2xl font-bold text-brand md:text-3xl">
@@ -69,6 +85,7 @@ export function PresencialesPage() {
           </div>
         </div>
       </div>
+      {videoOpen && <VideoModal url={videos.presenciales} onClose={() => setVideoOpen(false)} />}
     </div>
   );
 }

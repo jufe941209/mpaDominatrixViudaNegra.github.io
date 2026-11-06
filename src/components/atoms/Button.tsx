@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 
 type Variant = 'danger' | 'success' | 'primary' | 'dark' | 'secondary' | 'warning' | 'outline-light';
 
@@ -15,6 +16,8 @@ const variantClasses: Record<Variant, string> = {
 interface ButtonProps {
   children: ReactNode;
   href?: string;
+  /** Internal route (e.g. "/presenciales"). Navigates client-side via react-router instead of a full page load. */
+  to?: string;
   onClick?: () => void;
   variant?: Variant;
   pill?: boolean;
@@ -22,20 +25,37 @@ interface ButtonProps {
   external?: boolean;
 }
 
-export function Button({ children, href, onClick, variant = 'danger', pill = true, className = '', external = true }: ButtonProps) {
-  const base = `inline-flex items-center justify-center gap-2 px-6 py-2.5 font-bold text-sm shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-100 focus-visible:outline-offset-4 ${pill ? 'rounded-full' : 'rounded-lg'} ${variantClasses[variant]} ${className}`;
+export function Button({ children, href, to, onClick, variant = 'danger', pill = true, className = '', external = true }: ButtonProps) {
+  const base = `group relative inline-flex items-center justify-center gap-2 overflow-hidden px-6 py-2.5 font-bold text-sm tracking-wide shadow-lg transition-all duration-300 hover:scale-105 hover:tracking-wider hover:shadow-2xl active:scale-100 focus-visible:outline-offset-4 ${pill ? 'rounded-full' : 'rounded-lg'} ${variantClasses[variant]} ${className}`;
+  const content = (
+    <>
+      <span className="relative z-10 inline-flex items-center gap-2">{children}</span>
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full"
+      />
+    </>
+  );
+
+  if (to) {
+    return (
+      <Link to={to} className={base}>
+        {content}
+      </Link>
+    );
+  }
 
   if (href) {
     return (
       <a href={href} className={base} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>
-        {children}
+        {content}
       </a>
     );
   }
 
   return (
     <button type="button" onClick={onClick} className={base}>
-      {children}
+      {content}
     </button>
   );
 }

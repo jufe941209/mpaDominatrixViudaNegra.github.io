@@ -22,11 +22,17 @@
       "2": { "title": "Group Session 2", "subtitle": "Multiple power dynamics" },
       "3": { "title": "Group Session 3", "subtitle": "Advanced group exploration" },
       "4": { "title": "Group Session 4", "subtitle": "Collective submission experience" },
-      "5": { "title": "Group Session 5", "subtitle": "Exclusive multiple domination" }
+      "5": { "title": "Group Session 5", "subtitle": "Exclusive multiple domination" },
+      "6": { "title": "Group Session 6", "subtitle": "Submission beneath the throne" },
+      "7": { "title": "Group Session 7", "subtitle": "Absolute group control" }
     }
   },
   "rules": {
     "title": "RULES",
+    "schedule": {
+      "title": "Hours of Availability",
+      "text": "Monday to Saturday, 9:00 AM to 9:00 PM. Sundays, holidays, and after 9:00 PM until midnight have an additional cost. Every appointment must be booked in advance with the deposit I'll indicate via WhatsApp when you request it."
+    },
     "items": [
       "Please address me with respect; you will always receive the same from me.",
       "It's important to follow the steps indicated to request a session. This ensures everything flows in an organized way without setbacks.",

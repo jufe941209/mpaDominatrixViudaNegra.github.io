@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mpa-viuda-negra.vercel.app/sitemap.xml

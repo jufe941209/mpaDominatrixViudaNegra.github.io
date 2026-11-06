@@ -68,9 +68,9 @@ export function AgeGate() {
           <span>SOLO ADULTOS · ADULTS ONLY</span>
         </div>
 
-        <h1 id="age-gate-title" className="mb-1 font-heading text-2xl font-semibold text-white sm:text-3xl">
+        <h2 id="age-gate-title" className="mb-1 font-heading text-2xl font-semibold text-white sm:text-3xl">
           Advertencia de Contenido para Adultos
-        </h1>
+        </h2>
         <p className="mb-6 text-sm leading-relaxed text-white/80">
           Este sitio web contiene material exclusivo para adultos, incluyendo temática BDSM, fetiches
           y contenido de connotación sexual. Al ingresar confirmas que eres mayor de{' '}

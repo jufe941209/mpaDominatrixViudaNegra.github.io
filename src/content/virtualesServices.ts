@@ -14,7 +14,7 @@ export const virtualesServices: ServiceCard[] = [
     id: 'video-submission',
     titleKey: 'virtuales:services.video_submission.title',
     descriptionKey: 'virtuales:services.video_submission.description',
-    image: '/img/virtuales/llamadaSumicion.png',
+    image: '/img/virtuales/llamadaSumicion.jpg',
     emoji: '🎥',
     buttonVariant: 'danger',
     whatsappMessage: 'Hola, me interesa el servicio de Video Llamada Sumisión',

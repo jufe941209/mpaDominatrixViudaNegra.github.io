@@ -42,7 +42,7 @@ export function NavDropdown({ label, items, icon, onNavigate }: NavDropdownProps
         <Icon name="fas fa-chevron-down" className={`ml-1.5 text-[10px] transition-transform ${open ? 'rotate-180' : ''}`} />
       </button>
       {open && (
-        <div className="static m-0 min-w-[220px] rounded-lg bg-white py-2 shadow-xl lg:absolute lg:left-0 lg:top-full">
+        <div className="static m-0 min-w-[220px] animate-fadeInUp rounded-lg bg-white py-2 shadow-xl lg:absolute lg:left-0 lg:top-full">
           {items.map((item) => (
             <Link
               key={item.path}

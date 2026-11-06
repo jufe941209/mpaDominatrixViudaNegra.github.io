@@ -12,7 +12,7 @@ export function RopaInteriorPage() {
 
   return (
     <div
-      className="relative bg-cover bg-center bg-fixed py-20"
+      className="relative bg-cover bg-center py-20"
       style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/img/fondo1.jpg')" }}
     >
       <div className="mx-auto max-w-4xl px-4">

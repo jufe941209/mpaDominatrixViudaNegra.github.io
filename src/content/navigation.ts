@@ -13,6 +13,7 @@ export const navigation = {
       { path: '/virtuales', labelKey: 'common:nav.services_virtual' },
       { path: '/shows', labelKey: 'common:nav.services_shows' },
       { path: '/talleres', labelKey: 'common:nav.services_workshops' },
+      { path: '/contenido', labelKey: 'common:nav.services_content' },
     ] as NavLinkItem[],
   },
   gallery: {
@@ -36,4 +37,5 @@ export const navigation = {
   },
   wishlist: { path: '/lista-deseos', labelKey: 'common:nav.wishlist' },
   press: { path: '/prensa', labelKey: 'common:nav.press' },
+  rubberDollJade: { path: '/rubber-doll-jade', labelKey: 'common:nav.rubber_doll_jade' },
 };

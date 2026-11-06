@@ -13,6 +13,7 @@ import esPrensa from './es/prensa.json';
 import esRopaInterior from './es/ropaInterior.json';
 import esConstruction from './es/construction.json';
 import esNotFound from './es/notFound.json';
+import esMazmorra from './es/mazmorra.json';
 
 import enCommon from './en/common.json';
 import enHome from './en/home.json';
@@ -25,6 +26,7 @@ import enPrensa from './en/prensa.json';
 import enRopaInterior from './en/ropaInterior.json';
 import enConstruction from './en/construction.json';
 import enNotFound from './en/notFound.json';
+import enMazmorra from './en/mazmorra.json';
 
 export const defaultNS = 'common';
 
@@ -37,7 +39,7 @@ i18next
     defaultNS,
     ns: [
       'common', 'home', 'practicas', 'presenciales', 'virtuales',
-      'talleres', 'profesionales', 'prensa', 'ropaInterior', 'construction', 'notFound',
+      'talleres', 'profesionales', 'prensa', 'ropaInterior', 'construction', 'notFound', 'mazmorra',
     ],
     resources: {
       es: {
@@ -52,6 +54,7 @@ i18next
         ropaInterior: esRopaInterior,
         construction: esConstruction,
         notFound: esNotFound,
+        mazmorra: esMazmorra,
       },
       en: {
         common: enCommon,
@@ -65,6 +68,7 @@ i18next
         ropaInterior: enRopaInterior,
         construction: enConstruction,
         notFound: enNotFound,
+        mazmorra: enMazmorra,
       },
     },
     interpolation: { escapeValue: false },

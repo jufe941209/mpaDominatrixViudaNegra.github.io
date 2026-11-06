@@ -4,6 +4,7 @@ import { TopBar } from '../organisms/TopBar';
 import { Navbar } from '../organisms/Navbar';
 import { Footer } from '../organisms/Footer';
 import { BackToTopButton } from '../molecules/BackToTopButton';
+import { useSeo } from '../../hooks/useSeo';
 
 function PageFallback() {
   return (
@@ -15,6 +16,7 @@ function PageFallback() {
 
 export function PageLayout() {
   const location = useLocation();
+  useSeo();
 
   useEffect(() => {
     window.scrollTo(0, 0);

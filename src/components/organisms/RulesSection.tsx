@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Icon } from '../atoms/Icon';
 import { Reveal } from '../atoms/Reveal';
 
 const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSf0xyhl4ZdfquSP5OGg8rBl8AL7D7IyDE-37FLTyZ2hJhU0Xg/viewform';
@@ -11,11 +12,20 @@ export function RulesSection() {
 
   return (
     <div
-      className="bg-cover bg-center bg-fixed py-16"
+      className="bg-cover bg-center py-16"
       style={{ backgroundImage: 'linear-gradient(#BA2505, rgba(0,0,0,0.2)), url(/img/fondoreglas.jpg)' }}
     >
       <Reveal className="mx-auto max-w-3xl px-4 text-center">
-        <h1 className="mb-6 animate-fadeIn font-heading text-4xl font-semibold text-white">{t('presenciales:rules.title')}</h1>
+        <h2 className="mb-6 animate-fadeIn font-heading text-4xl font-semibold text-white">{t('presenciales:rules.title')}</h2>
+
+        <div className="mb-8 rounded-2xl border-2 border-white/80 bg-black/60 p-5 text-left shadow-lg backdrop-blur-sm">
+          <h3 className="mb-2 flex items-center justify-center gap-2 text-center font-heading text-xl font-bold text-white">
+            <Icon name="fas fa-clock" />
+            {t('presenciales:rules.schedule.title')}
+          </h3>
+          <p className="text-center text-base leading-relaxed text-white">{t('presenciales:rules.schedule.text')}</p>
+        </div>
+
         <ul className="mb-6 space-y-4 text-left">
           {items.map((item, i) => (
             <li

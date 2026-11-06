@@ -22,11 +22,17 @@
       "2": { "title": "Sesión Grupal 2", "subtitle": "Dinámicas de poder múltiples" },
       "3": { "title": "Sesión Grupal 3", "subtitle": "Exploración grupal avanzada" },
       "4": { "title": "Sesión Grupal 4", "subtitle": "Experiencia de sumisión colectiva" },
-      "5": { "title": "Sesión Grupal 5", "subtitle": "Dominación múltiple exclusiva" }
+      "5": { "title": "Sesión Grupal 5", "subtitle": "Dominación múltiple exclusiva" },
+      "6": { "title": "Sesión Grupal 6", "subtitle": "Sumisión bajo el trono" },
+      "7": { "title": "Sesión Grupal 7", "subtitle": "Control absoluto en grupo" }
     }
   },
   "rules": {
     "title": "REGLAS",
+    "schedule": {
+      "title": "Horario de Atención",
+      "text": "Lunes a sábado de 9:00 a.m. a 9:00 p.m. Domingos, festivos y después de las 9:00 p.m. hasta las 12:00 a.m. tienen costo adicional. Toda cita debe reservarse previamente con el abono que te indicaré por WhatsApp al solicitarla."
+    },
     "items": [
       "Por favor, dirígete a mí con respeto; siempre lo recibirás de mi parte.",
       "Es importante seguir los pasos indicados para solicitar una sesión. Así aseguramos que todo fluya de manera organizada y sin contratiempos.",

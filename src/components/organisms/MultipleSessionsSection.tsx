@@ -26,11 +26,11 @@ export function MultipleSessionsSection() {
         <Icon name="fas fa-images" className="mr-2" />
         {t('presenciales:multiples.gallery')}
       </h3>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {multipleSessionCards.map((card, i) => (
           <Reveal key={card.id} delayMs={i * 80}>
             <div className="overflow-hidden rounded-2xl border-2 border-brand bg-gradient-to-br from-[#2d2d2d] to-[#1a1a1a] shadow-xl transition-transform duration-300 hover:-translate-y-1">
-              <img src={card.image} alt={t(card.titleKey)} loading="lazy" className="h-[250px] w-full object-cover" />
+              <img src={card.image} alt={t(card.titleKey)} loading="lazy" className="aspect-[2/3] w-full object-cover object-top" />
               <div className="p-5 text-center">
                 <h5 className="mb-1 font-heading font-bold text-brand">{t(card.titleKey)}</h5>
                 <p className="text-center text-sm text-gray-300">{t(card.subtitleKey)}</p>

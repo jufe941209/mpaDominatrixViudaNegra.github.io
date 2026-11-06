@@ -32,7 +32,7 @@ export function Navbar({ overlay = false }: NavbarProps) {
     : 'sticky top-0 shadow-md';
 
   return (
-    <nav className={`z-50 w-full bg-brand-scroll transition-shadow duration-300 ${positionClass}`}>
+    <nav className={`z-50 w-full bg-[#840016] transition-shadow duration-300 ${positionClass}`}>
       <div className="mx-auto flex max-w-[1320px] items-center justify-between px-4 py-3 lg:px-8 lg:py-0">
         <Link to="/" className="flex items-center gap-2 transition-opacity hover:opacity-85 focus-visible:outline-white">
           <img src="/img/logo.png" alt="Viuda Negra" className={`transition-all duration-300 ${isSticky ? 'max-h-[45px]' : 'max-h-[60px]'}`} />
@@ -65,6 +65,9 @@ export function Navbar({ overlay = false }: NavbarProps) {
             </NavLink>
             <NavLink to={navigation.press.path} className={directLinkClass} onClick={() => setMobileOpen(false)}>
               {t(navigation.press.labelKey)}
+            </NavLink>
+            <NavLink to={navigation.rubberDollJade.path} className={directLinkClass} onClick={() => setMobileOpen(false)}>
+              {t(navigation.rubberDollJade.labelKey)}
             </NavLink>
 
             <div className="relative">

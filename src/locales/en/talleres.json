@@ -3,5 +3,24 @@
   "description": "Immerse yourself in a world of exclusivity and knowledge with Dominatrix Viuda Negra. Learn all advanced techniques in fetish and BDSM, from domination dynamics to the most specialized practices for adult entertainment. This training is designed to elevate your webcam studio to another level, optimizing the experience for you and your clients, increasing your income and differentiating you in the industry.",
   "descriptionExtra": "🚀 Become a benchmark and turn your talent into a profitable business.",
   "subtitle": "Discover our available workshops.",
-  "book": "Make your reservation here!"
+  "book": "Make your reservation here!",
+  "pricing": {
+    "title": "Rates per Person",
+    "tiers": [
+      { "label": "1 to 3 people", "price": "$120.000" },
+      { "label": "3 to 6 people", "price": "$80.000" },
+      { "label": "6 or more", "price": "$60.000" }
+    ]
+  },
+  "available": {
+    "title": "Available Workshops",
+    "items": [
+      "WC Fetish Initiation",
+      "Foot Fetish",
+      "Male Chastity",
+      "Self Bondage",
+      "Findom",
+      "Sissification / Feminization"
+    ]
+  }
 }

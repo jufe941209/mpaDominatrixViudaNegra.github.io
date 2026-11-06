@@ -1,11 +1,16 @@
+import { useState } from 'react';
 import { Reveal } from '../components/atoms/Reveal';
 import { Icon } from '../components/atoms/Icon';
 import { GalleryLightbox } from '../components/organisms/GalleryLightbox';
+import { VideoThumbnail } from '../components/molecules/VideoThumbnail';
+import { VideoModal } from '../components/organisms/VideoModal';
 import { useLightbox } from '../hooks/useLightbox';
 import { eventItems } from '../content/eventItems';
+import { videos } from '../content/videos';
 
 export function EventosPage() {
   const lightbox = useLightbox();
+  const [videoOpen, setVideoOpen] = useState(false);
   const lightboxImages = eventItems.map((item) => ({ src: item.image, alt: item.title }));
 
   return (
@@ -21,6 +26,19 @@ export function EventosPage() {
           <p className="mx-auto mb-12 max-w-2xl text-center text-white/70">
             Fiestas, lanzamientos y presentaciones del universo fetichista y BDSM de la Dominatrix Viuda Negra.
           </p>
+        </Reveal>
+
+        <Reveal className="mx-auto mb-12 max-w-5xl rounded-[20px] border border-white/20 bg-black/50 p-6 text-center shadow-2xl backdrop-blur-sm md:p-10">
+          <h2 className="mb-3 font-heading text-3xl font-semibold text-white md:text-4xl">Mírame en Acción</h2>
+          <p className="mx-auto mb-8 max-w-2xl text-white/70">
+            Un adelanto exclusivo de la Dominatrix Viuda Negra. Dale clic para ver el video completo.
+          </p>
+          <VideoThumbnail
+            posterSrc="/img/throne/throne1.jpg"
+            alt="Video de la Dominatrix Viuda Negra"
+            heightClass="h-[300px] sm:h-[460px]"
+            onClick={() => setVideoOpen(true)}
+          />
         </Reveal>
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -48,6 +66,7 @@ export function EventosPage() {
         </div>
       </div>
       <GalleryLightbox images={lightboxImages} index={lightbox.index} onClose={lightbox.close} />
+      {videoOpen && <VideoModal url={videos.home} onClose={() => setVideoOpen(false)} />}
     </div>
   );
 }

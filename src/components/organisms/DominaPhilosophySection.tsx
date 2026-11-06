@@ -4,8 +4,8 @@ import { Icon } from '../atoms/Icon';
 const FEATURES = [
   {
     icon: 'fas fa-certificate',
-    title: 'Experiencia Comprobada',
-    text: 'Más de 8 años de trayectoria como Dominatrix, Ama y Mistress profesional de BDSM en Bogotá, Colombia.',
+    title: '16 Años de Experiencia',
+    text: 'Más de una década y media dominando el arte del BDSM como Dominatrix, Ama y Mistress profesional en Bogotá, Colombia.',
   },
   {
     icon: 'fas fa-user-secret',
@@ -13,26 +13,26 @@ const FEATURES = [
     text: 'Tu privacidad es prioridad: atención, pagos y comunicación 100% discretos en cada sesión.',
   },
   {
-    icon: 'fas fa-sliders-h',
-    title: 'Sesiones Personalizadas',
-    text: 'Cada encuentro se adapta a tus fantasías y nivel de experiencia, desde iniciación hasta prácticas avanzadas.',
+    icon: 'fas fa-crown',
+    title: 'Las Reglas las Pongo Yo',
+    text: 'Tendrás la oportunidad de seleccionar las prácticas que acordemos y tus límites en un formato, pero aquí la que manda soy yo: decido cómo comienza y cómo termina la sesión. No realizo fantasías al pie de la letra.',
   },
   {
     icon: 'fas fa-map-marker-alt',
     title: 'Mazmorra Privada en Bogotá',
-    text: 'Espacio propio, equipado y seguro en Bogotá, Colombia, para vivir el BDSM como se merece.',
+    text: 'Mi mazmorra es un espacio propio y privado, donde podemos llevar a cabo nuestros fetiches y fantasías.',
   },
 ];
 
-export function WhyChooseSection() {
+export function DominaPhilosophySection() {
   return (
     <div className="bg-[#fdfdfd] py-16">
       <Reveal className="mx-auto max-w-[1320px] px-4">
         <div className="mx-auto mb-10 max-w-2xl text-center">
-          <h2 className="mb-3 font-heading text-3xl font-semibold text-black">¿Por Qué Elegirme?</h2>
+          <h2 className="mb-3 font-heading text-3xl font-semibold text-black">Dominatrix Profesional y Vocacional</h2>
           <p className="text-gray-600">
-            La Dominatrix Viuda Negra combina experiencia, discreción y pasión por el BDSM para ofrecerte una
-            experiencia auténtica en Bogotá, Colombia.
+            16 años de trayectoria como Ama, Mistress y Dominatrix de BDSM en Bogotá, Colombia. Esto no es solo un
+            servicio: es mi vocación y mi forma de vida.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

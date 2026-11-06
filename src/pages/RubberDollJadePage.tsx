@@ -15,8 +15,7 @@ export function RubberDollJadePage() {
             className="rounded-2xl p-10 text-center"
             style={{ background: 'linear-gradient(#b72327, rgba(0,0,0,0.8)), url(/img/fondo-webcam.jpg)', backgroundSize: 'cover' }}
           >
-            <h1 className="mb-4 font-heading text-3xl font-bold text-white md:text-4xl">Rubber Doll Jade</h1>
-            <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed text-white">Mi rol de sumisa</p>
+            <h1 className="font-heading text-3xl font-bold text-white md:text-4xl">Rubber Doll Jade</h1>
           </Reveal>
         </div>
       </div>
@@ -27,8 +26,8 @@ export function RubberDollJadePage() {
             <div className="lg:col-span-5">
               <div className="h-full border-y-[10px] border-brand bg-black p-1">
                 <img
-                  src="/img/rubberdoll/jade1.jpg"
-                  alt="Rubber Doll Jade - faceta sumisa"
+                  src="/img/rubberdoll/jade2.jpg"
+                  alt="Rubber Doll Jade 1"
                   loading="lazy"
                   className="h-full min-h-[320px] w-full bg-black object-contain"
                 />
@@ -38,11 +37,8 @@ export function RubberDollJadePage() {
               className="flex flex-col justify-center px-6 py-10 text-center lg:col-span-7"
               style={{ background: 'linear-gradient(#b72327, rgba(0,0,0,0.85))' }}
             >
-              <h2 className="mb-4 font-heading text-3xl font-semibold text-white">También Puedo Ser Sumisa</h2>
-              <p className="text-center text-white/90">
-                Rubber Doll Jade no solo domina: también disfruta entregando el control por completo. Esta es mi faceta
-                más sumisa, vulnerable y entregada, para quienes buscan vivir el otro lado de la moneda conmigo.
-              </p>
+              <h2 className="mb-4 font-heading text-3xl font-semibold text-white">Rubber Doll Jade</h2>
+              <p className="text-center text-white/90">Muy pronto encontrarás aquí toda la información sobre esta faceta.</p>
             </div>
           </div>
         </Reveal>
@@ -67,21 +63,18 @@ export function RubberDollJadePage() {
       <div className="bg-black py-16">
         <Reveal className="mx-auto max-w-[1320px] px-4">
           <div className="grid grid-cols-1 items-stretch gap-0 lg:grid-cols-12">
-            <div className="order-2 flex flex-col justify-center px-6 py-10 text-center lg:order-1 lg:col-span-7"
+            <div
+              className="order-2 flex flex-col justify-center px-6 py-10 text-center lg:order-1 lg:col-span-7"
               style={{ background: 'linear-gradient(rgba(0,0,0,0.85), #b72327)' }}
             >
-              <h2 className="mb-4 font-heading text-3xl font-semibold text-white">Mi Entrega Total</h2>
-              <p className="text-center text-white/90">
-                Si lo que buscas es verme sometida, explorando bondage, control y entrega absoluta, aquí es donde
-                invierto los roles. Pregúntame por sesiones y contenido personalizado donde Rubber Doll Jade se
-                entrega sin límites.
-              </p>
+              <h2 className="mb-4 font-heading text-3xl font-semibold text-white">Rubber Doll Jade</h2>
+              <p className="text-center text-white/90">Muy pronto conocerás más sobre esta faceta de la Dominatrix Viuda Negra.</p>
             </div>
             <div className="order-1 lg:order-2 lg:col-span-5">
               <div className="h-full border-y-[10px] border-brand bg-black p-1">
                 <img
-                  src="/img/rubberdoll/jade2.jpg"
-                  alt="Rubber Doll Jade - entrega total"
+                  src="/img/rubberdoll/jade1.jpg"
+                  alt="Rubber Doll Jade 2"
                   loading="lazy"
                   className="h-full min-h-[320px] w-full bg-black object-contain"
                 />

@@ -64,8 +64,8 @@ export const seoByPath: Record<string, SeoEntry> = {
     description: 'Fiestas, lanzamientos y presentaciones del universo fetichista y BDSM de la Dominatrix Viuda Negra en Bogotá.',
   },
   '/rubber-doll-jade': {
-    title: `Rubber Doll Jade | Rol de Sumisa de ${BRAND}`,
-    description: 'Rubber Doll Jade: la faceta sumisa de la Dominatrix Viuda Negra en Bogotá, Colombia.',
+    title: `Rubber Doll Jade | ${BRAND}`,
+    description: 'Rubber Doll Jade: una faceta de la Dominatrix Viuda Negra en Bogotá, Colombia.',
   },
 };
 

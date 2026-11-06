@@ -50,7 +50,7 @@ export function ContenidoPage() {
           <ContentSection
             icon="fas fa-mask"
             title="Contenido de Rubber Doll"
-            description="Paquetes exclusivos de fotos y videos en mi faceta de Rubber Doll Jade, mi rol más sumiso y entregado. Muy pronto encontrarás aquí la muestra y el detalle de cada paquete disponible."
+            description="Paquetes exclusivos de fotos y videos en mi faceta de Rubber Doll Jade. Muy pronto encontrarás aquí la muestra y el detalle de cada paquete disponible."
             whatsappMessage="Hola, quiero información sobre los paquetes de Contenido de Rubber Doll"
             delayMs={100}
           />

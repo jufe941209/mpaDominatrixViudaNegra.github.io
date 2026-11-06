@@ -30,6 +30,7 @@ export function RubberDollJadePage() {
             style={{ background: 'linear-gradient(#b72327, rgba(0,0,0,0.8)), url(/img/fondo-webcam.jpg)', backgroundSize: 'cover' }}
           >
             <h1 className="mb-4 font-heading text-3xl font-bold text-white md:text-4xl">Rubber Doll Jade</h1>
+            <p className="mb-4 font-heading text-lg italic text-white/90">Otro juego, las mismas reglas: las pongo yo.</p>
             <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/60 bg-black/40 px-4 py-2 text-sm font-semibold text-white">
               <Icon name="fas fa-video" />
               En este rol, solo servicio virtual y contenido. No sesiones presenciales.
@@ -60,8 +61,27 @@ export function RubberDollJadePage() {
                 Disfruto de otro rol, interpretando una muñeca sexual fetichista de látex que ama los juguetes
                 sexuales, las BBC, los cornudos, y está abierta a explorar nuevas prácticas. Es un espacio para
                 desarrollar mis fantasías más perversas, acompañándolas de algunas actividades BDSM de sometimiento
-                para hacer más dinámicas y divertidas las transmisiones. Aunque no me considero sumisa como tal.
+                para hacer más dinámicas y divertidas las transmisiones. Aunque no me considero sumisa como tal: yo
+                sigo decidiendo qué se hace, cómo y hasta dónde.
               </p>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+
+      <div className="bg-[#fdfdfd] py-16">
+        <Reveal className="mx-auto max-w-[1320px] px-4 text-center">
+          <h2 className="mb-3 font-heading text-3xl font-semibold text-black">Dos Caras, Un Solo Control</h2>
+          <p className="mx-auto mb-10 max-w-2xl text-gray-600">
+            Rubber Doll Jade es otra piel, otra estética, otra forma de jugar. Pero quien decide las reglas del
+            juego sigue siendo la misma: yo.
+          </p>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <div className="overflow-hidden rounded-2xl border-2 border-brand bg-black shadow-xl">
+              <img src="/img/rubberdoll/jade1.jpg" alt="Rubber Doll Jade 1" loading="lazy" className="mx-auto h-[420px] w-full bg-black object-contain" />
+            </div>
+            <div className="overflow-hidden rounded-2xl border-2 border-brand bg-black shadow-xl">
+              <img src="/img/rubberdoll/jade2.jpg" alt="Rubber Doll Jade 2" loading="lazy" className="mx-auto h-[420px] w-full bg-black object-contain" />
             </div>
           </div>
         </Reveal>
@@ -84,50 +104,38 @@ export function RubberDollJadePage() {
       </div>
 
       <div className="bg-black py-16">
-        <Reveal className="mx-auto max-w-[1320px] px-4">
-          <div className="grid grid-cols-1 items-stretch gap-0 lg:grid-cols-12">
-            <div
-              className="order-2 flex flex-col justify-center px-6 py-10 text-center lg:order-1 lg:col-span-5"
-              style={{ background: 'linear-gradient(rgba(0,0,0,0.85), #b72327)' }}
-            >
-              <h2 className="mb-4 font-heading text-2xl font-semibold text-white">Mis Límites</h2>
-              <p className="text-center text-white/90">Dale clic a la imagen para verla completa.</p>
-            </div>
-            <div className="order-1 lg:order-2 lg:col-span-7">
-              <button type="button" onClick={() => lightbox.open(0)} aria-label={infographics[0].alt} className="block h-full w-full bg-black">
-                <img
-                  src={isEnglish ? infographics[0].srcEn : infographics[0].src}
-                  alt={infographics[0].alt}
-                  loading="lazy"
-                  className="mx-auto h-full max-h-[600px] w-full border-y-[10px] border-brand bg-black object-contain p-1"
-                />
-              </button>
-            </div>
-          </div>
+        <Reveal className="mx-auto max-w-[1320px] px-4 text-center">
+          <h2 className="mb-3 font-heading text-3xl font-semibold text-white">Mis Límites</h2>
+          <p className="mx-auto mb-10 max-w-2xl text-white/70">
+            Incluso en este rol, las reglas las pongo yo. Esto es exactamente lo que entra en el juego y lo que
+            jamás. Dale clic a la imagen para verla completa.
+          </p>
+          <button type="button" onClick={() => lightbox.open(0)} aria-label={infographics[0].alt} className="mx-auto block w-full max-w-xl bg-black">
+            <img
+              src={isEnglish ? infographics[0].srcEn : infographics[0].src}
+              alt={infographics[0].alt}
+              loading="lazy"
+              className="mx-auto max-h-[600px] w-full border-y-[10px] border-brand bg-black object-contain p-1"
+            />
+          </button>
         </Reveal>
       </div>
 
       <div className="bg-black py-16">
-        <Reveal className="mx-auto max-w-[1320px] px-4">
-          <div className="grid grid-cols-1 items-stretch gap-0 lg:grid-cols-12">
-            <div className="lg:col-span-7">
-              <button type="button" onClick={() => lightbox.open(1)} aria-label={infographics[1].alt} className="block h-full w-full bg-black">
-                <img
-                  src={isEnglish ? infographics[1].srcEn : infographics[1].src}
-                  alt={infographics[1].alt}
-                  loading="lazy"
-                  className="mx-auto h-full max-h-[600px] w-full border-y-[10px] border-brand bg-black object-contain p-1"
-                />
-              </button>
-            </div>
-            <div
-              className="flex flex-col justify-center px-6 py-10 text-center lg:col-span-5"
-              style={{ background: 'linear-gradient(#b72327, rgba(0,0,0,0.85))' }}
-            >
-              <h2 className="mb-4 font-heading text-2xl font-semibold text-white">Lo Que Disfruto</h2>
-              <p className="text-center text-white/90">Dale clic a la imagen para verla completa.</p>
-            </div>
-          </div>
+        <Reveal className="mx-auto max-w-[1320px] px-4 text-center">
+          <h2 className="mb-3 font-heading text-3xl font-semibold text-white">Lo Que Disfruto</h2>
+          <p className="mx-auto mb-10 max-w-2xl text-white/70">
+            Yo elijo qué se explora y cómo se hace. Esta es mi lista de prácticas favoritas en este rol. Dale clic a
+            la imagen para verla completa.
+          </p>
+          <button type="button" onClick={() => lightbox.open(1)} aria-label={infographics[1].alt} className="mx-auto block w-full max-w-xl bg-black">
+            <img
+              src={isEnglish ? infographics[1].srcEn : infographics[1].src}
+              alt={infographics[1].alt}
+              loading="lazy"
+              className="mx-auto max-h-[600px] w-full border-y-[10px] border-brand bg-black object-contain p-1"
+            />
+          </button>
         </Reveal>
       </div>
 

@@ -1,28 +1,50 @@
+import { useState } from 'react';
 import { Reveal } from '../components/atoms/Reveal';
 import { Button } from '../components/atoms/Button';
 import { Icon } from '../components/atoms/Icon';
+import { VideoThumbnail } from '../components/molecules/VideoThumbnail';
+import { VideoModal } from '../components/organisms/VideoModal';
 import { buildWhatsAppUrl } from '../lib/whatsapp';
+import { videos, videoPosters } from '../content/videos';
 
 interface ContentSectionProps {
   icon: string;
   title: string;
   description: string;
   whatsappMessage: string;
+  image: string;
+  imageAlt: string;
+  videoKey: keyof typeof videos;
+  videoAlt: string;
   delayMs?: number;
 }
 
-function ContentSection({ icon, title, description, whatsappMessage, delayMs }: ContentSectionProps) {
+function ContentSection({ icon, title, description, whatsappMessage, image, imageAlt, videoKey, videoAlt, delayMs }: ContentSectionProps) {
+  const [videoOpen, setVideoOpen] = useState(false);
+
   return (
     <Reveal delayMs={delayMs} className="h-full">
       <div className="flex h-full flex-col items-center rounded-[20px] border-2 border-brand bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] p-8 text-center shadow-2xl transition-transform duration-300 hover:-translate-y-1 md:p-10">
         <Icon name={icon} className="mb-4 text-5xl text-brand" />
         <h2 className="mb-4 font-heading text-2xl font-bold text-white md:text-3xl">{title}</h2>
+        <div className="mb-6 overflow-hidden rounded-2xl border-2 border-brand bg-black shadow-xl">
+          <img src={image} alt={imageAlt} loading="lazy" className="mx-auto h-[280px] w-full bg-black object-contain" />
+        </div>
+        <div className="mb-6 w-full">
+          <VideoThumbnail
+            posterSrc={videoPosters[videoKey]}
+            alt={videoAlt}
+            heightClass="h-[180px] sm:h-[220px]"
+            onClick={() => setVideoOpen(true)}
+          />
+        </div>
         <p className="mb-8 flex-1 leading-relaxed text-gray-300">{description}</p>
         <Button href={buildWhatsAppUrl(whatsappMessage)} variant="success">
           <Icon name="fa fa-whatsapp" />
           Consultar Paquetes Disponibles
         </Button>
       </div>
+      {videoOpen && <VideoModal url={videos[videoKey]} onClose={() => setVideoOpen(false)} />}
     </Reveal>
   );
 }
@@ -49,12 +71,20 @@ export function ContenidoPage() {
             title="Contenido de Domina"
             description="Paquetes exclusivos de fotos y videos en mi faceta de Dominatrix: dominación, fetiches y control absoluto. Muy pronto encontrarás aquí la muestra y el detalle de cada paquete disponible."
             whatsappMessage="Hola, quiero información sobre los paquetes de Contenido de Domina"
+            image="/img/rubberdoll/jade1.jpg"
+            imageAlt="Muestra de Contenido de Domina"
+            videoKey="contenidoDomina"
+            videoAlt="Video de Contenido de Domina"
           />
           <ContentSection
             icon="fas fa-mask"
             title="Contenido de Rubber Doll"
             description="Paquetes exclusivos de fotos y videos en mi faceta de Rubber Doll Jade. Muy pronto encontrarás aquí la muestra y el detalle de cada paquete disponible."
             whatsappMessage="Hola, quiero información sobre los paquetes de Contenido de Rubber Doll"
+            image="/img/rubberdoll/jade2.jpg"
+            imageAlt="Muestra de Contenido de Rubber Doll"
+            videoKey="contenidoRubberDoll"
+            videoAlt="Video de Contenido de Rubber Doll"
             delayMs={100}
           />
         </div>

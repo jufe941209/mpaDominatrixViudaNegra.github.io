@@ -1,0 +1,14 @@
+{
+  "title": "Mi Lista de Deseos",
+  "subtitle": "Cumple mis caprichos y gánate mi atención",
+  "description": "Esta es mi lista curada de regalos: ropa, juguetes, accesorios y detalles que quiero tener. Elige algo de la lista y envíamelo directamente, es la forma más directa de ganarte un lugar especial en mi atención.",
+  "cta": "Ver Mi Lista de Deseos",
+  "steps": {
+    "title": "Cómo Funciona",
+    "1": { "title": "Abre la lista", "text": "Dale clic al botón y entra a mi Linktree con todos mis deseos organizados." },
+    "2": { "title": "Elige un regalo", "text": "Escoge lo que quieras regalarme, desde lo más sencillo hasta lo más generoso." },
+    "3": { "title": "Confírmame por WhatsApp", "text": "Avísame qué compraste para agradecerte como corresponde." }
+  },
+  "note": "Un buen regalo siempre abre puertas. Mientras más generoso seas, más presente estarás en mi mente.",
+  "whatsappCta": "Avisar que ya compré algo"
+}

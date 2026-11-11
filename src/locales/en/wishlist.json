@@ -1,0 +1,14 @@
+{
+  "title": "My Wishlist",
+  "subtitle": "Spoil me and earn my attention",
+  "description": "This is my curated gift list: clothing, toys, accessories and items I want. Pick something from the list and send it to me directly — it's the most direct way to earn yourself a special place in my attention.",
+  "cta": "View My Wishlist",
+  "steps": {
+    "title": "How It Works",
+    "1": { "title": "Open the list", "text": "Click the button and go to my Linktree with all my wishes organized." },
+    "2": { "title": "Pick a gift", "text": "Choose whatever you want to spoil me with, from the simplest to the most generous." },
+    "3": { "title": "Confirm on WhatsApp", "text": "Let me know what you got me so I can thank you properly." }
+  },
+  "note": "A good gift always opens doors. The more generous you are, the more present you'll be in my mind.",
+  "whatsappCta": "Let me know I bought something"
+}

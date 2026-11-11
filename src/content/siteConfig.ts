@@ -13,4 +13,5 @@ export const siteConfig = {
     youtube: 'https://www.youtube.com/channel/UC5HmJn8VLOXRRUqiodQ55Xg',
     paypal: 'https://www.paypal.com/paypalme/amaviudanegra',
   },
+  wishlistUrl: 'https://linktr.ee/KinksterJade',
 };

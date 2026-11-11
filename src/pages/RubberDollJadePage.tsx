@@ -79,19 +79,6 @@ export function RubberDollJadePage() {
         </Reveal>
       </div>
 
-      <div className="bg-[#fdfdfd] py-16">
-        <Reveal className="mx-auto max-w-[1320px] px-4">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            <div className="overflow-hidden rounded-2xl border-2 border-brand bg-black shadow-xl">
-              <img src="/img/rubberdoll/jade1.jpg" alt={t('rubberDollJade:photo1Alt')} loading="lazy" className="mx-auto h-[420px] w-full bg-black object-contain" />
-            </div>
-            <div className="overflow-hidden rounded-2xl border-2 border-brand bg-black shadow-xl">
-              <img src="/img/rubberdoll/jade2.jpg" alt={t('rubberDollJade:photo2Alt')} loading="lazy" className="mx-auto h-[420px] w-full bg-black object-contain" />
-            </div>
-          </div>
-        </Reveal>
-      </div>
-
       <div
         className="bg-cover bg-center py-16"
         style={{ backgroundImage: 'linear-gradient(135deg, rgba(0,0,0,0.92), rgba(183,35,39,0.25), rgba(0,0,0,0.95)), url(/img/fondo1.jpg)' }}

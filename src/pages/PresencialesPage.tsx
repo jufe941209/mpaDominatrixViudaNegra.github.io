@@ -9,6 +9,7 @@ import { VideoModal } from '../components/organisms/VideoModal';
 import { buildWhatsAppUrl } from '../lib/whatsapp';
 import { videos, videoPosters } from '../content/videos';
 import { MultipleSessionsSection } from '../components/organisms/MultipleSessionsSection';
+import { SubmissiveSessionsSection } from '../components/organisms/SubmissiveSessionsSection';
 import { RulesSection } from '../components/organisms/RulesSection';
 
 export function PresencialesPage() {
@@ -40,6 +41,8 @@ export function PresencialesPage() {
 
         <RulesSection />
 
+        <SubmissiveSessionsSection />
+
         <MultipleSessionsSection />
 
         <div className="my-8 rounded-[20px] border border-white/20 bg-gradient-to-br from-gray-100 to-gray-200 p-6 shadow-2xl md:p-10">
@@ -53,7 +56,10 @@ export function PresencialesPage() {
                   <h5 className="font-heading text-lg font-bold text-white">🤖 {t('presenciales:fuck_machine.title')}</h5>
                 </div>
                 <div className="flex flex-1 flex-col items-center px-6 py-8 text-center">
-                  <img src="/img/presenciales/fuckmachine.jpg" alt={t('presenciales:fuck_machine.title')} loading="lazy" className="mb-4 h-[220px] w-full rounded-2xl object-cover shadow-md" />
+                  <div className="mb-4 grid w-full grid-cols-2 gap-2">
+                    <img src="/img/presenciales/fuckmachine.jpg" alt={t('presenciales:fuck_machine.title')} loading="lazy" className="h-[220px] w-full rounded-2xl object-cover shadow-md" />
+                    <img src="/img/presenciales/fuckmachine2.jpg" alt={t('presenciales:fuck_machine.title')} loading="lazy" className="h-[220px] w-full rounded-2xl object-cover shadow-md" />
+                  </div>
                   <p className="mb-4 flex-1 text-center text-sm text-gray-600">{t('presenciales:fuck_machine.description')}</p>
                   <div className="mb-4"><Badge>✓ {t('common:available')}</Badge></div>
                   <Button href={buildWhatsAppUrl('Hola, me interesa el servicio de Fuck Machine')} variant="danger">
@@ -82,6 +88,22 @@ export function PresencialesPage() {
             </Reveal>
           </div>
         </div>
+
+        <Reveal className="my-8 overflow-hidden rounded-[20px] border-2 border-brand bg-gradient-to-br from-gray-100 to-gray-200 shadow-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <img
+              src="/img/presenciales/mediospago.jpg"
+              alt={t('presenciales:payment_methods.title')}
+              loading="lazy"
+              className="h-full max-h-[420px] w-full object-cover"
+            />
+            <div className="flex flex-col items-center justify-center p-8 text-center md:p-10">
+              <Icon name="fas fa-money-bill-wave" className="mb-4 text-4xl text-brand" />
+              <h2 className="mb-4 font-heading text-2xl font-bold text-brand md:text-3xl">{t('presenciales:payment_methods.title')}</h2>
+              <p className="text-center text-gray-600">{t('presenciales:payment_methods.description')}</p>
+            </div>
+          </div>
+        </Reveal>
       </div>
       {videoOpen && <VideoModal url={videos.presenciales} onClose={() => setVideoOpen(false)} />}
     </div>

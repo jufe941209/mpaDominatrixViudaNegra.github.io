@@ -3,12 +3,18 @@ import type { PracticeCategory } from '../types/content';
 
 const bySlug = (slug: string) => practiceCategories.find((c) => c.slug === slug)!;
 
+export interface PracticeIntroImage {
+  src: string;
+  to: string;
+}
+
 export interface PracticeTab {
   slug: string;
   navLabelKey: string;
   titleKey: string;
   descriptionKey: string;
   categories?: PracticeCategory[];
+  introImages?: PracticeIntroImage[];
 }
 
 export const practiceTabs: PracticeTab[] = [
@@ -17,7 +23,16 @@ export const practiceTabs: PracticeTab[] = [
     navLabelKey: 'common:nav.practices_fetiches',
     titleKey: 'practicas:tabs.fetiches.title',
     descriptionKey: 'practicas:tabs.fetiches.description',
-    categories: ['feet', 'fishnet', 'nylon', 'smoking', 'smell'].map(bySlug),
+    introImages: [
+      { src: '/img/pies/pies1.jpg', to: '/practicas/humillacion' },
+      { src: '/img/fishnets/fishnets1.jpg', to: '/practicas/humillacion' },
+      { src: '/img/nylon/nylon1.jpg', to: '/practicas/otros' },
+      { src: '/img/smoking/smoking1.jpg', to: '/practicas/otros' },
+      { src: '/img/smell/smell1.jpg', to: '/practicas/humillacion' },
+      { src: '/img/boots/boots1.jpg', to: '/practicas/humillacion' },
+      { src: '/img/pegging/pegging1.jpg', to: '/practicas/pegging' },
+      { src: '/img/chastity/castidad1.jpg', to: '/practicas/castidad' },
+    ],
   },
   {
     slug: 'pegging',
@@ -75,12 +90,13 @@ export const practiceTabs: PracticeTab[] = [
     navLabelKey: 'common:nav.practices_humillacion',
     titleKey: 'practicas:tabs.humillacion.title',
     descriptionKey: 'practicas:tabs.humillacion.description',
-    categories: [bySlug('boots')],
+    categories: ['boots', 'feet', 'smell', 'fishnet'].map(bySlug),
   },
   {
     slug: 'otros',
     navLabelKey: 'common:nav.practices_otros',
     titleKey: 'practicas:tabs.otros.title',
     descriptionKey: 'practicas:tabs.otros.description',
+    categories: ['nylon', 'smoking'].map(bySlug),
   },
 ];

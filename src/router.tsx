@@ -16,6 +16,7 @@ const MazmorraArsenalPage = lazy(() => import('./pages/MazmorraArsenalPage').the
 const ShowsPage = lazy(() => import('./pages/ShowsPage').then((m) => ({ default: m.ShowsPage })));
 const EventosPage = lazy(() => import('./pages/EventosPage').then((m) => ({ default: m.EventosPage })));
 const ContenidoPage = lazy(() => import('./pages/ContenidoPage').then((m) => ({ default: m.ContenidoPage })));
+const WishlistPage = lazy(() => import('./pages/WishlistPage').then((m) => ({ default: m.WishlistPage })));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then((m) => ({ default: m.NotFoundPage })));
 
 export const router = createBrowserRouter([
@@ -35,7 +36,7 @@ export const router = createBrowserRouter([
       { path: '/ropa-interior', element: <RopaInteriorPage /> },
       { path: '/mazmorra', element: <MazmorraArsenalPage /> },
       { path: '/sexshop', element: <ComingSoonPage /> },
-      { path: '/lista-deseos', element: <ComingSoonPage /> },
+      { path: '/lista-deseos', element: <WishlistPage /> },
       { path: '/shows', element: <ShowsPage /> },
       { path: '/eventos', element: <EventosPage /> },
       { path: '/packages', element: <ComingSoonPage /> },

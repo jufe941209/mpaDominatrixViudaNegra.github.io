@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
+  professionalGalleryShowcase,
   professionalGalleryRow1,
   professionalGalleryRow2,
   professionalGalleryRow3,
@@ -40,7 +41,7 @@ export function ProfesionalesPage() {
   const galleryTwoLightbox = useLightbox();
 
   const galleryOneImages = useMemo(
-    () => [...professionalGalleryRow1, ...professionalGalleryRow2].map((p) => ({ src: p.src, alt: p.alt })),
+    () => [...professionalGalleryShowcase, ...professionalGalleryRow1, ...professionalGalleryRow2].map((p) => ({ src: p.src, alt: p.alt })),
     [],
   );
   const galleryTwoImages = useMemo(
@@ -56,8 +57,13 @@ export function ProfesionalesPage() {
             {t('profesionales:title')}
           </h2>
           <div className="space-y-4">
-            <Row photos={professionalGalleryRow1} startIndex={0} onOpen={galleryOneLightbox.open} />
-            <Row photos={professionalGalleryRow2} startIndex={professionalGalleryRow1.length} onOpen={galleryOneLightbox.open} />
+            <Row photos={professionalGalleryShowcase} startIndex={0} onOpen={galleryOneLightbox.open} />
+            <Row photos={professionalGalleryRow1} startIndex={professionalGalleryShowcase.length} onOpen={galleryOneLightbox.open} />
+            <Row
+              photos={professionalGalleryRow2}
+              startIndex={professionalGalleryShowcase.length + professionalGalleryRow1.length}
+              onOpen={galleryOneLightbox.open}
+            />
           </div>
         </div>
       </div>

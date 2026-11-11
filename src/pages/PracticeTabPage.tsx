@@ -5,6 +5,7 @@ import { Reveal } from '../components/atoms/Reveal';
 import { Button } from '../components/atoms/Button';
 import { Icon } from '../components/atoms/Icon';
 import { PracticeGallerySection } from '../components/organisms/PracticeGallerySection';
+import { PracticeIntroSlider } from '../components/organisms/PracticeIntroSlider';
 import { GalleryLightbox } from '../components/organisms/GalleryLightbox';
 import { useLightbox } from '../hooks/useLightbox';
 import { buildCategoryImages } from '../content/practiceImages';
@@ -44,10 +45,25 @@ export function PracticeTabPage() {
           <p className="mx-auto max-w-2xl text-center text-lg leading-relaxed text-white/80">{t(tab.descriptionKey)}</p>
         </Reveal>
 
+        {tab.introImages && tab.introImages.length > 0 && (
+          <Reveal className="mb-10">
+            <PracticeIntroSlider images={tab.introImages} />
+          </Reveal>
+        )}
+
         {tab.categories && tab.categories.length > 0 ? (
           tab.categories.map((category, i) => (
             <PracticeGallerySection key={category.slug} category={category} offset={offsets[i]} onOpen={lightbox.open} />
           ))
+        ) : tab.introImages && tab.introImages.length > 0 ? (
+          <Reveal className="mx-auto max-w-xl rounded-[20px] border border-white/10 bg-black/40 p-8 text-center shadow-2xl backdrop-blur-sm md:p-10">
+            <Icon name="fas fa-mask" className="mb-4 text-4xl text-brand" />
+            <p className="mb-6 text-white/80">{t('practicas:fetiches.cta')}</p>
+            <Button href={buildWhatsAppUrl(`Hola, quiero más información sobre ${t(tab.titleKey)}`)} variant="success">
+              <Icon name="fa fa-whatsapp" />
+              {t('practicas:whatsappCta')}
+            </Button>
+          </Reveal>
         ) : (
           <Reveal className="mx-auto max-w-xl rounded-[20px] border border-white/10 bg-black/40 p-8 text-center shadow-2xl backdrop-blur-sm md:p-10">
             <Icon name="fas fa-hourglass-half" className="mb-4 text-4xl text-brand" />

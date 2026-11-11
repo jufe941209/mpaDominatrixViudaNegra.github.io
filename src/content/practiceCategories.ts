@@ -10,4 +10,5 @@ export const practiceCategories: PracticeCategory[] = [
   { slug: 'chastity', titleKey: 'practicas:chastity_title', folder: '/img/chastity', filePrefix: 'castidad', count: 4, extension: 'jpg' },
   { slug: 'pegging', titleKey: 'practicas:pegging_title', folder: '/img/pegging', filePrefix: 'pegging', count: 5, extension: 'jpg' },
   { slug: 'petplay', titleKey: 'practicas:petplay_title', folder: '/img/petplay', filePrefix: 'petplay', count: 3, extension: 'jpg' },
+  { slug: 'leatherGloves', titleKey: 'practicas:leatherGloves_title', folder: '/img/leathergloves', filePrefix: 'leathergloves', count: 5, extension: 'jpg' },
 ];

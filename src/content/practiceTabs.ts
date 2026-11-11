@@ -97,6 +97,6 @@ export const practiceTabs: PracticeTab[] = [
     navLabelKey: 'common:nav.practices_otros',
     titleKey: 'practicas:tabs.otros.title',
     descriptionKey: 'practicas:tabs.otros.description',
-    categories: ['nylon', 'smoking'].map(bySlug),
+    categories: ['nylon', 'smoking', 'leatherGloves'].map(bySlug),
   },
 ];

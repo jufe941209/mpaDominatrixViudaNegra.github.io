@@ -6,6 +6,8 @@ import { Badge } from '../components/atoms/Badge';
 import { Reveal } from '../components/atoms/Reveal';
 import { VideoThumbnail } from '../components/molecules/VideoThumbnail';
 import { VideoModal } from '../components/organisms/VideoModal';
+import { GalleryLightbox } from '../components/organisms/GalleryLightbox';
+import { useLightbox } from '../hooks/useLightbox';
 import { buildWhatsAppUrl } from '../lib/whatsapp';
 import { videos, videoPosters } from '../content/videos';
 import { MultipleSessionsSection } from '../components/organisms/MultipleSessionsSection';
@@ -15,6 +17,7 @@ import { RulesSection } from '../components/organisms/RulesSection';
 export function PresencialesPage() {
   const { t } = useTranslation();
   const [videoOpen, setVideoOpen] = useState(false);
+  const paymentLightbox = useLightbox();
 
   return (
     <div
@@ -89,15 +92,22 @@ export function PresencialesPage() {
           </div>
         </div>
 
-        <Reveal className="my-8 overflow-hidden rounded-[20px] border-2 border-brand bg-gradient-to-br from-gray-100 to-gray-200 shadow-2xl">
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            <img
-              src="/img/presenciales/mediospago.jpg"
-              alt={t('presenciales:payment_methods.title')}
-              loading="lazy"
-              className="h-full max-h-[420px] w-full object-cover"
-            />
-            <div className="flex flex-col items-center justify-center p-8 text-center md:p-10">
+        <Reveal className="my-8 overflow-hidden rounded-[20px] border-2 border-brand bg-gradient-to-br from-gray-100 to-gray-200 p-6 shadow-2xl md:p-10">
+          <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2">
+            <button
+              type="button"
+              onClick={() => paymentLightbox.open(0)}
+              aria-label={`Ver ${t('presenciales:payment_methods.title')}`}
+              className="block overflow-hidden rounded-2xl border-2 border-brand shadow-xl transition-transform duration-300 hover:-translate-y-1"
+            >
+              <img
+                src="/img/presenciales/mediospago.jpg"
+                alt={t('presenciales:payment_methods.title')}
+                loading="lazy"
+                className="h-[320px] w-full object-cover"
+              />
+            </button>
+            <div className="flex flex-col items-center text-center">
               <Icon name="fas fa-money-bill-wave" className="mb-4 text-4xl text-brand" />
               <h2 className="mb-4 font-heading text-2xl font-bold text-brand md:text-3xl">{t('presenciales:payment_methods.title')}</h2>
               <p className="text-center text-gray-600">{t('presenciales:payment_methods.description')}</p>
@@ -106,6 +116,11 @@ export function PresencialesPage() {
         </Reveal>
       </div>
       {videoOpen && <VideoModal url={videos.presenciales} onClose={() => setVideoOpen(false)} />}
+      <GalleryLightbox
+        images={[{ src: '/img/presenciales/mediospago.jpg', alt: t('presenciales:payment_methods.title') }]}
+        index={paymentLightbox.index}
+        onClose={paymentLightbox.close}
+      />
     </div>
   );
 }

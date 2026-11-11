@@ -2,7 +2,30 @@
   "title": "Mi Lista de Deseos",
   "subtitle": "Cumple mis caprichos y gánate mi atención",
   "description": "Esta es mi lista curada de regalos: ropa, juguetes, accesorios y detalles que quiero tener. Elige algo de la lista y envíamelo directamente, es la forma más directa de ganarte un lugar especial en mi atención.",
-  "cta": "Ver Mi Lista de Deseos",
+  "cta": "Ver Todo en Linktree",
+  "open": "Abrir",
+  "platforms": {
+    "throne": {
+      "title": "Throne",
+      "description": "Mi lista de deseos principal: regalos, tributos y caprichos pensados para mí."
+    },
+    "amazon": {
+      "title": "Amazon",
+      "description": "Ropa, accesorios y detalles de mi lista de Amazon, directo a mi puerta."
+    },
+    "lovense": {
+      "title": "Lovense",
+      "description": "Controla mi juguete a distancia. Una forma muy directa de ganarte mi atención."
+    },
+    "aliexpress": {
+      "title": "AliExpress",
+      "description": "Caprichos y antojos variados que tengo guardados en mi lista."
+    },
+    "paypal": {
+      "title": "PayPal",
+      "description": "Tributo directo para quien prefiere ser generoso sin intermediarios."
+    }
+  },
   "steps": {
     "title": "Cómo Funciona",
     "1": { "title": "Abre la lista", "text": "Dale clic al botón y entra a mi Linktree con todos mis deseos organizados." },

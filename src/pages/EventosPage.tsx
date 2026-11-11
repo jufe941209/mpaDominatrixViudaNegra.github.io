@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Reveal } from '../components/atoms/Reveal';
+import { Button } from '../components/atoms/Button';
 import { Icon } from '../components/atoms/Icon';
 import { GalleryLightbox } from '../components/organisms/GalleryLightbox';
 import { VideoThumbnail } from '../components/molecules/VideoThumbnail';
@@ -8,8 +9,14 @@ import { useLightbox } from '../hooks/useLightbox';
 import { eventItems } from '../content/eventItems';
 import { videos } from '../content/videos';
 
+const performerPhotos = [
+  { src: '/img/eventos/performers1.jpg', alt: 'Performers en látex en un evento fetichista' },
+  { src: '/img/eventos/performers2.jpg', alt: 'Dominación en vivo durante un show de performers' },
+];
+
 export function EventosPage() {
   const lightbox = useLightbox();
+  const performersLightbox = useLightbox();
   const [videoOpen, setVideoOpen] = useState(false);
   const lightboxImages = eventItems.map((item) => ({ src: item.image, alt: item.title }));
 
@@ -60,8 +67,40 @@ export function EventosPage() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal className="mx-auto mt-16 max-w-5xl rounded-[20px] border border-white/20 bg-black/50 p-6 text-center shadow-2xl backdrop-blur-sm md:p-10">
+          <h2 className="mb-3 font-heading text-2xl font-bold text-white md:text-3xl">Show Eventos / Performers</h2>
+          <p className="mx-auto mb-8 max-w-2xl text-center text-white/70">
+            Un vistazo a las performers y escenas en vivo que acompañan los eventos fetichistas de la Dominatrix Viuda Negra.
+          </p>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {performerPhotos.map((photo, i) => (
+              <button
+                key={photo.src}
+                type="button"
+                onClick={() => performersLightbox.open(i)}
+                aria-label={`Ver ${photo.alt}`}
+                className="group overflow-hidden rounded-2xl border-2 border-brand shadow-xl transition-transform duration-300 hover:-translate-y-1"
+              >
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  loading="lazy"
+                  className="h-[420px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </button>
+            ))}
+          </div>
+          <div className="mt-8">
+            <Button to="/shows" variant="danger">
+              <Icon name="fas fa-theater-masks" />
+              Ver Más Shows y Performers
+            </Button>
+          </div>
+        </Reveal>
       </div>
       <GalleryLightbox images={lightboxImages} index={lightbox.index} onClose={lightbox.close} />
+      <GalleryLightbox images={performerPhotos} index={performersLightbox.index} onClose={performersLightbox.close} />
       {videoOpen && <VideoModal url={videos.home} onClose={() => setVideoOpen(false)} />}
     </div>
   );

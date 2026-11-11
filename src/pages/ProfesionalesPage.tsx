@@ -6,6 +6,8 @@ import {
   professionalGalleryRow2,
   professionalGalleryRow3,
   professionalGalleryRow4,
+  professionalGalleryRow5,
+  professionalGalleryRow6,
   type ProfessionalPhoto,
 } from '../content/professionalGallery';
 import { GalleryCard } from '../components/molecules/GalleryCard';
@@ -68,7 +70,11 @@ export function ProfesionalesPage() {
     [],
   );
   const galleryTwoImages = useMemo(
-    () => [...professionalGalleryRow3, ...professionalGalleryRow4].map((p) => ({ src: p.src, alt: p.alt })),
+    () =>
+      [...professionalGalleryRow3, ...professionalGalleryRow4, ...professionalGalleryRow5, ...professionalGalleryRow6].map((p) => ({
+        src: p.src,
+        alt: p.alt,
+      })),
     [],
   );
 
@@ -113,6 +119,27 @@ export function ProfesionalesPage() {
           <div className="space-y-4">
             <Row photos={professionalGalleryRow3} startIndex={0} onOpen={galleryTwoLightbox.open} />
             <Row photos={professionalGalleryRow4} startIndex={professionalGalleryRow3.length} onOpen={galleryTwoLightbox.open} />
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="bg-cover bg-center py-16"
+        style={{ backgroundImage: 'linear-gradient(135deg, rgba(0,0,0,0.92), rgba(183,35,39,0.25), rgba(0,0,0,0.95)), url(/img/fondo1.jpg)' }}
+      >
+        <div className="mx-auto max-w-[1320px] px-4">
+          <SectionLabel icon="fas fa-gem">{t('profesionales:sections.royalty')}</SectionLabel>
+          <div className="space-y-4">
+            <Row
+              photos={professionalGalleryRow5}
+              startIndex={professionalGalleryRow3.length + professionalGalleryRow4.length}
+              onOpen={galleryTwoLightbox.open}
+            />
+            <Row
+              photos={professionalGalleryRow6}
+              startIndex={professionalGalleryRow3.length + professionalGalleryRow4.length + professionalGalleryRow5.length}
+              onOpen={galleryTwoLightbox.open}
+            />
           </div>
         </div>
       </div>

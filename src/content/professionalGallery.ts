@@ -13,19 +13,19 @@ const photo = (n: number, colSpan: ProfessionalPhoto['colSpan'], height: 300 | 4
   height,
 });
 
-const SHOWCASE_CAPTIONS = ['En El Trono', 'Porte y Dominio', 'Control Total', 'Presencia Absoluta'];
-
 export const professionalGalleryShowcase: ProfessionalPhoto[] = [1, 2, 3, 4].map((n) => ({
   src: `/img/throne/throne${n}.jpg`,
   alt: `Dominatrix Viuda Negra en su trono ${n}`,
   colSpan: 'lg-3',
   height: 400,
-  caption: SHOWCASE_CAPTIONS[n - 1],
 }));
 
 // Grid 1: replicates profesionales.php's first gallery (11 photos, 4/4/3 rows)
 export const professionalGalleryRow1: ProfessionalPhoto[] = [1, 2, 3, 4, 5, 6, 7, 8].map((n) => photo(n, 'lg-3'));
 export const professionalGalleryRow2: ProfessionalPhoto[] = [9, 10, 11].map((n) => photo(n, 'lg-4'));
+// Ordered so wide/full-body shots lead into close-up portraits, instead of raw upload order
+export const professionalGalleryRow5: ProfessionalPhoto[] = [18, 20, 19, 24, 21, 25, 26, 22].map((n) => photo(n, 'lg-3'));
+export const professionalGalleryRow6: ProfessionalPhoto[] = [23, 27, 28].map((n) => photo(n, 'lg-4'));
 
 // Grid 2: replicates the second gallery (note: photo 16 is reused twice in the
 // original markup instead of using the unused profesionales17.jpg on disk —

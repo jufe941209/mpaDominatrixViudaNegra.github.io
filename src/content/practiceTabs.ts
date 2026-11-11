@@ -17,7 +17,7 @@ export const practiceTabs: PracticeTab[] = [
     navLabelKey: 'common:nav.practices_fetiches',
     titleKey: 'practicas:tabs.fetiches.title',
     descriptionKey: 'practicas:tabs.fetiches.description',
-    categories: ['feet', 'fishnet', 'boots', 'nylon', 'smoking', 'smell'].map(bySlug),
+    categories: ['feet', 'fishnet', 'nylon', 'smoking', 'smell'].map(bySlug),
   },
   {
     slug: 'pegging',
@@ -31,6 +31,9 @@ export const practiceTabs: PracticeTab[] = [
     navLabelKey: 'common:nav.practices_sadomasoquismo',
     titleKey: 'practicas:tabs.sadomasoquismo.title',
     descriptionKey: 'practicas:tabs.sadomasoquismo.description',
+    categories: [
+      { slug: 'sadomasoquismo', titleKey: 'practicas:tabs.sadomasoquismo.title', folder: '/img/throne', filePrefix: 'throne', count: 4, extension: 'jpg' },
+    ],
   },
   {
     slug: 'lluvias',
@@ -72,6 +75,7 @@ export const practiceTabs: PracticeTab[] = [
     navLabelKey: 'common:nav.practices_humillacion',
     titleKey: 'practicas:tabs.humillacion.title',
     descriptionKey: 'practicas:tabs.humillacion.description',
+    categories: [bySlug('boots')],
   },
   {
     slug: 'otros',

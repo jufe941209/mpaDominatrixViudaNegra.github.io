@@ -1,9 +1,9 @@
 import { lazy } from 'react';
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 import { PageLayout } from './components/templates/PageLayout';
 import { HomePage } from './pages/HomePage';
 
-const PracticasPage = lazy(() => import('./pages/PracticasPage').then((m) => ({ default: m.PracticasPage })));
+const PracticeTabPage = lazy(() => import('./pages/PracticeTabPage').then((m) => ({ default: m.PracticeTabPage })));
 const PresencialesPage = lazy(() => import('./pages/PresencialesPage').then((m) => ({ default: m.PresencialesPage })));
 const VirtualesPage = lazy(() => import('./pages/VirtualesPage').then((m) => ({ default: m.VirtualesPage })));
 const TalleresPage = lazy(() => import('./pages/TalleresPage').then((m) => ({ default: m.TalleresPage })));
@@ -23,7 +23,8 @@ export const router = createBrowserRouter([
     element: <PageLayout />,
     children: [
       { path: '/', element: <HomePage /> },
-      { path: '/practicas', element: <PracticasPage /> },
+      { path: '/practicas', element: <Navigate to="/practicas/fetiches" replace /> },
+      { path: '/practicas/:slug', element: <PracticeTabPage /> },
       { path: '/presenciales', element: <PresencialesPage /> },
       { path: '/virtuales', element: <VirtualesPage /> },
       { path: '/talleres', element: <TalleresPage /> },

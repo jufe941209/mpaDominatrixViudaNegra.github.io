@@ -11,10 +11,45 @@ export const seoByPath: Record<string, SeoEntry> = {
     description:
       'Dominatrix Viuda Negra: Ama y Mistress profesional de BDSM en Bogotá, Colombia. Sesiones presenciales y virtuales, shows, talleres, galería y tienda fetiche.',
   },
-  '/practicas': {
-    title: `Prácticas y Fetiches BDSM | ${BRAND} Bogotá`,
-    description:
-      'Explora las prácticas y fetiches que domina la Ama Viuda Negra en Bogotá: pies, botas, nylon, smoking, castidad, pegging, petplay y más.',
+  '/practicas/fetiches': {
+    title: `Fetiches: Pies, Nylon, Botas y Más | ${BRAND} Bogotá`,
+    description: 'Explora mis fetiches en Bogotá: pies, nylon, botas, fishnet, smoking y más. Cada práctica tiene su propia galería.',
+  },
+  '/practicas/pegging': {
+    title: `Pegging / Strapon | ${BRAND} Bogotá`,
+    description: 'Pegging y juego con strapon con la Dominatrix Viuda Negra en Bogotá, Colombia.',
+  },
+  '/practicas/sadomasoquismo': {
+    title: `Sadomasoquismo | ${BRAND} Bogotá`,
+    description: 'Sesiones de sadomasoquismo adaptadas a tu nivel de experiencia con la Dominatrix Viuda Negra en Bogotá.',
+  },
+  '/practicas/lluvias': {
+    title: `Lluvias Doradas (Golden Showers) | ${BRAND} Bogotá`,
+    description: 'Golden showers y juegos de lluvias con la Dominatrix Viuda Negra en Bogotá, Colombia.',
+  },
+  '/practicas/bondage': {
+    title: `Bondage: Cuerdas y Restricción | ${BRAND} Bogotá`,
+    description: 'Bondage, cuerdas, esposas y restricción con la Dominatrix Viuda Negra en Bogotá, Colombia.',
+  },
+  '/practicas/findom': {
+    title: `FinDom: Dominación Financiera | ${BRAND} Bogotá`,
+    description: 'Dominación financiera (FinDom) con la Dominatrix Viuda Negra en Bogotá, Colombia.',
+  },
+  '/practicas/juego-de-roles': {
+    title: `Juego de Roles | ${BRAND} Bogotá`,
+    description: 'Juego de roles y escenarios de fantasía con la Dominatrix Viuda Negra en Bogotá, Colombia.',
+  },
+  '/practicas/castidad': {
+    title: `Castidad Masculina | ${BRAND} Bogotá`,
+    description: 'Dispositivos y control de castidad masculina con la Dominatrix Viuda Negra en Bogotá, Colombia.',
+  },
+  '/practicas/humillacion': {
+    title: `Humillación | ${BRAND} Bogotá`,
+    description: 'Humillación verbal y física con la Dominatrix Viuda Negra en Bogotá, Colombia.',
+  },
+  '/practicas/otros': {
+    title: `Otras Prácticas y Fetiches | ${BRAND} Bogotá`,
+    description: 'Otras prácticas y fetiches con la Dominatrix Viuda Negra en Bogotá, Colombia. Pregúntame por lo que buscas.',
   },
   '/presenciales': {
     title: `Servicios Presenciales de Dominación | ${BRAND} Bogotá`,

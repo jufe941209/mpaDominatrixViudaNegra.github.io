@@ -53,9 +53,7 @@ export function Navbar({ overlay = false }: NavbarProps) {
             <NavLink to={navigation.home.path} className={directLinkClass} onClick={() => setMobileOpen(false)} end>
               {t(navigation.home.labelKey)}
             </NavLink>
-            <NavLink to={navigation.practicas.path} className={directLinkClass} onClick={() => setMobileOpen(false)}>
-              {t(navigation.practicas.labelKey)}
-            </NavLink>
+            <NavDropdown label={t(navigation.practicas.labelKey)} items={navigation.practicas.items} onNavigate={() => setMobileOpen(false)} />
             <NavDropdown label={t(navigation.services.labelKey)} items={navigation.services.items} onNavigate={() => setMobileOpen(false)} />
             <NavDropdown label={t(navigation.gallery.labelKey)} items={navigation.gallery.items} onNavigate={() => setMobileOpen(false)} />
             <NavDropdown label={t(navigation.shop.labelKey)} items={navigation.shop.items} onNavigate={() => setMobileOpen(false)} />

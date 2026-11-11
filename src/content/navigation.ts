@@ -1,3 +1,5 @@
+import { practiceTabs } from './practiceTabs';
+
 export interface NavLinkItem {
   path: string;
   labelKey: string;
@@ -5,7 +7,10 @@ export interface NavLinkItem {
 
 export const navigation = {
   home: { path: '/', labelKey: 'common:nav.home' },
-  practicas: { path: '/practicas', labelKey: 'common:nav.practices' },
+  practicas: {
+    labelKey: 'common:nav.practices',
+    items: practiceTabs.map((tab) => ({ path: `/practicas/${tab.slug}`, labelKey: tab.navLabelKey })) as NavLinkItem[],
+  },
   services: {
     labelKey: 'common:nav.services',
     items: [

@@ -10,6 +10,8 @@ import {
 } from '../content/professionalGallery';
 import { GalleryCard } from '../components/molecules/GalleryCard';
 import { GalleryLightbox } from '../components/organisms/GalleryLightbox';
+import { Icon } from '../components/atoms/Icon';
+import { Reveal } from '../components/atoms/Reveal';
 import { useLightbox } from '../hooks/useLightbox';
 
 const COL_CLASS: Record<ProfessionalPhoto['colSpan'], string> = {
@@ -28,9 +30,30 @@ function Row({ photos, startIndex, onOpen }: { photos: ProfessionalPhoto[]; star
     <div className="flex flex-wrap justify-center gap-4">
       {photos.map((photo, i) => (
         <div key={photo.src} className={COL_CLASS[photo.colSpan]}>
-          <GalleryCard src={photo.src} alt={photo.alt} heightClass={HEIGHT_CLASS[photo.height]} onClick={() => onOpen(startIndex + i)} />
+          <GalleryCard
+            src={photo.src}
+            alt={photo.alt}
+            heightClass={HEIGHT_CLASS[photo.height]}
+            caption={photo.caption}
+            onClick={() => onOpen(startIndex + i)}
+          />
         </div>
       ))}
+    </div>
+  );
+}
+
+function SectionLabel({ icon, light, children }: { icon: string; light?: boolean; children: string }) {
+  const textClass = light ? 'text-white' : 'text-brand';
+  const lineClass = light ? 'bg-white/50' : 'bg-brand/60';
+  return (
+    <div className="mb-6 flex items-center justify-center gap-3">
+      <span className={`h-px w-10 ${lineClass}`} />
+      <h3 className={`flex items-center gap-2 font-heading text-sm font-bold uppercase tracking-[0.2em] ${textClass}`}>
+        <Icon name={icon} />
+        {children}
+      </h3>
+      <span className={`h-px w-10 ${lineClass}`} />
     </div>
   );
 }
@@ -51,13 +74,29 @@ export function ProfesionalesPage() {
 
   return (
     <>
+      <div
+        className="bg-cover bg-center py-16"
+        style={{
+          backgroundImage: "linear-gradient(135deg, rgba(0,0,0,0.9), rgba(183,35,39,0.3), rgba(0,0,0,0.95)), url('/img/hero-bg.png.jpeg')",
+        }}
+      >
+        <Reveal className="mx-auto max-w-[1320px] px-4 text-center">
+          <h1 className="mb-3 font-heading text-4xl font-bold text-white [text-shadow:2px_2px_6px_rgba(0,0,0,0.6)] md:text-5xl">
+            {t('profesionales:title')}
+          </h1>
+          <p className="mx-auto max-w-2xl text-center text-white/80">{t('profesionales:subtitle')}</p>
+        </Reveal>
+      </div>
+
       <div className="bg-black py-16">
         <div className="mx-auto max-w-[1320px] px-4">
-          <h2 className="mb-10 text-center font-heading text-3xl font-bold text-white [text-shadow:2px_2px_4px_rgba(0,0,0,0.5)] md:text-4xl">
-            {t('profesionales:title')}
-          </h2>
-          <div className="space-y-4">
+          <SectionLabel icon="fas fa-crown">{t('profesionales:sections.showcase')}</SectionLabel>
+          <div className="mb-14">
             <Row photos={professionalGalleryShowcase} startIndex={0} onOpen={galleryOneLightbox.open} />
+          </div>
+
+          <SectionLabel icon="fas fa-images">{t('profesionales:sections.gallery')}</SectionLabel>
+          <div className="space-y-4">
             <Row photos={professionalGalleryRow1} startIndex={professionalGalleryShowcase.length} onOpen={galleryOneLightbox.open} />
             <Row
               photos={professionalGalleryRow2}
@@ -68,10 +107,13 @@ export function ProfesionalesPage() {
         </div>
       </div>
 
-      <div className="bg-[#9b1818] py-12">
-        <div className="mx-auto max-w-[1320px] space-y-4 px-4">
-          <Row photos={professionalGalleryRow3} startIndex={0} onOpen={galleryTwoLightbox.open} />
-          <Row photos={professionalGalleryRow4} startIndex={professionalGalleryRow3.length} onOpen={galleryTwoLightbox.open} />
+      <div className="bg-[#9b1818] py-16">
+        <div className="mx-auto max-w-[1320px] px-4">
+          <SectionLabel icon="fas fa-wine-glass" light>{t('profesionales:sections.candor')}</SectionLabel>
+          <div className="space-y-4">
+            <Row photos={professionalGalleryRow3} startIndex={0} onOpen={galleryTwoLightbox.open} />
+            <Row photos={professionalGalleryRow4} startIndex={professionalGalleryRow3.length} onOpen={galleryTwoLightbox.open} />
+          </div>
         </div>
       </div>
 

@@ -5,11 +5,14 @@ interface GalleryCardProps {
   alt: string;
   onClick: () => void;
   heightClass?: string;
+  caption?: string;
 }
 
-export function GalleryCard({ src, alt, onClick, heightClass = 'h-[250px]' }: GalleryCardProps) {
+export function GalleryCard({ src, alt, onClick, heightClass = 'h-[250px]', caption }: GalleryCardProps) {
   return (
-    <div className={`group relative ${heightClass} overflow-hidden rounded-2xl shadow-lg transition-shadow duration-300 hover:shadow-2xl`}>
+    <div
+      className={`group relative ${heightClass} overflow-hidden rounded-2xl border border-white/10 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-brand hover:shadow-2xl`}
+    >
       <img
         src={src}
         alt={alt}
@@ -24,6 +27,11 @@ export function GalleryCard({ src, alt, onClick, heightClass = 'h-[250px]' }: Ga
       >
         <Icon name="fas fa-search-plus" className="scale-90 text-3xl text-white drop-shadow transition-transform duration-300 group-hover:scale-100" />
       </button>
+      {caption && (
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent px-3 pb-2 pt-6">
+          <span className="font-heading text-xs font-semibold uppercase tracking-wide text-white/90">{caption}</span>
+        </div>
+      )}
     </div>
   );
 }

@@ -1,18 +1,10 @@
 import { useEffect, useState } from 'react';
 
-const STORAGE_KEY = 'vn_age_verified';
 const EXIT_URL = 'https://www.google.com';
 
-function readVerified() {
-  try {
-    return localStorage.getItem(STORAGE_KEY) === '1';
-  } catch {
-    return false;
-  }
-}
-
 export function AgeGate() {
-  const [verified, setVerified] = useState(readVerified);
+  // Always shown on every fresh page load, by design: this is not remembered across visits.
+  const [verified, setVerified] = useState(false);
 
   useEffect(() => {
     if (verified) return;
@@ -26,11 +18,6 @@ export function AgeGate() {
   if (verified) return null;
 
   function handleEnter() {
-    try {
-      localStorage.setItem(STORAGE_KEY, '1');
-    } catch {
-      /* localStorage unavailable, gate will reappear on next load */
-    }
     setVerified(true);
   }
 

@@ -3,6 +3,7 @@ export interface ProfessionalPhoto {
   alt: string;
   colSpan: 'lg-3' | 'lg-4' | 'lg-6';
   height: 300 | 400;
+  caption?: string;
 }
 
 const photo = (n: number, colSpan: ProfessionalPhoto['colSpan'], height: 300 | 400 = 300): ProfessionalPhoto => ({
@@ -12,11 +13,14 @@ const photo = (n: number, colSpan: ProfessionalPhoto['colSpan'], height: 300 | 4
   height,
 });
 
+const SHOWCASE_CAPTIONS = ['En El Trono', 'Porte y Dominio', 'Control Total', 'Presencia Absoluta'];
+
 export const professionalGalleryShowcase: ProfessionalPhoto[] = [1, 2, 3, 4].map((n) => ({
   src: `/img/throne/throne${n}.jpg`,
   alt: `Dominatrix Viuda Negra en su trono ${n}`,
   colSpan: 'lg-3',
   height: 400,
+  caption: SHOWCASE_CAPTIONS[n - 1],
 }));
 
 // Grid 1: replicates profesionales.php's first gallery (11 photos, 4/4/3 rows)

@@ -7,9 +7,9 @@ const BRAND = 'Dominatrix Viuda Negra';
 
 export const seoByPath: Record<string, SeoEntry> = {
   '/': {
-    title: `${BRAND} | Ama y Mistress BDSM en Bogotá, Colombia`,
+    title: `${BRAND} | Dominatrix en Bogotá y Colombia - Ama y Mistress BDSM`,
     description:
-      'Dominatrix Viuda Negra: Ama y Mistress profesional de BDSM en Bogotá, Colombia. Sesiones presenciales y virtuales, shows, talleres, galería y tienda fetiche.',
+      'Dominatrix Viuda Negra: Dominatrix profesional en Bogotá, Colombia. Ama y Mistress de BDSM con sesiones presenciales y virtuales, shows, talleres, galería y tienda fetiche.',
   },
   '/practicas/fetiches': {
     title: `Fetiches: Pies, Nylon, Botas y Más | ${BRAND} Bogotá`,
@@ -52,9 +52,9 @@ export const seoByPath: Record<string, SeoEntry> = {
     description: 'Otras prácticas y fetiches con la Dominatrix Viuda Negra en Bogotá, Colombia. Pregúntame por lo que buscas.',
   },
   '/presenciales': {
-    title: `Servicios Presenciales de Dominación | ${BRAND} Bogotá`,
+    title: `Dominatrix en Bogotá: Sesiones Presenciales | ${BRAND}`,
     description:
-      'Sesiones presenciales de BDSM con la Dominatrix Viuda Negra en su mazmorra privada de Bogotá, Colombia. Reglas, horarios, sesiones múltiples y servicios adicionales.',
+      'Sesiones presenciales con una Dominatrix en Bogotá, Colombia: mazmorra privada, reglas, horarios, sesiones múltiples y servicios adicionales con la Dominatrix Viuda Negra.',
   },
   '/virtuales': {
     title: `Servicios Virtuales: Videollamadas y Sumisión Online | ${BRAND}`,

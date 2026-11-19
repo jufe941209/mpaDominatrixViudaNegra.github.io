@@ -16,6 +16,7 @@ const MazmorraArsenalPage = lazy(() => import('./pages/MazmorraArsenalPage').the
 const ShowsPage = lazy(() => import('./pages/ShowsPage').then((m) => ({ default: m.ShowsPage })));
 const EventosPage = lazy(() => import('./pages/EventosPage').then((m) => ({ default: m.EventosPage })));
 const ContenidoPage = lazy(() => import('./pages/ContenidoPage').then((m) => ({ default: m.ContenidoPage })));
+const ContenidoDetailPage = lazy(() => import('./pages/ContenidoDetailPage').then((m) => ({ default: m.ContenidoDetailPage })));
 const WishlistPage = lazy(() => import('./pages/WishlistPage').then((m) => ({ default: m.WishlistPage })));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then((m) => ({ default: m.NotFoundPage })));
 
@@ -30,6 +31,7 @@ export const router = createBrowserRouter([
       { path: '/virtuales', element: <VirtualesPage /> },
       { path: '/talleres', element: <TalleresPage /> },
       { path: '/contenido', element: <ContenidoPage /> },
+      { path: '/contenido/:slug', element: <ContenidoDetailPage /> },
       { path: '/prensa', element: <PrensaPage /> },
       { path: '/profesionales', element: <ProfesionalesPage /> },
       { path: '/sesiones', element: <ComingSoonPage /> },

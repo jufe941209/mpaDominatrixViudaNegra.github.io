@@ -14,6 +14,8 @@
   <url><loc>https://mpa-viuda-negra.vercel.app/presenciales</loc><priority>0.8</priority></url>
   <url><loc>https://mpa-viuda-negra.vercel.app/virtuales</loc><priority>0.8</priority></url>
   <url><loc>https://mpa-viuda-negra.vercel.app/contenido</loc><priority>0.7</priority></url>
+  <url><loc>https://mpa-viuda-negra.vercel.app/contenido/domina</loc><priority>0.6</priority></url>
+  <url><loc>https://mpa-viuda-negra.vercel.app/contenido/rubber-doll</loc><priority>0.6</priority></url>
   <url><loc>https://mpa-viuda-negra.vercel.app/talleres</loc><priority>0.6</priority></url>
   <url><loc>https://mpa-viuda-negra.vercel.app/profesionales</loc><priority>0.6</priority></url>
   <url><loc>https://mpa-viuda-negra.vercel.app/mazmorra</loc><priority>0.6</priority></url>

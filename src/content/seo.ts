@@ -12,8 +12,8 @@ export const seoByPath: Record<string, SeoEntry> = {
       'Dominatrix Viuda Negra: Dominatrix profesional en Bogotá, Colombia. Ama y Mistress de BDSM con sesiones presenciales y virtuales, shows, talleres, galería y tienda fetiche.',
   },
   '/practicas/fetiches': {
-    title: `Fetiches: Pies, Nylon, Botas y Más | ${BRAND} Bogotá`,
-    description: 'Explora mis fetiches en Bogotá: pies, nylon, botas, fishnet, smoking y más. Cada práctica tiene su propia galería.',
+    title: `Cuero/Leather | ${BRAND} Bogotá`,
+    description: 'Galería de looks en cuero y leather de la Dominatrix Viuda Negra en Bogotá, Colombia.',
   },
   '/practicas/pegging': {
     title: `Pegging / Strapon | ${BRAND} Bogotá`,
@@ -65,6 +65,14 @@ export const seoByPath: Record<string, SeoEntry> = {
     title: `Contenido Exclusivo: Domina y Rubber Doll | ${BRAND}`,
     description:
       'Paquetes de fotos y videos exclusivos de la Dominatrix Viuda Negra, en su faceta de Domina y de Rubber Doll. Consulta y compra directo por WhatsApp.',
+  },
+  '/contenido/domina': {
+    title: `Contenido de Domina | ${BRAND}`,
+    description: 'Paquete de fotos y video exclusivo en la faceta de Dominatrix de la Dominatrix Viuda Negra. Ficha técnica y compra por WhatsApp.',
+  },
+  '/contenido/rubber-doll': {
+    title: `Contenido de Rubber Doll | ${BRAND}`,
+    description: 'Paquete de fotos y video exclusivo en la faceta de Rubber Doll Jade. Ficha técnica y compra por WhatsApp.',
   },
   '/talleres': {
     title: `Talleres y Capacitación BDSM para Webcam | ${BRAND}`,

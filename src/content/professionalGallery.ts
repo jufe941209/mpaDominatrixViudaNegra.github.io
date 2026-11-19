@@ -13,7 +13,7 @@ const photo = (n: number, colSpan: ProfessionalPhoto['colSpan'], height: 300 | 4
   height,
 });
 
-export const professionalGalleryShowcase: ProfessionalPhoto[] = [29, 30, 31, 32, 28].map((n) => photo(n, 'lg-3', 400));
+export const professionalGalleryShowcase: ProfessionalPhoto[] = [29, 30, 31, 32].map((n) => photo(n, 'lg-3', 400));
 
 // Grid 1: replicates profesionales.php's first gallery (11 photos, 4/4/3 rows)
 export const professionalGalleryRow1: ProfessionalPhoto[] = [1, 2, 3, 4, 5, 6, 7, 8].map((n) => photo(n, 'lg-3'));

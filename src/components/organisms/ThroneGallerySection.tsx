@@ -1,13 +1,15 @@
-import { GalleryCard } from '../molecules/GalleryCard';
 import { GalleryLightbox } from './GalleryLightbox';
 import { Reveal } from '../atoms/Reveal';
 import { useLightbox } from '../../hooks/useLightbox';
 import type { GalleryImage } from '../../types/content';
 
-const images: GalleryImage[] = Array.from({ length: 4 }, (_, i) => ({
-  src: `/img/throne/throne${i + 1}.jpg`,
-  alt: `Dominatrix Viuda Negra en el trono ${i + 1}`,
-}));
+const images: GalleryImage[] = [
+  ...[29, 30, 31, 32].map((n) => ({ src: `/img/profesionales/profesionales${n}.jpg`, alt: `Dominatrix Viuda Negra en el trono ${n}` })),
+  ...[18, 19, 20, 21, 22, 23, 24, 25, 26, 27].map((n) => ({ src: `/img/profesionales/profesionales${n}.jpg`, alt: `Porte Real ${n}` })),
+  ...[1, 2, 3, 4].map((n) => ({ src: `/img/throne/throne${n}.jpg`, alt: `Dominatrix Viuda Negra en el trono ${n}` })),
+];
+
+const track = [...images, ...images];
 
 export function ThroneGallerySection() {
   const lightbox = useLightbox();
@@ -23,12 +25,22 @@ export function ThroneGallerySection() {
             desapercibida.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-          {images.map((image, i) => (
-            <GalleryCard key={image.src} src={image.src} alt={image.alt} heightClass="h-[260px] sm:h-[340px]" onClick={() => lightbox.open(i)} />
+      </Reveal>
+      <div className="group relative mx-auto max-w-[1600px] overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
+        <div className="flex w-max animate-[practice-slide_40s_linear_infinite] gap-4 group-hover:[animation-play-state:paused]">
+          {track.map((image, i) => (
+            <button
+              key={`${image.src}-${i}`}
+              type="button"
+              onClick={() => lightbox.open(i % images.length)}
+              aria-label={`Ver ${image.alt}`}
+              className="block h-[320px] w-[220px] flex-shrink-0 overflow-hidden rounded-2xl border-2 border-brand shadow-xl transition-transform duration-300 hover:-translate-y-1 sm:h-[400px] sm:w-[280px]"
+            >
+              <img src={image.src} alt={image.alt} loading="lazy" className="h-full w-full object-cover" />
+            </button>
           ))}
         </div>
-      </Reveal>
+      </div>
       <GalleryLightbox images={images} index={lightbox.index} onClose={lightbox.close} />
     </div>
   );

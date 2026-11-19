@@ -7,7 +7,7 @@ import { VideoModal } from '../components/organisms/VideoModal';
 import { GalleryLightbox } from '../components/organisms/GalleryLightbox';
 import { useLightbox } from '../hooks/useLightbox';
 import { buildWhatsAppUrl } from '../lib/whatsapp';
-import { showVideos, videos, videoPosters } from '../content/videos';
+import { showVideos, videos } from '../content/videos';
 
 const performerPhotos = [
   { src: '/img/eventos/performers1.jpg', alt: 'Performers en látex en un evento fetichista' },
@@ -38,7 +38,7 @@ export function ShowsPage() {
 
         <Reveal className="mb-8 rounded-[20px] border border-white/20 bg-black/50 p-6 text-center shadow-2xl backdrop-blur-sm md:p-10">
           <VideoThumbnail
-            posterSrc={videoPosters.showsCover}
+            posterSrc="/img/throne/throne1.jpg"
             alt="Video de portada de Show Eventos / Performers"
             heightClass="h-[260px] sm:h-[380px]"
             onClick={() => setActiveVideo(videos.showsCover)}

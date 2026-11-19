@@ -8,8 +8,9 @@ export const practiceCategories: PracticeCategory[] = [
   { slug: 'nylon', titleKey: 'practicas:nylon_title', folder: '/img/nylon', filePrefix: 'nylon', count: 6, extension: 'jpg' },
   { slug: 'smoking', titleKey: 'practicas:smoking_title', folder: '/img/smoking', filePrefix: 'smoking', count: 3, extension: 'jpg' },
   { slug: 'chastity', titleKey: 'practicas:chastity_title', folder: '/img/chastity', filePrefix: 'castidad', count: 7, extension: 'jpg' },
-  { slug: 'pegging', titleKey: 'practicas:pegging_title', folder: '/img/pegging', filePrefix: 'pegging', count: 5, extension: 'jpg' },
+  { slug: 'pegging', titleKey: 'practicas:pegging_title', folder: '/img/pegging', filePrefix: 'pegging', count: 6, extension: 'jpg' },
   { slug: 'peggingScene', titleKey: 'practicas:peggingScene_title', folder: '/img/peggingScene', filePrefix: 'peggingScene', count: 13, extension: 'jpg' },
   { slug: 'petplay', titleKey: 'practicas:petplay_title', folder: '/img/petplay', filePrefix: 'petplay', count: 10, extension: 'jpg' },
   { slug: 'leatherGloves', titleKey: 'practicas:leatherGloves_title', folder: '/img/leathergloves', filePrefix: 'leathergloves', count: 5, extension: 'jpg' },
+  { slug: 'leather', titleKey: 'practicas:leather_title', folder: '/img/profesionales', filePrefix: 'profesionales', count: 11, extension: 'jpg' },
 ];

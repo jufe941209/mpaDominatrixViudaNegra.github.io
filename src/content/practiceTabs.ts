@@ -23,16 +23,7 @@ export const practiceTabs: PracticeTab[] = [
     navLabelKey: 'common:nav.practices_fetiches',
     titleKey: 'practicas:tabs.fetiches.title',
     descriptionKey: 'practicas:tabs.fetiches.description',
-    introImages: [
-      { src: '/img/pies/pies1.jpg', to: '/practicas/humillacion' },
-      { src: '/img/fishnets/fishnets1.jpg', to: '/practicas/humillacion' },
-      { src: '/img/nylon/nylon1.jpg', to: '/practicas/otros' },
-      { src: '/img/smoking/smoking1.jpg', to: '/practicas/otros' },
-      { src: '/img/smell/smell1.jpg', to: '/practicas/humillacion' },
-      { src: '/img/boots/boots1.jpg', to: '/practicas/humillacion' },
-      { src: '/img/pegging/pegging1.jpg', to: '/practicas/pegging' },
-      { src: '/img/chastity/castidad1.jpg', to: '/practicas/castidad' },
-    ],
+    categories: [bySlug('leather')],
   },
   {
     slug: 'pegging',

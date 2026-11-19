@@ -19,8 +19,12 @@
     { "source": "/ropaInterior.php", "destination": "/ropa-interior", "permanent": true },
     { "source": "/capacitaciones.php", "destination": "/talleres", "permanent": true }
   ],
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "rewrites": [{ "source": "/((?!assets/).*)", "destination": "/index.html" }],
   "headers": [
+    {
+      "source": "/((?!assets/|img/).*)",
+      "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+    },
     {
       "source": "/img/(.*)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]

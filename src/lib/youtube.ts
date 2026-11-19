@@ -9,6 +9,7 @@ declare global {
 
 export interface YouTubePlayer {
   playVideo: () => void;
+  pauseVideo: () => void;
   unMute: () => void;
   setVolume: (volume: number) => void;
   mute: () => void;

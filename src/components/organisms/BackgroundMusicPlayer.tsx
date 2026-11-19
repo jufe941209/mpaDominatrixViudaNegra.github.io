@@ -59,7 +59,11 @@ export function BackgroundMusicPlayer() {
     };
   }, [isHome, unlocked]);
 
-  if (!isHome || !unlocked) return null;
+  useEffect(() => {
+    if (!playerRef.current) return;
+    if (isHome) playerRef.current.playVideo();
+    else playerRef.current.pauseVideo();
+  }, [isHome]);
 
   function handleUnmute() {
     const player = playerRef.current;
@@ -78,6 +82,7 @@ export function BackgroundMusicPlayer() {
   return (
     <>
       <div ref={containerRef} className="pointer-events-none fixed -left-[9999px] -top-[9999px] h-px w-px opacity-0" aria-hidden="true" />
+      {isHome && unlocked && (
       <div className="animate-fadeInUp fixed bottom-6 left-6 z-50 flex items-center gap-3 rounded-full border border-white/20 bg-black/75 py-2 pl-2 pr-4 shadow-lg backdrop-blur-sm">
         <button
           type="button"
@@ -98,6 +103,7 @@ export function BackgroundMusicPlayer() {
           </a>
         </span>
       </div>
+      )}
     </>
   );
 }

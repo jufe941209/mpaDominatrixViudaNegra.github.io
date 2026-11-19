@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, type ReactNode } from 'react';
+import { isAgeVerified } from '../lib/ageVerification';
 
 interface MusicContextValue {
   unlocked: boolean;
@@ -7,18 +8,10 @@ interface MusicContextValue {
 
 const MusicContext = createContext<MusicContextValue | null>(null);
 
-function readAlreadyVerified() {
-  try {
-    return sessionStorage.getItem('vn_age_verified') === '1';
-  } catch {
-    return false;
-  }
-}
-
 export function MusicProvider({ children }: { children: ReactNode }) {
-  // If the age gate was already accepted earlier this tab session, music can play
+  // If the age gate was already accepted earlier this browser session, music can play
   // on arrival at Home without waiting for another "Enter" click that won't happen.
-  const [unlocked, setUnlocked] = useState(readAlreadyVerified);
+  const [unlocked, setUnlocked] = useState(isAgeVerified);
   return <MusicContext.Provider value={{ unlocked, unlock: () => setUnlocked(true) }}>{children}</MusicContext.Provider>;
 }
 

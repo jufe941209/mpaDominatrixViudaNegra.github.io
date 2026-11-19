@@ -1,21 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useMusic } from '../../context/MusicContext';
+import { isAgeVerified, markAgeVerified } from '../../lib/ageVerification';
 
 const EXIT_URL = 'https://www.google.com';
-const STORAGE_KEY = 'vn_age_verified';
-
-function readVerified() {
-  try {
-    return sessionStorage.getItem(STORAGE_KEY) === '1';
-  } catch {
-    return false;
-  }
-}
 
 export function AgeGate() {
-  // Shown once per browser tab session (sessionStorage): stays dismissed across in-site
-  // navigation and reloads, but reappears if the tab is closed and reopened.
-  const [verified, setVerified] = useState(readVerified);
+  // Shown once per browser session, shared across all tabs (session cookie).
+  const [verified, setVerified] = useState(isAgeVerified);
   const { unlock } = useMusic();
 
   useEffect(() => {
@@ -30,11 +21,7 @@ export function AgeGate() {
   if (verified) return null;
 
   function handleEnter() {
-    try {
-      sessionStorage.setItem(STORAGE_KEY, '1');
-    } catch {
-      /* sessionStorage unavailable, gate will reappear on next navigation */
-    }
+    markAgeVerified();
     unlock();
     setVerified(true);
   }

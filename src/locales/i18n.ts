@@ -17,6 +17,7 @@ import esMazmorra from './es/mazmorra.json';
 import esRubberDollJade from './es/rubberDollJade.json';
 import esWishlist from './es/wishlist.json';
 import esContenido from './es/contenido.json';
+import esEventos from './es/eventos.json';
 
 import enCommon from './en/common.json';
 import enHome from './en/home.json';
@@ -33,6 +34,7 @@ import enMazmorra from './en/mazmorra.json';
 import enRubberDollJade from './en/rubberDollJade.json';
 import enWishlist from './en/wishlist.json';
 import enContenido from './en/contenido.json';
+import enEventos from './en/eventos.json';
 
 export const defaultNS = 'common';
 
@@ -45,7 +47,7 @@ i18next
     defaultNS,
     ns: [
       'common', 'home', 'practicas', 'presenciales', 'virtuales',
-      'talleres', 'profesionales', 'prensa', 'ropaInterior', 'construction', 'notFound', 'mazmorra', 'rubberDollJade', 'wishlist', 'contenido',
+      'talleres', 'profesionales', 'prensa', 'ropaInterior', 'construction', 'notFound', 'mazmorra', 'rubberDollJade', 'wishlist', 'contenido', 'eventos',
     ],
     resources: {
       es: {
@@ -64,6 +66,7 @@ i18next
         rubberDollJade: esRubberDollJade,
         wishlist: esWishlist,
         contenido: esContenido,
+        eventos: esEventos,
       },
       en: {
         common: enCommon,
@@ -81,6 +84,7 @@ i18next
         rubberDollJade: enRubberDollJade,
         wishlist: enWishlist,
         contenido: enContenido,
+        eventos: enEventos,
       },
     },
     interpolation: { escapeValue: false },

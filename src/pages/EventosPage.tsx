@@ -1,13 +1,10 @@
-import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Reveal } from '../components/atoms/Reveal';
 import { Button } from '../components/atoms/Button';
 import { Icon } from '../components/atoms/Icon';
 import { GalleryLightbox } from '../components/organisms/GalleryLightbox';
-import { VideoThumbnail } from '../components/molecules/VideoThumbnail';
-import { VideoModal } from '../components/organisms/VideoModal';
 import { useLightbox } from '../hooks/useLightbox';
 import { eventItems } from '../content/eventItems';
-import { videos } from '../content/videos';
 
 const performerPhotos = [
   { src: '/img/eventos/performers1.jpg', alt: 'Performers en látex en un evento fetichista' },
@@ -15,9 +12,9 @@ const performerPhotos = [
 ];
 
 export function EventosPage() {
+  const { t } = useTranslation();
   const lightbox = useLightbox();
   const performersLightbox = useLightbox();
-  const [videoOpen, setVideoOpen] = useState(false);
   const lightboxImages = eventItems.map((item) => ({ src: item.image, alt: item.title }));
 
   return (
@@ -28,20 +25,9 @@ export function EventosPage() {
       <div className="mx-auto max-w-[1320px] px-4">
         <Reveal>
           <h1 className="mb-4 text-center font-heading text-4xl font-bold text-white [text-shadow:2px_2px_4px_rgba(0,0,0,0.8)] md:text-5xl">
-            Noticias y Eventos
+            {t('eventos:title')}
           </h1>
-          <p className="mx-auto mb-12 max-w-2xl text-center text-white/70">
-            Fiestas, lanzamientos y presentaciones del universo fetichista y BDSM de la Dominatrix Viuda Negra.
-          </p>
-        </Reveal>
-
-        <Reveal className="mx-auto mb-12 max-w-5xl rounded-[20px] border border-white/20 bg-black/50 p-6 text-center shadow-2xl backdrop-blur-sm md:p-10">
-          <VideoThumbnail
-            posterSrc="/img/throne/throne1.jpg"
-            alt="Video de la Dominatrix Viuda Negra"
-            heightClass="h-[300px] sm:h-[460px]"
-            onClick={() => setVideoOpen(true)}
-          />
+          <p className="mx-auto mb-12 max-w-2xl text-center text-white/70">{t('eventos:description')}</p>
         </Reveal>
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -60,7 +46,7 @@ export function EventosPage() {
                     className="mt-4 inline-flex w-fit items-center gap-2 text-sm font-bold uppercase tracking-wide text-brand transition-colors hover:text-brand-dark"
                   >
                     <Icon name="fas fa-search-plus" />
-                    Ver completo
+                    {t('eventos:viewFull')}
                   </button>
                 </div>
               </div>
@@ -69,10 +55,8 @@ export function EventosPage() {
         </div>
 
         <Reveal className="mx-auto mt-16 max-w-5xl rounded-[20px] border border-white/20 bg-black/50 p-6 text-center shadow-2xl backdrop-blur-sm md:p-10">
-          <h2 className="mb-3 font-heading text-2xl font-bold text-white md:text-3xl">Show Eventos / Performers</h2>
-          <p className="mx-auto mb-8 max-w-2xl text-center text-white/70">
-            Un vistazo a las performers y escenas en vivo que acompañan los eventos fetichistas de la Dominatrix Viuda Negra.
-          </p>
+          <h2 className="mb-3 font-heading text-2xl font-bold text-white md:text-3xl">{t('eventos:performers.title')}</h2>
+          <p className="mx-auto mb-8 max-w-2xl text-center text-white/70">{t('eventos:performers.description')}</p>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {performerPhotos.map((photo, i) => (
               <button
@@ -94,14 +78,13 @@ export function EventosPage() {
           <div className="mt-8">
             <Button to="/shows" variant="danger">
               <Icon name="fas fa-theater-masks" />
-              Ver Más Shows y Performers
+              {t('eventos:performers.cta')}
             </Button>
           </div>
         </Reveal>
       </div>
       <GalleryLightbox images={lightboxImages} index={lightbox.index} onClose={lightbox.close} />
       <GalleryLightbox images={performerPhotos} index={performersLightbox.index} onClose={performersLightbox.close} />
-      {videoOpen && <VideoModal url={videos.home} onClose={() => setVideoOpen(false)} />}
     </div>
   );
 }

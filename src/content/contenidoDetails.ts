@@ -10,6 +10,7 @@ export interface ContenidoDetail {
   whatsappMessage: string;
   titleKey: string;
   descriptionKey: string;
+  fichaKey: 'domina' | 'rubberDoll';
 }
 
 export const contenidoDetails: ContenidoDetail[] = [
@@ -23,6 +24,7 @@ export const contenidoDetails: ContenidoDetail[] = [
     whatsappMessage: 'Hola, quiero información sobre los paquetes de Contenido de Domina',
     titleKey: 'contenido:domina.title',
     descriptionKey: 'contenido:domina.description',
+    fichaKey: 'domina',
   },
   {
     slug: 'rubber-doll',
@@ -34,5 +36,6 @@ export const contenidoDetails: ContenidoDetail[] = [
     whatsappMessage: 'Hola, quiero información sobre los paquetes de Contenido de Rubber Doll',
     titleKey: 'contenido:rubberDoll.title',
     descriptionKey: 'contenido:rubberDoll.description',
+    fichaKey: 'rubberDoll',
   },
 ];

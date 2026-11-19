@@ -20,6 +20,26 @@
     "precioCop": "Price (COP)",
     "precioUsd": "Price (USD)",
     "consultar": "Ask on WhatsApp",
-    "comprar": "Buy / Ask"
+    "comprar": "Buy / Ask",
+    "values": {
+      "domina": {
+        "rol": "Dominatrix / Mistress",
+        "fotos": "25 photos + 2 short videos",
+        "juguetes": "Whip, gag, BDSM candles",
+        "outfit": "Black latex and thigh-high boots",
+        "hashtags": "#dominatrix #bdsm #femdom #latex",
+        "precioCop": "$120,000 COP",
+        "precioUsd": "$30 USD"
+      },
+      "rubberDoll": {
+        "rol": "Rubber Doll Jade",
+        "fotos": "20 photos + 1 video",
+        "juguetes": "Dildo, harness, ball gag",
+        "outfit": "Full latex catsuit with mask",
+        "hashtags": "#rubberdoll #latex #fetish #rubberfetish",
+        "precioCop": "$100,000 COP",
+        "precioUsd": "$25 USD"
+      }
+    }
   }
 }

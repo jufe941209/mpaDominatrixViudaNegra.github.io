@@ -51,7 +51,7 @@ export function ContenidoDetailPage() {
             {FICHA_ROWS.map((key) => (
               <div key={key} className="flex items-center justify-between gap-4 py-3">
                 <dt className="text-sm font-semibold uppercase tracking-wide text-white/60">{t(`contenido:fichaTecnica.${key}`)}</dt>
-                <dd className="text-right text-sm font-bold text-white">{t('contenido:fichaTecnica.consultar')}</dd>
+                <dd className="text-right text-sm font-bold text-white">{t(`contenido:fichaTecnica.values.${detail.fichaKey}.${key}`)}</dd>
               </div>
             ))}
           </dl>

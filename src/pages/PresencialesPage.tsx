@@ -84,13 +84,13 @@ export function PresencialesPage() {
               type="button"
               onClick={() => paymentLightbox.open(0)}
               aria-label={`Ver ${t('presenciales:payment_methods.title')}`}
-              className="block overflow-hidden rounded-2xl border-2 border-brand shadow-xl transition-transform duration-300 hover:-translate-y-1"
+              className="block overflow-hidden rounded-2xl border-2 border-brand bg-black shadow-xl transition-transform duration-300 hover:-translate-y-1"
             >
               <img
                 src="/img/presenciales/mediospago.jpg"
                 alt={t('presenciales:payment_methods.title')}
                 loading="lazy"
-                className="h-[320px] w-full object-cover"
+                className="mx-auto max-h-[480px] w-full bg-black object-contain"
               />
             </button>
             <div className="flex flex-col items-center text-center">

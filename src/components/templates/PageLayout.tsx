@@ -4,6 +4,7 @@ import { TopBar } from '../organisms/TopBar';
 import { Navbar } from '../organisms/Navbar';
 import { Footer } from '../organisms/Footer';
 import { BackToTopButton } from '../molecules/BackToTopButton';
+import { BackgroundMusicPlayer } from '../organisms/BackgroundMusicPlayer';
 import { useSeo } from '../../hooks/useSeo';
 
 function PageFallback() {
@@ -37,6 +38,7 @@ export function PageLayout() {
       </div>
       <Footer />
       <BackToTopButton />
+      <BackgroundMusicPlayer />
     </div>
   );
 }

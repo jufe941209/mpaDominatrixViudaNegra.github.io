@@ -13,14 +13,9 @@ const photo = (n: number, colSpan: ProfessionalPhoto['colSpan'], height: 300 | 4
   height,
 });
 
-export const professionalGalleryShowcase: ProfessionalPhoto[] = [29, 30, 31, 32].map((n) => photo(n, 'lg-3', 400));
-
-// Grid 1: replicates profesionales.php's first gallery (11 photos, 4/4/3 rows)
-export const professionalGalleryRow1: ProfessionalPhoto[] = [1, 2, 3, 4, 5, 6, 7, 8].map((n) => photo(n, 'lg-3'));
-export const professionalGalleryRow2: ProfessionalPhoto[] = [9, 10, 11].map((n) => photo(n, 'lg-4'));
-// Ordered so wide/full-body shots lead into close-up portraits, instead of raw upload order
-export const professionalGalleryRow5: ProfessionalPhoto[] = [18, 20, 19, 24, 21, 25, 26, 22].map((n) => photo(n, 'lg-3'));
-export const professionalGalleryRow6: ProfessionalPhoto[] = [23, 27].map((n) => photo(n, 'lg-4'));
+// Note: the old "En El Trono" (29-32), "Galería Completa" (1-11) and "Porte Real" (18-27)
+// sets have moved out of this page entirely — they now live only on Home and Cuero/Leather,
+// so they're not duplicated here anymore.
 export const professionalGalleryRow7: ProfessionalPhoto[] = [33, 34, 35, 36, 37, 38].map((n) => photo(n, 'lg-3'));
 
 // Grid 2: replicates the second gallery (note: photo 16 is reused twice in the

@@ -23,7 +23,7 @@ export const practiceTabs: PracticeTab[] = [
     navLabelKey: 'common:nav.practices_fetiches',
     titleKey: 'practicas:tabs.fetiches.title',
     descriptionKey: 'practicas:tabs.fetiches.description',
-    categories: [bySlug('leather')],
+    categories: [bySlug('leather'), bySlug('leatherGloves')],
   },
   {
     slug: 'pegging',
@@ -82,6 +82,6 @@ export const practiceTabs: PracticeTab[] = [
     navLabelKey: 'common:nav.practices_otros',
     titleKey: 'practicas:tabs.otros.title',
     descriptionKey: 'practicas:tabs.otros.description',
-    categories: ['nylon', 'smoking', 'leatherGloves'].map(bySlug),
+    categories: ['nylon', 'smoking'].map(bySlug),
   },
 ];

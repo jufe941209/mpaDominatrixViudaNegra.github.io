@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
+import { useMusic } from '../../context/MusicContext';
 
 const EXIT_URL = 'https://www.google.com';
 
 export function AgeGate() {
   // Always shown on every fresh page load, by design: this is not remembered across visits.
   const [verified, setVerified] = useState(false);
+  const { unlock } = useMusic();
 
   useEffect(() => {
     if (verified) return;
@@ -18,6 +20,7 @@ export function AgeGate() {
   if (verified) return null;
 
   function handleEnter() {
+    unlock();
     setVerified(true);
   }
 

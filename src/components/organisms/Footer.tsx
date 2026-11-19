@@ -53,6 +53,16 @@ export function Footer() {
       <div className="border-t border-black/10 bg-black py-4">
         <div className="mx-auto flex max-w-[1320px] flex-col items-center justify-center gap-2 px-4 text-sm text-white/70">
           <span><Icon name="fas fa-copyright" className="mr-2" />{t('common:footer.copyright')}</span>
+          <span className="text-xs text-white/40">
+            {t('common:footer.credits')}{' '}
+            <a href="https://www.vanncode.com" target="_blank" rel="noopener noreferrer" className="hover:text-brand transition-colors">
+              www.vanncode.com
+            </a>{' '}
+            ·{' '}
+            <a href="https://www.instagram.com/vanncode" target="_blank" rel="noopener noreferrer" className="hover:text-brand transition-colors">
+              @vanncode
+            </a>
+          </span>
         </div>
       </div>
     </footer>

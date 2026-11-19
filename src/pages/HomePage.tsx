@@ -17,6 +17,8 @@ export function HomePage() {
     <>
       <HeroCarousel />
 
+      <ThroneGallerySection />
+
       <div
         className="bg-cover bg-center py-16"
         style={{ backgroundImage: 'linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.95)), url(/img/fondo-webcam.jpg)' }}
@@ -33,7 +35,6 @@ export function HomePage() {
 
       <AboutSection />
       <DominaPhilosophySection />
-      <ThroneGallerySection />
       <ArtesEscenicasSection />
       <DisenadoraModaSection />
 

@@ -1,16 +1,6 @@
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import {
-  professionalGalleryShowcase,
-  professionalGalleryRow1,
-  professionalGalleryRow2,
-  professionalGalleryRow3,
-  professionalGalleryRow4,
-  professionalGalleryRow5,
-  professionalGalleryRow6,
-  professionalGalleryRow7,
-  type ProfessionalPhoto,
-} from '../content/professionalGallery';
+import { professionalGalleryRow3, professionalGalleryRow4, professionalGalleryRow7, type ProfessionalPhoto } from '../content/professionalGallery';
 import { GalleryCard } from '../components/molecules/GalleryCard';
 import { GalleryLightbox } from '../components/organisms/GalleryLightbox';
 import { Icon } from '../components/atoms/Icon';
@@ -63,20 +53,11 @@ function SectionLabel({ icon, light, children }: { icon: string; light?: boolean
 
 export function ProfesionalesPage() {
   const { t } = useTranslation();
-  const galleryOneLightbox = useLightbox();
   const galleryTwoLightbox = useLightbox();
   const galleryThreeLightbox = useLightbox();
 
-  const galleryOneImages = useMemo(
-    () => [...professionalGalleryShowcase, ...professionalGalleryRow1, ...professionalGalleryRow2].map((p) => ({ src: p.src, alt: p.alt })),
-    [],
-  );
   const galleryTwoImages = useMemo(
-    () =>
-      [...professionalGalleryRow3, ...professionalGalleryRow4, ...professionalGalleryRow5, ...professionalGalleryRow6].map((p) => ({
-        src: p.src,
-        alt: p.alt,
-      })),
+    () => [...professionalGalleryRow3, ...professionalGalleryRow4].map((p) => ({ src: p.src, alt: p.alt })),
     [],
   );
   const galleryThreeImages = useMemo(() => professionalGalleryRow7.map((p) => ({ src: p.src, alt: p.alt })), []);
@@ -97,52 +78,12 @@ export function ProfesionalesPage() {
         </Reveal>
       </div>
 
-      <div className="bg-black py-16">
-        <div className="mx-auto max-w-[1320px] px-4">
-          <SectionLabel icon="fas fa-crown">{t('profesionales:sections.showcase')}</SectionLabel>
-          <div className="mb-14">
-            <Row photos={professionalGalleryShowcase} startIndex={0} onOpen={galleryOneLightbox.open} />
-          </div>
-
-          <SectionLabel icon="fas fa-images">{t('profesionales:sections.gallery')}</SectionLabel>
-          <div className="space-y-4">
-            <Row photos={professionalGalleryRow1} startIndex={professionalGalleryShowcase.length} onOpen={galleryOneLightbox.open} />
-            <Row
-              photos={professionalGalleryRow2}
-              startIndex={professionalGalleryShowcase.length + professionalGalleryRow1.length}
-              onOpen={galleryOneLightbox.open}
-            />
-          </div>
-        </div>
-      </div>
-
       <div className="bg-[#9b1818] py-16">
         <div className="mx-auto max-w-[1320px] px-4">
           <SectionLabel icon="fas fa-wine-glass" light>{t('profesionales:sections.candor')}</SectionLabel>
           <div className="space-y-4">
             <Row photos={professionalGalleryRow3} startIndex={0} onOpen={galleryTwoLightbox.open} />
             <Row photos={professionalGalleryRow4} startIndex={professionalGalleryRow3.length} onOpen={galleryTwoLightbox.open} />
-          </div>
-        </div>
-      </div>
-
-      <div
-        className="bg-cover bg-center py-16"
-        style={{ backgroundImage: 'linear-gradient(135deg, rgba(0,0,0,0.92), rgba(183,35,39,0.25), rgba(0,0,0,0.95)), url(/img/fondo1.jpg)' }}
-      >
-        <div className="mx-auto max-w-[1320px] px-4">
-          <SectionLabel icon="fas fa-gem">{t('profesionales:sections.royalty')}</SectionLabel>
-          <div className="space-y-4">
-            <Row
-              photos={professionalGalleryRow5}
-              startIndex={professionalGalleryRow3.length + professionalGalleryRow4.length}
-              onOpen={galleryTwoLightbox.open}
-            />
-            <Row
-              photos={professionalGalleryRow6}
-              startIndex={professionalGalleryRow3.length + professionalGalleryRow4.length + professionalGalleryRow5.length}
-              onOpen={galleryTwoLightbox.open}
-            />
           </div>
         </div>
       </div>
@@ -159,7 +100,6 @@ export function ProfesionalesPage() {
         </div>
       </div>
 
-      <GalleryLightbox images={galleryOneImages} index={galleryOneLightbox.index} onClose={galleryOneLightbox.close} />
       <GalleryLightbox images={galleryTwoImages} index={galleryTwoLightbox.index} onClose={galleryTwoLightbox.close} />
       <GalleryLightbox images={galleryThreeImages} index={galleryThreeLightbox.index} onClose={galleryThreeLightbox.close} />
     </>

@@ -9,15 +9,18 @@ const SONG_TITLE = 'BDSM';
 const SONG_CREDIT = 'DeathbyRomy';
 const SONG_URL = `https://www.youtube.com/watch?v=${VIDEO_ID}`;
 
+const TARGET_VOLUME = 20;
+
 /**
  * Plays background music on the Home page only, via YouTube's official IFrame Player API
  * (never a ripped/rehosted audio file) so the song stays properly attributed and only
  * ever playable through YouTube's own player and terms.
  *
- * Browsers block unmuted autoplay even right after an unrelated click (like the age
- * gate's "Enter" button), so we start muted (always allowed) and unmute at full volume
- * the moment the visitor clicks the player's own sound button — a real, direct gesture
- * the browser always honors.
+ * We request unmuted autoplay at low volume right as the player is created (as close to
+ * the age gate's "Enter" click as an async-loaded iframe can get), which many browsers
+ * honor. Browsers that still block audio-on-autoplay force it silently muted with no way
+ * for us to detect that from a cross-origin iframe, so the visible control always lets a
+ * visitor turn the sound on/off with one real click — a gesture every browser always honors.
  */
 export function BackgroundMusicPlayer() {
   const { pathname } = useLocation();
@@ -25,6 +28,9 @@ export function BackgroundMusicPlayer() {
   const containerRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<YouTubePlayer | null>(null);
   const [ready, setReady] = useState(false);
+  // Optimistic unmuted autoplay is attempted below, but a cross-origin iframe never tells us
+  // whether the browser actually honored it or silently force-muted it — so the UI always
+  // starts as "click to make sure it's on" rather than claiming a success we can't verify.
   const [audible, setAudible] = useState(false);
   const isHome = pathname === '/';
 
@@ -36,9 +42,11 @@ export function BackgroundMusicPlayer() {
       if (cancelled || !containerRef.current || !window.YT) return;
       playerRef.current = new window.YT.Player(containerRef.current, {
         videoId: VIDEO_ID,
-        playerVars: { autoplay: 1, mute: 1, loop: 1, playlist: VIDEO_ID, controls: 0, playsinline: 1 },
+        playerVars: { autoplay: 1, mute: 0, loop: 1, playlist: VIDEO_ID, controls: 0, playsinline: 1 },
         events: {
           onReady: (event: { target: YouTubePlayer }) => {
+            event.target.unMute();
+            event.target.setVolume(TARGET_VOLUME);
             event.target.playVideo();
             setReady(true);
           },
@@ -57,7 +65,7 @@ export function BackgroundMusicPlayer() {
     const player = playerRef.current;
     if (!player) return;
     player.unMute();
-    player.setVolume(100);
+    player.setVolume(TARGET_VOLUME);
     player.playVideo();
     setAudible(true);
   }
@@ -82,12 +90,8 @@ export function BackgroundMusicPlayer() {
         </button>
         <span className="text-xs leading-tight text-white/70">
           🎵 "{SONG_TITLE}" — {SONG_CREDIT}
-          {!audible && (
-            <>
-              <br />
-              <span className="font-bold text-brand">Haz clic para escuchar</span>
-            </>
-          )}
+          <br />
+          <span className="font-bold text-brand">{audible ? 'Sonando' : 'Haz clic para escuchar'}</span>
           <br />
           <a href={SONG_URL} target="_blank" rel="noopener noreferrer" className="text-brand underline">
             Ver canción original en YouTube

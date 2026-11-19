@@ -8,6 +8,7 @@ import {
   professionalGalleryRow4,
   professionalGalleryRow5,
   professionalGalleryRow6,
+  professionalGalleryRow7,
   type ProfessionalPhoto,
 } from '../content/professionalGallery';
 import { GalleryCard } from '../components/molecules/GalleryCard';
@@ -64,6 +65,7 @@ export function ProfesionalesPage() {
   const { t } = useTranslation();
   const galleryOneLightbox = useLightbox();
   const galleryTwoLightbox = useLightbox();
+  const galleryThreeLightbox = useLightbox();
 
   const galleryOneImages = useMemo(
     () => [...professionalGalleryShowcase, ...professionalGalleryRow1, ...professionalGalleryRow2].map((p) => ({ src: p.src, alt: p.alt })),
@@ -77,6 +79,7 @@ export function ProfesionalesPage() {
       })),
     [],
   );
+  const galleryThreeImages = useMemo(() => professionalGalleryRow7.map((p) => ({ src: p.src, alt: p.alt })), []);
 
   return (
     <>
@@ -144,8 +147,21 @@ export function ProfesionalesPage() {
         </div>
       </div>
 
+      <div
+        className="bg-cover bg-center py-16"
+        style={{ backgroundImage: "linear-gradient(135deg, rgba(20,0,10,0.95), rgba(139,26,26,0.35), rgba(0,0,0,0.92)), url('/img/fondo-webcam.jpg')" }}
+      >
+        <div className="mx-auto max-w-[1320px] px-4">
+          <SectionLabel icon="fas fa-skull" light>{t('profesionales:sections.gothic')}</SectionLabel>
+          <div className="space-y-4">
+            <Row photos={professionalGalleryRow7} startIndex={0} onOpen={galleryThreeLightbox.open} />
+          </div>
+        </div>
+      </div>
+
       <GalleryLightbox images={galleryOneImages} index={galleryOneLightbox.index} onClose={galleryOneLightbox.close} />
       <GalleryLightbox images={galleryTwoImages} index={galleryTwoLightbox.index} onClose={galleryTwoLightbox.close} />
+      <GalleryLightbox images={galleryThreeImages} index={galleryThreeLightbox.index} onClose={galleryThreeLightbox.close} />
     </>
   );
 }

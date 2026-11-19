@@ -2,13 +2,24 @@ import { useTranslation } from 'react-i18next';
 import { Icon } from '../components/atoms/Icon';
 import { Button } from '../components/atoms/Button';
 import { Reveal } from '../components/atoms/Reveal';
+import { GalleryCard } from '../components/molecules/GalleryCard';
+import { GalleryLightbox } from '../components/organisms/GalleryLightbox';
+import { useLightbox } from '../hooks/useLightbox';
 import { buildWhatsAppUrl } from '../lib/whatsapp';
 import { UnderwearPricingTiers } from '../components/organisms/UnderwearPricingTiers';
 import { underwearAdditionalKeys } from '../content/underwearData';
 
+const realPhotos = Array.from({ length: 6 }, (_, i) => ({
+  src: `/img/tienda/realUsada${i + 1}.jpg`,
+  alt: `Ropa Interior Usada - Foto Real ${i + 1}`,
+}));
+
 export function RopaInteriorPage() {
   const { t } = useTranslation();
   const termItems = t('ropaInterior:terms.items', { returnObjects: true }) as string[];
+  const catalogItems = t('ropaInterior:catalog.items', { returnObjects: true }) as string[];
+  const hashtags = t('ropaInterior:hashtags', { returnObjects: true }) as string[];
+  const realPhotosLightbox = useLightbox();
 
   return (
     <div
@@ -20,7 +31,27 @@ export function RopaInteriorPage() {
           <h1 className="mb-2 text-center font-heading text-4xl font-bold text-white [text-shadow:2px_2px_4px_rgba(0,0,0,0.8)] md:text-5xl">
             {t('ropaInterior:title')}
           </h1>
-          <p className="mb-12 text-center font-medium text-brand">{t('ropaInterior:description')}</p>
+          <p className="mx-auto mb-4 max-w-2xl text-center font-medium leading-relaxed text-brand">{t('ropaInterior:description')}</p>
+          <p className="mx-auto mb-6 max-w-2xl text-center text-sm leading-relaxed text-white/80">{t('ropaInterior:logistics')}</p>
+          <div className="mb-12 flex flex-wrap items-center justify-center gap-2">
+            {catalogItems.map((item) => (
+              <span key={item} className="rounded-full border border-brand/60 bg-black/40 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-white/90">
+                {item}
+              </span>
+            ))}
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <section className="mb-10 rounded-[20px] border border-white/20 bg-white/95 p-8 shadow-2xl backdrop-blur-sm">
+            <h2 className="mb-6 text-center font-heading text-2xl font-bold text-brand">{t('ropaInterior:realPhotos.title')}</h2>
+            <div className="mb-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
+              {realPhotos.map((photo, i) => (
+                <GalleryCard key={photo.src} src={photo.src} alt={photo.alt} heightClass="h-[260px]" onClick={() => realPhotosLightbox.open(i)} />
+              ))}
+            </div>
+            <p className="text-center italic text-gray-600">{t('ropaInterior:realPhotos.caption')}</p>
+          </section>
         </Reveal>
 
         <Reveal>
@@ -76,13 +107,22 @@ export function RopaInteriorPage() {
           </section>
         </Reveal>
 
-        <div className="text-center">
+        <div className="mb-8 text-center">
           <Button href={buildWhatsAppUrl('Hola! Me interesa información sobre ropa interior usada')} variant="danger" pill={false}>
             <Icon name="fab fa-whatsapp" />
             {t('ropaInterior:mainCta')}
           </Button>
         </div>
+
+        <div className="flex flex-wrap justify-center gap-x-3 gap-y-1">
+          {hashtags.map((tag) => (
+            <span key={tag} className="text-xs text-white/30">
+              {tag}
+            </span>
+          ))}
+        </div>
       </div>
+      <GalleryLightbox images={realPhotos} index={realPhotosLightbox.index} onClose={realPhotosLightbox.close} />
     </div>
   );
 }

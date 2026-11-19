@@ -44,7 +44,14 @@
     <noscript><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" /></noscript>
 
     <!-- Hero's first slide is the largest above-the-fold image on the home page (the most common landing route) -->
-    <link rel="preload" as="image" href="/img/carousel-1.jpg" fetchpriority="high" />
+    <script>
+      // Hero image is only on Home: preloading it elsewhere just wastes bandwidth and logs a warning.
+      if (location.pathname === '/') {
+        var l = document.createElement('link');
+        l.rel = 'preload'; l.as = 'image'; l.href = '/img/carousel-1.jpg'; l.setAttribute('fetchpriority', 'high');
+        document.head.appendChild(l);
+      }
+    </script>
 
     <script type="application/ld+json">
       {

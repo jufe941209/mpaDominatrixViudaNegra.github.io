@@ -1,22 +1,17 @@
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Icon } from '../components/atoms/Icon';
 import { Button } from '../components/atoms/Button';
 import { Badge } from '../components/atoms/Badge';
 import { Reveal } from '../components/atoms/Reveal';
-import { VideoThumbnail } from '../components/molecules/VideoThumbnail';
-import { VideoModal } from '../components/organisms/VideoModal';
 import { GalleryLightbox } from '../components/organisms/GalleryLightbox';
 import { useLightbox } from '../hooks/useLightbox';
 import { buildWhatsAppUrl } from '../lib/whatsapp';
-import { videos, videoPosters } from '../content/videos';
 import { MultipleSessionsSection } from '../components/organisms/MultipleSessionsSection';
 import { SubmissiveSessionsSection } from '../components/organisms/SubmissiveSessionsSection';
 import { RulesSection } from '../components/organisms/RulesSection';
 
 export function PresencialesPage() {
   const { t } = useTranslation();
-  const [videoOpen, setVideoOpen] = useState(false);
   const paymentLightbox = useLightbox();
 
   return (
@@ -31,15 +26,6 @@ export function PresencialesPage() {
         >
           <h1 className="mb-4 font-heading text-3xl font-bold text-white md:text-4xl">{t('presenciales:title')}</h1>
           <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed text-white">{t('presenciales:description')}</p>
-        </Reveal>
-
-        <Reveal className="mb-8 rounded-[20px] border border-white/20 bg-black/50 p-6 text-center shadow-2xl backdrop-blur-sm md:p-10">
-          <VideoThumbnail
-            posterSrc={videoPosters.presenciales}
-            alt="Video de sesiones presenciales"
-            heightClass="h-[260px] sm:h-[380px]"
-            onClick={() => setVideoOpen(true)}
-          />
         </Reveal>
 
         <RulesSection />
@@ -115,7 +101,6 @@ export function PresencialesPage() {
           </div>
         </Reveal>
       </div>
-      {videoOpen && <VideoModal url={videos.presenciales} onClose={() => setVideoOpen(false)} />}
       <GalleryLightbox
         images={[{ src: '/img/presenciales/mediospago.jpg', alt: t('presenciales:payment_methods.title') }]}
         index={paymentLightbox.index}

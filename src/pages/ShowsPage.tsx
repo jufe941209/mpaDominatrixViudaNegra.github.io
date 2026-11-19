@@ -7,7 +7,7 @@ import { VideoModal } from '../components/organisms/VideoModal';
 import { GalleryLightbox } from '../components/organisms/GalleryLightbox';
 import { useLightbox } from '../hooks/useLightbox';
 import { buildWhatsAppUrl } from '../lib/whatsapp';
-import { showVideos } from '../content/videos';
+import { showVideos, videos, videoPosters } from '../content/videos';
 
 const performerPhotos = [
   { src: '/img/eventos/performers1.jpg', alt: 'Performers en látex en un evento fetichista' },
@@ -34,6 +34,15 @@ export function ShowsPage() {
             Shows en vivo, performances fetichistas y presentaciones de la Dominatrix Viuda Negra para clubes,
             fiestas temáticas y eventos privados en Bogotá.
           </p>
+        </Reveal>
+
+        <Reveal className="mb-8 rounded-[20px] border border-white/20 bg-black/50 p-6 text-center shadow-2xl backdrop-blur-sm md:p-10">
+          <VideoThumbnail
+            posterSrc={videoPosters.showsCover}
+            alt="Video de portada de Show Eventos / Performers"
+            heightClass="h-[260px] sm:h-[380px]"
+            onClick={() => setActiveVideo(videos.showsCover)}
+          />
         </Reveal>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">

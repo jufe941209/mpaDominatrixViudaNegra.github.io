@@ -13,7 +13,7 @@ function bunnyThumbnail(videoId: string) {
 const videoIds = {
   home: 'c3f5baac-3553-40a4-9656-8078506d0d1b',
   inicio: '19fa5b5f-1497-444b-a60b-12fa8f7f3c7d',
-  presenciales: '3c98e918-d894-4ee3-bbae-4221a4ae73d9',
+  showsCover: '3c98e918-d894-4ee3-bbae-4221a4ae73d9',
   mazmorraJuguetes: '24e98f21-f846-45e2-9c72-f616850ff89a',
   rubberDollJade: '40b17239-7822-4439-959a-2241e84c4461',
   contenidoDomina: 'e1420395-47ac-4d38-b33d-e338b36cc8b5',

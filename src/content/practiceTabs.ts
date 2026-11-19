@@ -39,16 +39,13 @@ export const practiceTabs: PracticeTab[] = [
     navLabelKey: 'common:nav.practices_pegging',
     titleKey: 'practicas:tabs.pegging.title',
     descriptionKey: 'practicas:tabs.pegging.description',
-    categories: [bySlug('pegging')],
+    categories: [bySlug('pegging'), bySlug('peggingScene')],
   },
   {
     slug: 'sadomasoquismo',
     navLabelKey: 'common:nav.practices_sadomasoquismo',
     titleKey: 'practicas:tabs.sadomasoquismo.title',
     descriptionKey: 'practicas:tabs.sadomasoquismo.description',
-    categories: [
-      { slug: 'sadomasoquismo', titleKey: 'practicas:tabs.sadomasoquismo.title', folder: '/img/throne', filePrefix: 'throne', count: 4, extension: 'jpg' },
-    ],
   },
   {
     slug: 'lluvias',
@@ -61,9 +58,6 @@ export const practiceTabs: PracticeTab[] = [
     navLabelKey: 'common:nav.practices_bondage',
     titleKey: 'practicas:tabs.bondage.title',
     descriptionKey: 'practicas:tabs.bondage.description',
-    categories: [
-      { slug: 'bondage', titleKey: 'practicas:tabs.bondage.title', folder: '/img/mazmorra/bondage', filePrefix: 'bondage', count: 7, extension: 'jpg' },
-    ],
   },
   {
     slug: 'findom',

@@ -27,6 +27,7 @@ export const practiceTabs: PracticeTab[] = [
     descriptionKey: 'practicas:tabs.fetiches.description',
     categories: [
       { slug: 'fetiches', titleKey: 'practicas:tabs.fetiches.title', folder: '/img/mazmorra/bondage', filePrefix: 'bondage', count: 2, numbers: [2, 5], extension: 'jpg' },
+      { slug: 'latexVip', titleKey: 'practicas:latexVip_title', folder: '/img/latexvip', filePrefix: 'latexvip', count: 18, extension: 'jpg' },
     ],
   },
   {

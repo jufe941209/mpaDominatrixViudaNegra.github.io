@@ -62,12 +62,12 @@ export const seoByPath: Record<string, SeoEntry> = {
       'Domina o sométete a distancia: videollamadas de dominación, llamadas calientes, relatos eróticos y contenido personalizado con la Dominatrix Viuda Negra.',
   },
   '/contenido': {
-    title: `Contenido Exclusivo: Domina y Rubber Doll | ${BRAND}`,
+    title: `Contenido Exclusivo: Dominatrix y Rubber Doll | ${BRAND}`,
     description:
-      'Paquetes de fotos y videos exclusivos de la Dominatrix Viuda Negra, en su faceta de Domina y de Rubber Doll. Consulta y compra directo por WhatsApp.',
+      'Paquetes de fotos y videos exclusivos de la Dominatrix Viuda Negra, en su faceta de Dominatrix y de Rubber Doll. Consulta y compra directo por WhatsApp.',
   },
   '/contenido/domina': {
-    title: `Contenido de Domina | ${BRAND}`,
+    title: `Contenido de Dominatrix | ${BRAND}`,
     description: 'Paquete de fotos y video exclusivo en la faceta de Dominatrix de la Dominatrix Viuda Negra. Ficha técnica y compra por WhatsApp.',
   },
   '/contenido/rubber-doll': {

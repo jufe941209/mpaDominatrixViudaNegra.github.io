@@ -32,11 +32,18 @@ export function PracticeTabPage() {
 
   if (!tab) return <Navigate to="/practicas/fetiches" replace />;
 
+  const pageTitle = t(tab.titleKey);
+  const sameTitle = (a: string, b: string) => a.trim().toLowerCase() === b.trim().toLowerCase();
+
   return (
     <div
       className="relative min-h-screen bg-cover bg-center pt-28 pb-16"
       style={{
-        backgroundImage: "linear-gradient(135deg, rgba(0,0,0,0.85), rgba(183,35,39,0.3), rgba(0,0,0,0.9)), url('/img/hero-bg.png.jpeg')",
+        backgroundImage: tab.backgroundImage
+          ? // Light overlay only: the leather texture itself should stay visible.
+            `linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.15) 40%, rgba(183,35,39,0.18)), url('${tab.backgroundImage}')`
+          : "linear-gradient(135deg, rgba(0,0,0,0.85), rgba(183,35,39,0.3), rgba(0,0,0,0.9)), url('/img/hero-bg.png.jpeg')",
+        backgroundAttachment: tab.backgroundImage ? 'fixed' : undefined,
       }}
     >
       <div className="mx-auto max-w-[1320px] px-4">
@@ -53,7 +60,13 @@ export function PracticeTabPage() {
 
         {tab.categories && tab.categories.length > 0 ? (
           tab.categories.map((category, i) => (
-            <PracticeGallerySection key={category.slug} category={category} offset={offsets[i]} onOpen={lightbox.open} />
+            <PracticeGallerySection
+              key={category.slug}
+              category={category}
+              offset={offsets[i]}
+              onOpen={lightbox.open}
+              hideTitle={sameTitle(t(category.titleKey), pageTitle)}
+            />
           ))
         ) : tab.introImages && tab.introImages.length > 0 ? (
           <Reveal className="mx-auto max-w-xl rounded-[20px] border border-white/10 bg-black/40 p-8 text-center shadow-2xl backdrop-blur-sm md:p-10">

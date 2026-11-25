@@ -15,6 +15,8 @@ export interface PracticeTab {
   descriptionKey: string;
   categories?: PracticeCategory[];
   introImages?: PracticeIntroImage[];
+  /** Full-page background image replacing the default red/black one. */
+  backgroundImage?: string;
 }
 
 export const practiceTabs: PracticeTab[] = [
@@ -24,6 +26,7 @@ export const practiceTabs: PracticeTab[] = [
     titleKey: 'practicas:tabs.fetiches.title',
     descriptionKey: 'practicas:tabs.fetiches.description',
     categories: [bySlug('leather'), bySlug('leatherGloves')],
+    backgroundImage: '/img/leather-texture.jpg',
   },
   {
     slug: 'pegging',

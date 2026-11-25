@@ -13,6 +13,26 @@
   100% { transform: translateX(-50%); }
 }
 
+/* Official brand fonts: Cinzel Black for titles, Edwardian Script ITC for paragraphs. */
+@font-face {
+  font-family: 'Cinzel';
+  src: url('/fonts/cinzel-black.woff') format('woff');
+  font-weight: 100 900; /* single Black cut: never let the browser fake bold/light */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Edwardian Script';
+  src: url('/fonts/edwardian-script.woff') format('woff');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  /* Script glyphs are tiny for their em box: scale up so paragraphs stay readable
+     at the sizes the layout already uses. */
+  size-adjust: 175%;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -24,11 +44,13 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Jost', ui-sans-serif, system-ui, sans-serif;
+  font-family: 'Cinzel', Georgia, serif;
 }
 
 p {
-  line-height: 1.7;
+  font-family: 'Edwardian Script', 'Roboto', cursive;
+  font-synthesis: none;
+  line-height: 1.45;
 }
 
 ::selection {

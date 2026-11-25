@@ -11,7 +11,8 @@ export default {
         },
       },
       fontFamily: {
-        heading: ['Jost', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        heading: ['Cinzel', 'Georgia', 'serif'],
+        script: ['Edwardian Script', 'Roboto', 'cursive'],
         body: ['Roboto', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       keyframes: {

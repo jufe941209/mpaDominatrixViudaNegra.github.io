@@ -13,6 +13,10 @@
   "leather_title": "Cuero/Leather",
   "tabs": {
     "fetiches": {
+      "title": "Fetiches",
+      "description": "Un universo de fetiches para explorar. Cada uno tiene su propia pestaña con galería completa: elige el tuyo en el menú de Prácticas."
+    },
+    "cuero": {
       "title": "Cuero/Leather",
       "description": "El cuero como segunda piel: control, presencia y dominio en cada textura, desde looks completos hasta guantes. Explora mi galería completa en leather."
     },
@@ -54,7 +58,7 @@
     }
   },
   "fetiches": {
-    "cta": "Cada fetiche tiene su propia galería completa. Elige el tuyo en el menú de Prácticas y Fetiches, o escríbeme directamente."
+    "cta": "Cada fetiche tiene su propia galería completa. Elige el tuyo en el menú de Prácticas, o escríbeme directamente."
   },
   "comingSoon": "Muy pronto encontrarás aquí fotos y contenido de esta práctica. Mientras tanto, escríbeme por WhatsApp si quieres más información.",
   "whatsappCta": "Pregúntame por esta práctica"

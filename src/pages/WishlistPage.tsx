@@ -86,7 +86,7 @@ export function WishlistPage() {
           <Icon name="fas fa-heart" className="mb-4 text-3xl text-brand" />
           <p className="mb-6 italic text-white/80">{t('wishlist:note')}</p>
           <Button href={buildWhatsAppUrl('Hola, ya te compré algo de tu lista de deseos')} variant="success">
-            <Icon name="fa fa-whatsapp" />
+            <Icon name="fab fa-whatsapp" />
             {t('wishlist:whatsappCta')}
           </Button>
         </Reveal>

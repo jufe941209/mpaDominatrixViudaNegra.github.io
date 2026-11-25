@@ -73,7 +73,7 @@ export function PracticeTabPage() {
             <Icon name="fas fa-mask" className="mb-4 text-4xl text-brand" />
             <p className="mb-6 text-white/80">{t('practicas:fetiches.cta')}</p>
             <Button href={buildWhatsAppUrl(`Hola, quiero más información sobre ${t(tab.titleKey)}`)} variant="success">
-              <Icon name="fa fa-whatsapp" />
+              <Icon name="fab fa-whatsapp" />
               {t('practicas:whatsappCta')}
             </Button>
           </Reveal>
@@ -82,7 +82,7 @@ export function PracticeTabPage() {
             <Icon name="fas fa-hourglass-half" className="mb-4 text-4xl text-brand" />
             <p className="mb-6 text-white/80">{t('practicas:comingSoon')}</p>
             <Button href={buildWhatsAppUrl(`Hola, quiero más información sobre ${t(tab.titleKey)}`)} variant="success">
-              <Icon name="fa fa-whatsapp" />
+              <Icon name="fab fa-whatsapp" />
               {t('practicas:whatsappCta')}
             </Button>
           </Reveal>

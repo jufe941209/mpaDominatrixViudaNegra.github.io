@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Icon } from '../atoms/Icon';
 import { SocialIconRow } from '../molecules/SocialIconRow';
 import { siteConfig } from '../../content/siteConfig';
+import { buildWhatsAppUrl } from '../../lib/whatsapp';
 
 export function Footer() {
   const { t } = useTranslation();
@@ -14,7 +15,11 @@ export function Footer() {
           <div className="flex flex-col gap-2 text-white/80">
             <h4 className="mb-2 font-heading text-lg font-semibold text-white">{t('common:footer.contact')}</h4>
             <span><Icon name="fas fa-envelope" className="mr-2" />{t('common:footer.contact_email')}</span>
-            <span><Icon name="fas fa-phone" className="mr-2" />{t('common:footer.contact_phone')}</span>
+            {/* WhatsApp only: calls are never answered */}
+            <a href={buildWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-brand">
+              <Icon name="fab fa-whatsapp" className="mr-2" />
+              {t('common:footer.contact_phone')}
+            </a>
             <span className="mb-3"><Icon name="fas fa-print" className="mr-2" />{t('common:footer.contact_other')}</span>
             <div className="mt-1 flex items-center gap-2">
               <Icon name="fas fa-share" className="mr-1 text-xl text-white" />

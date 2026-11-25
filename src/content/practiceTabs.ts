@@ -25,7 +25,24 @@ export const practiceTabs: PracticeTab[] = [
     navLabelKey: 'common:nav.practices_fetiches',
     titleKey: 'practicas:tabs.fetiches.title',
     descriptionKey: 'practicas:tabs.fetiches.description',
-    categories: [bySlug('leather'), bySlug('leatherGloves')],
+    introImages: [
+      { src: '/img/profesionales/profesionales1.jpg', to: '/practicas/cuero' },
+      { src: '/img/pies/pies1.jpg', to: '/practicas/humillacion' },
+      { src: '/img/fishnets/fishnets1.jpg', to: '/practicas/humillacion' },
+      { src: '/img/nylon/nylon1.jpg', to: '/practicas/otros' },
+      { src: '/img/smoking/smoking1.jpg', to: '/practicas/otros' },
+      { src: '/img/smell/smell1.jpg', to: '/practicas/humillacion' },
+      { src: '/img/boots/boots1.jpg', to: '/practicas/humillacion' },
+      { src: '/img/pegging/pegging1.jpg', to: '/practicas/pegging' },
+      { src: '/img/chastity/castidad1.jpg', to: '/practicas/castidad' },
+      { src: '/img/petplay/petplay1.jpg', to: '/practicas/juego-de-roles' },
+    ],
+  },
+  {
+    slug: 'cuero',
+    navLabelKey: 'common:nav.practices_cuero',
+    titleKey: 'practicas:tabs.cuero.title',
+    descriptionKey: 'practicas:tabs.cuero.description',    categories: [bySlug('leather'), bySlug('leatherGloves')],
     backgroundImage: '/img/leather-texture.jpg',
   },
   {
@@ -52,6 +69,9 @@ export const practiceTabs: PracticeTab[] = [
     navLabelKey: 'common:nav.practices_bondage',
     titleKey: 'practicas:tabs.bondage.title',
     descriptionKey: 'practicas:tabs.bondage.description',
+    categories: [
+      { slug: 'bondage', titleKey: 'practicas:tabs.bondage.title', folder: '/img/mazmorra/bondage', filePrefix: 'bondage', count: 7, extension: 'jpg' },
+    ],
   },
   {
     slug: 'findom',

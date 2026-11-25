@@ -48,7 +48,7 @@ export function TalleresPage() {
                   <p className="mb-6 flex-1 text-center text-white/80">{t('talleres:pricing.description')}</p>
                   <div className="mt-auto text-center">
                     <Button href={buildWhatsAppUrl('Hola, me interesa información sobre los talleres')} variant="success">
-                      <Icon name="fa fa-whatsapp" />
+                      <Icon name="fab fa-whatsapp" />
                       {t('talleres:book')}
                     </Button>
                   </div>
@@ -71,7 +71,7 @@ export function TalleresPage() {
                   <p className="mb-6 flex-1 text-center text-white/80">{t('talleres:available.description')}</p>
                   <div className="mt-auto text-center">
                     <Button href={buildWhatsAppUrl('Hola, me interesa información sobre los talleres')} variant="success">
-                      <Icon name="fa fa-whatsapp" />
+                      <Icon name="fab fa-whatsapp" />
                       {t('talleres:book')}
                     </Button>
                   </div>

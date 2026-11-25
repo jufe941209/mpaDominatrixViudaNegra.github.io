@@ -12,6 +12,10 @@ export const seoByPath: Record<string, SeoEntry> = {
       'Dominatrix Viuda Negra: Dominatrix profesional en Bogotá, Colombia. Ama y Mistress de BDSM con sesiones presenciales y virtuales, shows, talleres, galería y tienda fetiche.',
   },
   '/practicas/fetiches': {
+    title: `Fetiches | ${BRAND} Bogotá`,
+    description: 'Explora todos los fetiches de la Dominatrix Viuda Negra en Bogotá: cuero, pies, botas, fishnet, nylon, smoking, castidad y más.',
+  },
+  '/practicas/cuero': {
     title: `Cuero/Leather | ${BRAND} Bogotá`,
     description: 'Galería de looks en cuero y leather de la Dominatrix Viuda Negra en Bogotá, Colombia.',
   },

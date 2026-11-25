@@ -11,7 +11,7 @@ export default {
         },
       },
       fontFamily: {
-        heading: ['Edwardian Script', 'Georgia', 'cursive'],
+        heading: ['Grenze Gotisch', 'Georgia', 'serif'],
         script: ['Cinzel', 'Georgia', 'serif'],
         body: ['Roboto', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },

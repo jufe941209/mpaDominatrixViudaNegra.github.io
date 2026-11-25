@@ -45,8 +45,10 @@ body {
 
 /* Titles in Edwardian Script, paragraphs in Cinzel Black (swapped on request). */
 h1, h2, h3, h4, h5, h6, .font-heading {
-  font-family: 'Edwardian Script', Georgia, cursive;
-  font-synthesis: none;
+  /* Gothic display face for titles: dark and elegant, still readable */
+  font-family: 'Grenze Gotisch', Georgia, serif;
+  font-weight: 600;
+  text-shadow: 0 0 18px rgba(183, 35, 39, 0.35);
   /* Script capitals in all-caps/wide tracking are unreadable */
   text-transform: none !important;
   letter-spacing: normal !important;

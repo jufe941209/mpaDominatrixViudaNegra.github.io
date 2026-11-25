@@ -13,24 +13,13 @@
   100% { transform: translateX(-50%); }
 }
 
-/* Official brand fonts: Cinzel Black for titles, Edwardian Script ITC for paragraphs. */
+/* Brand title font: Cinzel Black (official). Body text stays in Roboto. */
 @font-face {
   font-family: 'Cinzel';
   src: url('/fonts/cinzel-black.woff') format('woff');
   font-weight: 100 900; /* single Black cut: never let the browser fake bold/light */
   font-style: normal;
   font-display: swap;
-}
-
-@font-face {
-  font-family: 'Edwardian Script';
-  src: url('/fonts/edwardian-script.woff') format('woff');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-  /* Script glyphs are tiny for their em box: scale up so paragraphs stay readable
-     at the sizes the layout already uses. */
-  size-adjust: 135%;
 }
 
 html {
@@ -43,29 +32,11 @@ body {
   color-scheme: light;
 }
 
-/* Titles in Edwardian Script, paragraphs in Cinzel Black (swapped on request). */
-h1, h2, h3, h4, h5, h6, .font-heading {
-  /* Gothic display face for titles: dark and elegant, still readable */
-  font-family: 'Grenze Gotisch', Georgia, serif;
-  font-weight: 600;
-  text-shadow: 0 0 18px rgba(183, 35, 39, 0.35);
-  /* Script capitals in all-caps/wide tracking are unreadable */
-  text-transform: none !important;
-  letter-spacing: normal !important;
-}
-
-/* Headings whose text is ALL CAPS (tagged at runtime, see lib/scriptHeadings.ts):
-   show them in sentence case, since script capitals side by side are illegible. */
-.script-caps {
-  text-transform: lowercase !important;
-}
-.script-caps::first-letter {
-  text-transform: uppercase;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel', Georgia, serif;
 }
 
 p {
-  font-family: 'Cinzel', Georgia, serif;
-  font-synthesis: none;
   line-height: 1.7;
 }
 

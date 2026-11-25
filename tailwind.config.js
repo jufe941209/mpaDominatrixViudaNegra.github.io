@@ -11,8 +11,7 @@ export default {
         },
       },
       fontFamily: {
-        heading: ['Grenze Gotisch', 'Georgia', 'serif'],
-        script: ['Cinzel', 'Georgia', 'serif'],
+        heading: ['Cinzel', 'Georgia', 'serif'],
         body: ['Roboto', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       keyframes: {

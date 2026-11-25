@@ -30,7 +30,7 @@
   font-display: swap;
   /* Script glyphs are tiny for their em box: scale up so paragraphs stay readable
      at the sizes the layout already uses. */
-  size-adjust: 175%;
+  size-adjust: 135%;
 }
 
 html {
@@ -43,14 +43,28 @@ body {
   color-scheme: light;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cinzel', Georgia, serif;
+/* Titles in Edwardian Script, paragraphs in Cinzel Black (swapped on request). */
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Edwardian Script', Georgia, cursive;
+  font-synthesis: none;
+  /* Script capitals in all-caps/wide tracking are unreadable */
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+/* Headings whose text is ALL CAPS (tagged at runtime, see lib/scriptHeadings.ts):
+   show them in sentence case, since script capitals side by side are illegible. */
+.script-caps {
+  text-transform: lowercase !important;
+}
+.script-caps::first-letter {
+  text-transform: uppercase;
 }
 
 p {
-  font-family: 'Edwardian Script', 'Roboto', cursive;
+  font-family: 'Cinzel', Georgia, serif;
   font-synthesis: none;
-  line-height: 1.45;
+  line-height: 1.7;
 }
 
 ::selection {

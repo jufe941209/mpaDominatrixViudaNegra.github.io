@@ -5,6 +5,7 @@ export const practiceCategories: PracticeCategory[] = [
   { slug: 'fishnet', titleKey: 'practicas:fishnet_title', folder: '/img/fishnets', filePrefix: 'fishnets', count: 18, extension: 'jpg' },
   { slug: 'smell', titleKey: 'practicas:smell_title', folder: '/img/smell', filePrefix: 'smell', count: 4, extension: 'jpg' },
   { slug: 'boots', titleKey: 'practicas:boots_title', folder: '/img/boots', filePrefix: 'boots', count: 7, extension: 'jpg' },
+  { slug: 'facesitting', titleKey: 'practicas:facesitting_title', folder: '/img/facesitting', filePrefix: 'facesitting', count: 1, numbers: [1], extension: 'jpg' },
   { slug: 'nylon', titleKey: 'practicas:nylon_title', folder: '/img/nylon', filePrefix: 'nylon', count: 6, extension: 'jpg' },
   { slug: 'smoking', titleKey: 'practicas:smoking_title', folder: '/img/smoking', filePrefix: 'smoking', count: 3, extension: 'jpg' },
   { slug: 'chastity', titleKey: 'practicas:chastity_title', folder: '/img/chastity', filePrefix: 'castidad', count: 7, extension: 'jpg' },

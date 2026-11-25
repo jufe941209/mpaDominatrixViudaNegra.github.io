@@ -36,6 +36,10 @@
       "7": { "title": "Sesión Grupal 7", "subtitle": "Control absoluto en grupo" }
     }
   },
+  "booking": {
+    "button": "Agenda tu sesión aquí",
+    "note": "Reserva tu cita directamente en mi agenda en línea. Toda cita se confirma con el abono que te indicaré por WhatsApp."
+  },
   "rules": {
     "title": "REGLAS",
     "schedule": {

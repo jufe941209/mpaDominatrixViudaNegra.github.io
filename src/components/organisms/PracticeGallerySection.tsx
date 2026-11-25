@@ -25,17 +25,33 @@ export function PracticeGallerySection({ category, offset, onOpen, hideTitle = f
             {t(category.titleKey)}
           </SectionHeading>
         )}
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4 sm:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] sm:gap-5">
-          {images.map((image, i) => (
-            <GalleryCard
-              key={image.src}
-              src={image.src}
-              alt={image.alt}
-              heightClass="h-[200px] sm:h-[250px]"
-              onClick={() => onOpen(offset + i)}
-            />
-          ))}
-        </div>
+        {images.length <= 2 ? (
+          // 1-2 photos: centered, taller cards instead of stretching across the full width
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-5">
+            {images.map((image, i) => (
+              <div key={image.src} className="w-full max-w-[340px]">
+                <GalleryCard
+                  src={image.src}
+                  alt={image.alt}
+                  heightClass="h-[420px]"
+                  onClick={() => onOpen(offset + i)}
+                />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4 sm:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] sm:gap-5">
+            {images.map((image, i) => (
+              <GalleryCard
+                key={image.src}
+                src={image.src}
+                alt={image.alt}
+                heightClass="h-[200px] sm:h-[250px]"
+                onClick={() => onOpen(offset + i)}
+              />
+            ))}
+          </div>
+        )}
       </section>
     </Reveal>
   );

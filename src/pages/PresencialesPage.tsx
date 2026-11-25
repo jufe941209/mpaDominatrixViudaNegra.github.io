@@ -6,6 +6,7 @@ import { Reveal } from '../components/atoms/Reveal';
 import { GalleryLightbox } from '../components/organisms/GalleryLightbox';
 import { useLightbox } from '../hooks/useLightbox';
 import { buildWhatsAppUrl } from '../lib/whatsapp';
+import { siteConfig } from '../content/siteConfig';
 import { MultipleSessionsSection } from '../components/organisms/MultipleSessionsSection';
 import { SubmissiveSessionsSection } from '../components/organisms/SubmissiveSessionsSection';
 import { RulesSection } from '../components/organisms/RulesSection';
@@ -26,6 +27,13 @@ export function PresencialesPage() {
         >
           <h1 className="mb-4 font-heading text-3xl font-bold text-white md:text-4xl">{t('presenciales:title')}</h1>
           <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed text-white">{t('presenciales:description')}</p>
+          <div className="mt-6">
+            <Button href={siteConfig.bookingUrl} variant="success">
+              <Icon name="fas fa-calendar-check" />
+              {t('presenciales:booking.button')}
+            </Button>
+            <p className="mx-auto mt-3 max-w-xl text-center text-sm text-white/80">{t('presenciales:booking.note')}</p>
+          </div>
         </Reveal>
 
         <RulesSection />

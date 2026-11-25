@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Icon } from '../atoms/Icon';
 import { Reveal } from '../atoms/Reveal';
+import { Button } from '../atoms/Button';
+import { siteConfig } from '../../content/siteConfig';
 
 const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSf0xyhl4ZdfquSP5OGg8rBl8AL7D7IyDE-37FLTyZ2hJhU0Xg/viewform';
 
@@ -36,6 +38,12 @@ export function RulesSection() {
             </li>
           ))}
         </ul>
+        <div className="mb-4">
+          <Button href={siteConfig.bookingUrl} variant="danger">
+            <Icon name="fas fa-calendar-check" />
+            {t('presenciales:booking.button')}
+          </Button>
+        </div>
         <button
           type="button"
           onClick={() => setShowForm((s) => !s)}

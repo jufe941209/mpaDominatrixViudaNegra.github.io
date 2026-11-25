@@ -25,18 +25,6 @@ export const practiceTabs: PracticeTab[] = [
     navLabelKey: 'common:nav.practices_fetiches',
     titleKey: 'practicas:tabs.fetiches.title',
     descriptionKey: 'practicas:tabs.fetiches.description',
-    introImages: [
-      { src: '/img/profesionales/profesionales1.jpg', to: '/practicas/cuero' },
-      { src: '/img/pies/pies1.jpg', to: '/practicas/humillacion' },
-      { src: '/img/fishnets/fishnets1.jpg', to: '/practicas/humillacion' },
-      { src: '/img/nylon/nylon1.jpg', to: '/practicas/otros' },
-      { src: '/img/smoking/smoking1.jpg', to: '/practicas/otros' },
-      { src: '/img/smell/smell1.jpg', to: '/practicas/humillacion' },
-      { src: '/img/boots/boots1.jpg', to: '/practicas/humillacion' },
-      { src: '/img/pegging/pegging1.jpg', to: '/practicas/pegging' },
-      { src: '/img/chastity/castidad1.jpg', to: '/practicas/castidad' },
-      { src: '/img/petplay/petplay1.jpg', to: '/practicas/juego-de-roles' },
-    ],
     categories: [
       { slug: 'fetiches', titleKey: 'practicas:tabs.fetiches.title', folder: '/img/mazmorra/bondage', filePrefix: 'bondage', count: 2, numbers: [2, 5], extension: 'jpg' },
     ],
@@ -66,6 +54,9 @@ export const practiceTabs: PracticeTab[] = [
     navLabelKey: 'common:nav.practices_lluvias',
     titleKey: 'practicas:tabs.lluvias.title',
     descriptionKey: 'practicas:tabs.lluvias.description',
+    categories: [
+      { slug: 'lluvias', titleKey: 'practicas:tabs.lluvias.title', folder: '/img/lluvias', filePrefix: 'lluvias', count: 2, extension: 'jpg' },
+    ],
   },
   {
     slug: 'bondage',
@@ -109,6 +100,6 @@ export const practiceTabs: PracticeTab[] = [
     navLabelKey: 'common:nav.practices_otros',
     titleKey: 'practicas:tabs.otros.title',
     descriptionKey: 'practicas:tabs.otros.description',
-    categories: ['nylon', 'smoking'].map(bySlug),
+    categories: ['facesitting', 'nylon', 'smoking'].map(bySlug),
   },
 ];

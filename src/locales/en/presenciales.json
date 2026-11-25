@@ -36,6 +36,10 @@
       "7": { "title": "Group Session 7", "subtitle": "Absolute group control" }
     }
   },
+  "booking": {
+    "button": "Book your session here",
+    "note": "Book your appointment directly in my online schedule. Every appointment is confirmed with the deposit I will indicate via WhatsApp."
+  },
   "rules": {
     "title": "RULES",
     "schedule": {

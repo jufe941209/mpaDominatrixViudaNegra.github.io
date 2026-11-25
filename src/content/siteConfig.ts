@@ -3,6 +3,8 @@ export const siteConfig = {
   email: 'Dominatrixbogota@gmail.com',
   phone: '3192137590',
   location: 'Bogotá',
+  /** Online booking system for in-person sessions. */
+  bookingUrl: 'https://agendapro.com/site/co/dominatrixviudanegra',
   socialLinks: {
     twitter: 'https://twitter.com/Dominatrixbog',
     telegram: 'https://t.me/amaviudanegra',

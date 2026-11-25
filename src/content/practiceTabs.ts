@@ -37,6 +37,9 @@ export const practiceTabs: PracticeTab[] = [
       { src: '/img/chastity/castidad1.jpg', to: '/practicas/castidad' },
       { src: '/img/petplay/petplay1.jpg', to: '/practicas/juego-de-roles' },
     ],
+    categories: [
+      { slug: 'fetiches', titleKey: 'practicas:tabs.fetiches.title', folder: '/img/mazmorra/bondage', filePrefix: 'bondage', count: 2, numbers: [2, 5], extension: 'jpg' },
+    ],
   },
   {
     slug: 'cuero',
@@ -70,7 +73,8 @@ export const practiceTabs: PracticeTab[] = [
     titleKey: 'practicas:tabs.bondage.title',
     descriptionKey: 'practicas:tabs.bondage.description',
     categories: [
-      { slug: 'bondage', titleKey: 'practicas:tabs.bondage.title', folder: '/img/mazmorra/bondage', filePrefix: 'bondage', count: 7, extension: 'jpg' },
+      // Photos 2 and 5 live in the Fetiches tab instead.
+      { slug: 'bondage', titleKey: 'practicas:tabs.bondage.title', folder: '/img/mazmorra/bondage', filePrefix: 'bondage', count: 5, numbers: [1, 3, 4, 6, 7], extension: 'jpg' },
     ],
   },
   {

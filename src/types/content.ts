@@ -5,6 +5,8 @@ export interface PracticeCategory {
   filePrefix: string;
   count: number;
   extension: 'jpg' | 'jpeg' | 'png';
+  /** Only these 1-based file numbers from the folder (overrides count), e.g. [2, 5]. */
+  numbers?: number[];
 }
 
 export interface GalleryImage {

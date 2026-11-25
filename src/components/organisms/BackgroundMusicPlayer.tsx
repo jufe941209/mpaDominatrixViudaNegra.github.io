@@ -60,7 +60,9 @@ export function BackgroundMusicPlayer() {
       hostRef.current.appendChild(target);
       playerRef.current = new window.YT.Player(target, {
         videoId: VIDEO_ID,
-        playerVars: { autoplay: 1, mute: 0, loop: 1, playlist: VIDEO_ID, controls: 0, playsinline: 1 },
+        // `origin` lets the YouTube API address its messages to our page correctly
+        // (avoids the "target origin does not match" postMessage console warnings).
+        playerVars: { autoplay: 1, mute: 0, loop: 1, playlist: VIDEO_ID, controls: 0, playsinline: 1, origin: window.location.origin },
         events: {
           onReady: (event: { target: YouTubePlayer }) => {
             try {

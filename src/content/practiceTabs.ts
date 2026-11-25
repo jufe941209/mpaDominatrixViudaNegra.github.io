@@ -26,7 +26,6 @@ export const practiceTabs: PracticeTab[] = [
     titleKey: 'practicas:tabs.fetiches.title',
     descriptionKey: 'practicas:tabs.fetiches.description',
     categories: [
-      { slug: 'fetiches', titleKey: 'practicas:tabs.fetiches.title', folder: '/img/mazmorra/bondage', filePrefix: 'bondage', count: 2, numbers: [2, 5], extension: 'jpg' },
       { slug: 'latexVip', titleKey: 'practicas:latexVip_title', folder: '/img/latexvip', filePrefix: 'latexvip', count: 18, extension: 'jpg' },
     ],
   },
@@ -34,7 +33,8 @@ export const practiceTabs: PracticeTab[] = [
     slug: 'cuero',
     navLabelKey: 'common:nav.practices_cuero',
     titleKey: 'practicas:tabs.cuero.title',
-    descriptionKey: 'practicas:tabs.cuero.description',    categories: [bySlug('leather'), bySlug('leatherGloves')],
+    descriptionKey: 'practicas:tabs.cuero.description',
+    categories: [bySlug('leather'), bySlug('leatherGloves')],
     backgroundImage: '/img/leather-texture.jpg',
   },
   {
@@ -64,10 +64,6 @@ export const practiceTabs: PracticeTab[] = [
     navLabelKey: 'common:nav.practices_bondage',
     titleKey: 'practicas:tabs.bondage.title',
     descriptionKey: 'practicas:tabs.bondage.description',
-    categories: [
-      // Photos 2 and 5 live in the Fetiches tab instead.
-      { slug: 'bondage', titleKey: 'practicas:tabs.bondage.title', folder: '/img/mazmorra/bondage', filePrefix: 'bondage', count: 5, numbers: [1, 3, 4, 6, 7], extension: 'jpg' },
-    ],
   },
   {
     slug: 'findom',

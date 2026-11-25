@@ -45,12 +45,13 @@ export function ContenidoDetailPage() {
 
         <Reveal className="grid gap-6 md:grid-cols-[2fr_3fr] md:items-stretch">
           {/* Same cover image as this content's card on /contenido */}
-          <div className="overflow-hidden rounded-[20px] border-2 border-brand bg-black shadow-2xl">
+          {/* object-contain: show the whole image, never crop it */}
+          <div className="flex items-center justify-center overflow-hidden rounded-[20px] border-2 border-brand bg-black p-2 shadow-2xl">
             <img
               src={detail.image}
               alt={detail.imageAlt}
               loading="lazy"
-              className="h-[380px] w-full object-cover object-top md:h-full md:min-h-[420px]"
+              className="max-h-[520px] w-full object-contain md:h-full"
             />
           </div>
 
